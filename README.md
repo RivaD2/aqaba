@@ -5,8 +5,9 @@
 - React
 - react-router-dom
 - Material-UI
-- Google OAuth 2.0
-- My api server for a RESTful API
+- react-google-login
+- google-auth-library
+- My api server for a RESTful API and server-side verification
 - Axios
 
 ### How to use Aqaba:
