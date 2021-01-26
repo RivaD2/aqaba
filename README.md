@@ -19,7 +19,7 @@
 
 ### Wireframes:
 
-![home](./public/home.png)
+![home](./public/assets/home.png)
 
 ![perfumes](./public/assets/perfumes.png)
 
