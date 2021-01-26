@@ -23,7 +23,7 @@
 
 ![perfumes](./public/assets/perfumes.png)
 
-![perfume-selected]('./../public/assets/perfumes.png)
+![perfume-selected]('./../public/assets/perfume-selected.png)
 
 ![cart-modal](./public/assets/cart-modal.png)
 
