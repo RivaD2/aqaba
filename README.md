@@ -9,6 +9,7 @@
 - google-auth-library
 - My api server for a RESTful API and server-side verification
 - Axios
+- Figma (for wireframes)
 
 ### How to use Aqaba:
 
@@ -18,7 +19,17 @@
 
 ### Wireframes:
 
+![home](./public/home.png)
 
+![perfumes](./public/assets/perfumes.png)
+
+![perfume-selected]('./../public/assets/perfumes.png)
+
+![cart-modal](./public/assets/cart-modal.png)
+
+![checkout](./public/assets/checkout.png)
+
+![gifts](./public/assets/gifts.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
