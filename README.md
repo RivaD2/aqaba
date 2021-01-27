@@ -1,5 +1,7 @@
 # Aqaba: A complete makeover of the Aqaba website
 
+### Author: Riva Davidowski
+
 ### Tools Used:
 
 - React
@@ -20,6 +22,12 @@
 ### Wireframes:
 
 ![home](./public/assets/home.png)
+
+![subscribe](./public/assets/subscribe-modal.png)
+
+![create-acc](./public/assets/create-account-modal.png)
+
+![Login](./public/assets/login-modal.png)
 
 ![perfumes](./public/assets/perfumes.png)
 
