@@ -31,7 +31,7 @@
 
 ![perfume-feminine](./public/assets/perfumes-feminine.png)
 
-![perfume-feminine](./public/assets/perfumes-masculine.png)
+![perfume-masculine](./public/assets/perfume-masculine.png)
 
 ![perfume-selected]('./../public/assets/perfume-selected.png)
 
