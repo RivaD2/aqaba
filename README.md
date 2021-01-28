@@ -21,25 +21,25 @@
 
 ### Wireframes:
 
-![home](./public/assets/home.png)
+![home](./design/home.png)
 
-![subscribe](./public/assets/subscribe-modal.png)
+![subscribe](./design/subscribe-modal.png)
 
-![create-acc](./public/assets/create-account-modal.png)
+![create-acc](./design/create-account-modal.png)
 
-![Login](./public/assets/login-modal.png)
+![Login](./design/login-modal.png)
 
-![perfume-feminine](./public/assets/perfumes-feminine.png)
+![perfume-feminine](./design/perfumes-feminine.png)
 
-![perfume-masculine](./public/assets/perfume-masculine.png)
+![perfume-masculine](./design/perfume-masculine.png)
 
-![perfume-selected]('./../public/assets/perfume-selected.png)
+![perfume-selected](./design/perfume-selected.png)
 
-![cart-modal](./public/assets/cart-modal.png)
+![cart-modal](./design/cart-modal.png)
 
-![checkout](./public/assets/checkout.png)
+![checkout](./design/checkout.png)
 
-![gifts](./public/assets/gifts.png)
+![gifts](./design/gifts.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
