@@ -1,7 +1,12 @@
 .home-container-text {
-  font-size:26pt;
+  font-size:30pt;
   color:black;
   display:flex;
   flex-direction:column;
   justify-content: center;
+  z-index: 100;
+}
+
+.home-background {
+  z-index:0;
 }
