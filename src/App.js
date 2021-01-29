@@ -5,33 +5,36 @@ import PerfumesList from './components/PerfumesList';
 import Gifts from './components/Gifts';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+import './App.css';
 
-export default class App extends Component {
-const font =  "'Quicksand', sans-serif";
-const theme = createMuiTheme({
+let font =  "font-family: 'Cairo', sans-serif"
+let theme = createMuiTheme({
   typography: {
     fontFamily: font,
-    button: 
-      textTransform: "none"
-    }
   }
-});
+})
 
+class App extends Component {
   render() {
     return (
-      <div className="home container">
+      <ThemeProvider theme={theme} >
+      <div className="home-container">
           <Router history={history}>
+          <Header />
             <Switch>
               <Route exact path="/aqaba" />
               <Route path="/perfumes" component={PerfumesList} />
               <Route path="/gifts" component={Gifts} />
             </Switch>
-            <Header />
           </Router>
-      </div>
+          </div>
+      </ThemeProvider>
     )
   }
 }
 
+export default App;
 
 

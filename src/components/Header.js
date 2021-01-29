@@ -7,15 +7,16 @@ import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 
 const Header = () => {
   return (
-    <div>
-      <div className="nav-container">
+    <>
+    <div className = "nav-container">
+      <div className="nav-items">
         <Link href="/" className="nav-item" color="primary">
          Aqaba/
         </Link>
-        <Link href="/perfumes" className="nav-item" color="inherit">
+        <Link href="/perfumes" className="nav-item">
           Perfumes/
         </Link>
-        <Link href="/gifts" className="nav-item" color="inherit">
+        <Link href="/gifts" className="nav-item">
           Gifts
         </Link>
       </div>
@@ -32,6 +33,10 @@ const Header = () => {
           }}
       />
     </div>
+    <div className="header-text">
+     AQABA
+   </div>
+   </>
   )
 }
 export default Header;
