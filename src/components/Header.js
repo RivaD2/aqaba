@@ -8,8 +8,7 @@ import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 const Header = () => {
   return (
     <>
-    <div className = "nav-container">
-      <div className="nav-items">
+      <div className="nav-container">
         <Link href="/" className="nav-item" color="primary">
          Aqaba/
         </Link>
@@ -19,7 +18,6 @@ const Header = () => {
         <Link href="/gifts" className="nav-item">
           Gifts
         </Link>
-      </div>
       <TextField
           label="Search Aqaba"
           InputProps={{
@@ -32,10 +30,7 @@ const Header = () => {
             )
           }}
       />
-    </div>
-    <div className="header-text">
-     AQABA
-   </div>
+      </div>
    </>
   )
 }

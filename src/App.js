@@ -3,6 +3,7 @@ import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import Gifts from './components/Gifts';
+import AqabaHome from './AqabaHome';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
@@ -20,17 +21,18 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme} >
-      <div className="home-container">
+      <div className="router-container">
           <Router history={history}>
           <Header />
             <Switch>
-              <Route exact path="/aqaba" />
+              <Route exact path="/" component={AqabaHome}/>
               <Route path="/perfumes" component={PerfumesList} />
               <Route path="/gifts" component={Gifts} />
             </Switch>
           </Router>
           </div>
       </ThemeProvider>
+
     )
   }
 }
