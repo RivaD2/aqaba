@@ -9,13 +9,13 @@ const Header = () => {
   return (
     <>
       <div className="nav-container">
-        <Link href="/" className="nav-item" color="primary">
+        <Link to="/" className="nav-item" color="inherit">
          Aqaba/
         </Link>
-        <Link href="/perfumes" className="nav-item">
+        <Link to="/perfumes" className="nav-item">
           Perfumes/
         </Link>
-        <Link href="/gifts" className="nav-item">
+        <Link to="/gifts" className="nav-item">
           Gifts
         </Link>
       <TextField
@@ -34,4 +34,5 @@ const Header = () => {
    </>
   )
 }
+
 export default Header;

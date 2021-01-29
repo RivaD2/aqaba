@@ -5,6 +5,7 @@
 ### Tools Used:
 
 - React
+- react-spring
 - react-router-dom
 - Material-UI
 - react-google-login

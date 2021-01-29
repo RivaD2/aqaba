@@ -6,8 +6,8 @@ import Gifts from './components/Gifts';
 import AqabaHome from './AqabaHome';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
+import {createMuiTheme} from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
 let font =  "font-family: 'Cairo', sans-serif"
@@ -26,8 +26,8 @@ class App extends Component {
           <Header />
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
-              <Route path="/perfumes" component={PerfumesList} />
-              <Route path="/gifts" component={Gifts} />
+              <Route exact path="/perfumes" component={PerfumesList} />
+              <Route exact path="/gifts" component={Gifts} />
             </Switch>
           </Router>
           </div>
