@@ -13,11 +13,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TextButton = () => {
+const TextButton = props => {
+  const {onClick, text} = props;
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Button>Discover Aqaba</Button>
+      <Button onClick={onClick}>{text}</Button>
     </div>
   );
 }
