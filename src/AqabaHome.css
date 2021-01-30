@@ -1,12 +1,15 @@
-.home-container-text {
-  font-size:30pt;
-  color:black;
+.home {
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
+  /* z-index:100; */
+}
+
+.home-container-text {
+  font-size:25pt;
+  color:black;
   justify-content: center;
-  z-index: 100;
+  align-items: center;
 }
 
 .home-background {
-  z-index:0;
 }

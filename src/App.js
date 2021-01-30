@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import Gifts from './components/Gifts';
 import AqabaHome from './AqabaHome';
-import SearchBar from './components/SearchBar';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import {createMuiTheme} from '@material-ui/core/styles';
@@ -25,7 +24,6 @@ class App extends Component {
       <div className="router-container">
           <Router history={history}>
           <Header />
-          <SearchBar />
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />

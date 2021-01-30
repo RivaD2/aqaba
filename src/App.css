@@ -3,11 +3,11 @@
 }
 
 .router-container {
-  background-image: url('https://img.theculturetrip.com/450x/smart/images/56-3953367-1442351522775f6c6533ab461995c76bbaa2d44852.jpg');
-  background-size: cover;
+  /* background-image: url('https://img.theculturetrip.com/450x/smart/images/56-3953367-1442351522775f6c6533ab461995c76bbaa2d44852.jpg'); */
+  /* background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width:100vw;
   display:flex;
-  flex-direction: row;
+  flex-direction: row; */
 }

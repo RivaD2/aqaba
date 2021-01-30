@@ -1,8 +1,5 @@
 import React from 'react'
-import IconButton from "@material-ui/core/IconButton";
-import InputAdornment from "@material-ui/core/InputAdornment";
 import TextField from '@material-ui/core/TextField';
-import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 
 export default class SearchBar extends React.Component {
   state = { term: ''};
@@ -25,15 +22,6 @@ export default class SearchBar extends React.Component {
             className="search-field"
             onChange={this.onInputChange}
             value={this.state.term}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment>
-                  <IconButton>
-                      <SearchOutinedIcon />
-                  </IconButton>
-                </InputAdornment>
-              )
-            }}
         />
       </div>
     )
