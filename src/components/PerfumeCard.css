@@ -1,12 +1,9 @@
-/* html,
+html,
 body,
 #root {
-  width: 50%;
-  height: 50%;
   margin: 0;
   padding: 0;
-  background-color: white;
-} */
+}
 
 body {
   background: transparent;

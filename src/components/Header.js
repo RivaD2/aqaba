@@ -35,13 +35,13 @@ class Header extends React.Component {
         <div className="nav-container">
           <div className="link-block">
             <Link to="/" className="nav-item" color="inherit">
-            Aqaba/
+            AQABA/
             </Link>
             <Link to="/perfumes" className="nav-item">
-              Perfumes/
+              PERFUMES/
             </Link>
             <Link to="/gifts" className="nav-item">
-              Gifts
+              GIFTS
             </Link>
           </div>
           <div className="title-block">

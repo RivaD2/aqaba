@@ -10,7 +10,7 @@
 - Material-UI
 - react-google-login
 - google-auth-library
-- My api server for a RESTful API and server-side verification
+- My api server for database API and server-side verification
 - Axios
 - Figma (for wireframes)
 
