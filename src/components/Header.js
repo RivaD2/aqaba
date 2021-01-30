@@ -4,6 +4,8 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import IconButton from "@material-ui/core/IconButton";
+import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+
 import './Header.css';
 
 class Header extends React.Component {
@@ -12,6 +14,18 @@ class Header extends React.Component {
   toggleSearchField = () => {
     this.setState({
       showSearchField: !this.state.showSearchField
+    })
+  }
+  
+  onLoginClicked = () => {
+    this.setState({
+      showAccountModal: !this.state.showAccountModal
+    })
+  }
+
+  onCartClicked = () => {
+    this.setState({
+      showCartModal: !this.state.showCartModal
     })
   }
 
@@ -32,16 +46,22 @@ class Header extends React.Component {
           </div>
           <div className="title-block">
             AQABA
+            <div className="creator-title">by Miriam Mirani</div>
           </div>
           <div className="icon-block">
             <div className="cart-icon">
               <IconButton>
-              <AddShoppingCartOutlinedIcon />
+                <AddShoppingCartOutlinedIcon onClick={this.showCartModal}/>
               </IconButton>
             </div>
             <div className="search-icon">
               <IconButton onClick={this.toggleSearchField}> 
                 <SearchOutinedIcon />
+              </IconButton>
+            </div>
+            <div className="account-icon">
+              <IconButton >
+                <PermIdentityOutlinedIcon onClick={this.showAccountModal}/>
               </IconButton>
             </div>
           </div>

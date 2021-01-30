@@ -3,8 +3,8 @@ import { useTransition, animated, config } from 'react-spring'
 import './ImageFade.css';
 
 const slides = [
-  { id: 0, url: '/assets/aqaba-sands.png'},
-  { id: 1, url: '/assets/aqaba-arch.png' },
+  // { id: 0, url: '/assets/aqaba-sands.png'},
+  // { id: 1, url: '/assets/aqaba-arch.png' },
   { id: 2, url: '/assets/aqaba-shore.png' },
   { id: 3, url: '/assets/aqaba-tala-bay.png'},
 ]
@@ -17,7 +17,7 @@ const ImageFade = () => {
     leave: { opacity: 0 },
     config: config.molasses,
   })
-  useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 3000), [])
+  useEffect(() => void setInterval(() => set(state => (state + 1) % slides.length), 3000), [])
   return transitions.map(({ item, props, key }) => (
     <animated.div
       key={key}
