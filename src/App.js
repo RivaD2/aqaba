@@ -20,8 +20,8 @@ let theme = createMuiTheme({
 class App extends Component {
   render() {
     return (
-      <ThemeProvider theme={theme} >
-      <div className="router-container">
+      <ThemeProvider theme={theme}>
+      <div className="router-container App">
           <Router history={history}>
           <Header />
             <Switch>
