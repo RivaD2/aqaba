@@ -3,8 +3,11 @@ import PerfumeCard from './PerfumeCard';
 
 const PerfumesList = () => {
   return (
-    <div>
+    <div className="perfume-container">
+      <div className="perfume-cards">
       <PerfumeCard />
+      AQABA SPRING
+      </div>
     </div>
   )
 }

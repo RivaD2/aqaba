@@ -1,4 +1,17 @@
 
 .nav-item {
   color:black;
+  
 }
+
+.nav-container {
+  z-index: 100;
+  display:flex;
+}
+
+.search-field {
+  justify-content:right;
+  align-items:right;
+  width:20px;
+}
+

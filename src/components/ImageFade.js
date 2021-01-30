@@ -3,9 +3,9 @@ import { useTransition, animated, config } from 'react-spring'
 import './ImageFade.css';
 
 const slides = [
-  { id: 0, url: '/assets/aqaba-tala-bay'},
-  { id: 1, url: '/assets/aqaba-night.png' },
-  { id: 2, url: '/assets/aqaba-gulf.png' },
+  { id: 0, url: '/assets/aqaba-sands.png'},
+  { id: 1, url: '/assets/aqaba-arch.png' },
+  { id: 2, url: '/assets/aqaba-spring.png' },
   { id: 3, url: '/assets/el-manara.png'},
 ]
 

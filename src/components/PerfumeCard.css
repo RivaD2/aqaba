@@ -1,16 +1,14 @@
-html,
+/* html,
 body,
 #root {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   margin: 0;
   padding: 0;
   background-color: white;
-}
+} */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu,
-    roboto, noto, segoe ui, arial, sans-serif;
   background: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -30,17 +28,17 @@ body {
 }
 
 .card {
-  width: 45ch;
-  height: 45ch;
+  width: 15ch;
+  height: 15ch;
   background: grey;
   border-radius: 5px;
-  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fragrantica.com%2Fperfume%2FAqaba%2FAqaba-Spring-2266.html&psig=AOvVaw13Tff9YuhrzTeaaIFVJzFK&ust=1612034582526000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiy0_ruwe4CFQAAAAAdAAAAABAD');
+  background-image: url('https://static.luckyscent.com/images/products/17900.jpg?width=400&404=product.png');
   background-size: cover;
   background-position: center center;
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.5s;
   will-change: transform;
-  border: 15px solid white;
+  border: 2px solid rgb(180, 136, 136);
 }
 
 .card:hover {
