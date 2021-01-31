@@ -6,8 +6,17 @@
   width:100vw;
   height: 60px;
   align-items:center;
+  font-weight:bold;
 }
 
 .footer-link {
   padding:14px 12px 10px 12px;
+}
+
+.connect-icons {
+  color:black;
+}
+
+.MuiIconButton-label {
+  color:black;
 }
