@@ -11,32 +11,32 @@ export default class Footer extends React.Component {
     return (
       <div className="footer-container"> 
         <div className="connect-block">
-          CONNECT
+          <div className="connect-icons">
+
+            <IconButton>
+              <InstagramIcon/>
+            </IconButton>
+            <IconButton>
+              <FacebookIcon />
+            </IconButton>
+            <IconButton>
+              <TwitterIcon />
+            </IconButton>
+            <IconButton>
+              <PinterestIcon/>
+            </IconButton>
+          </div>
         </div>
-        <div className="connect-icons">
-          <IconButton>
-            <InstagramIcon onClick={this.showCartModal}/>
-          </IconButton>
-          <IconButton>
-            <FacebookIcon onClick={this.showCartModal} />
-          </IconButton>
-          <IconButton>
-            <TwitterIcon onClick={this.showCartModal} />
-          </IconButton>
-          <IconButton>
-            <PinterestIcon onClick={this.showCartModal}/>
-          </IconButton>
-        </div>
-        <div className="Press">
+        <div className="footer-link">
           PRESS
         </div>
-        <div className="blog">
+        <div className="footer-link">
           BLOG
         </div>
-        <div className="video">
+        <div className="footer-link">
           VIDEO
         </div>
-        <div ClassName="subscribe">
+        <div className="footer-link">
           SUBSCRIBE
         </div>
       </div>

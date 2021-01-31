@@ -5,15 +5,9 @@
   justify-content: space-evenly;
   width:100vw;
   height: 60px;
-  padding-top:20px;
+  align-items:center;
 }
 
-.connect-block {
-}
-
-.connect-icons {
-  display:flex;
-  flex-direction:row;
-
-  
+.footer-link {
+  padding:14px 12px 10px 12px;
 }
