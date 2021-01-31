@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import Gifts from './components/Gifts';
 import AqabaHome from './AqabaHome';
+import Footer from './components/Footer'
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import {createMuiTheme} from '@material-ui/core/styles';
@@ -29,6 +30,7 @@ class App extends Component {
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
+            <Footer />
           </Router>
           </div>
       </ThemeProvider>
