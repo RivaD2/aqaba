@@ -6,6 +6,7 @@
 
 - React
 - react-spring
+- React Responsive Carousel
 - react-router-dom
 - Material-UI
 - react-google-login

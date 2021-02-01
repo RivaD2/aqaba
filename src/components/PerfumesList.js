@@ -1,14 +1,17 @@
 import React from 'react'
-import PerfumeCard from './PerfumeCard';
+import PerfumeCarousel from './Carousel';
 
-const PerfumesList = () => {
-  return (
-    <div className="perfume-container">
-      <div className="perfume-cards">
-      <PerfumeCard />
-      AQABA SPRING
+import './PerfumesList.css';
+
+export default class PerfumesList extends React.Component {
+  render() {
+    return (
+      <div className="perfume-container">
+        <div className="perfume-cards">
+        </div>
+        <PerfumeCarousel />
       </div>
-    </div>
-  )
+    )
+  }
 }
-export default PerfumesList;
+
