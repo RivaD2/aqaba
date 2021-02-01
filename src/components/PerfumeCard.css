@@ -25,8 +25,8 @@ body {
 }
 
 .card {
-  width: 15ch;
-  height: 15ch;
+  width: 25ch;
+  height: 25ch;
   background: grey;
   border-radius: 5px;
   background-image: url('https://static.luckyscent.com/images/products/17900.jpg?width=400&404=product.png');
@@ -41,3 +41,4 @@ body {
 .card:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
+

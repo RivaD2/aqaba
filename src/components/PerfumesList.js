@@ -7,9 +7,12 @@ export default class PerfumesList extends React.Component {
     const tempCards = [{},{},{},{},{}];
     return (
       <div className="perfume-container">
+          <div className="perfumes-links">
+            AQABA FEMININE/AQABA MASCULINE
+          </div>
         <div className="perfume-cards">
-        </div>
           <PerfumeCarousel cards={tempCards}/>
+          </div>
       </div>
     )
   }

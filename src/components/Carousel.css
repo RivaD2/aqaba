@@ -1,0 +1,25 @@
+.carousel-container {
+  /* flex-direction: row; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height:260px;
+  align-items: center;
+}
+
+.slide {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  background-color: white;
+}
+
+.carousel  {
+  width:90%;
+  justify-content: center;
+  align-items: center;
+}
+
