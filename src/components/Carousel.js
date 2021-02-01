@@ -5,11 +5,11 @@ import PerfumeCard from './PerfumeCard';
 
 class PerfumeCarousel extends React.Component {
     render() {
+        let perfumeCards = this.props.cards;
+        const listOfPerfumes = perfumeCards.map(card => <PerfumeCard key={card}/>)
         return (
             <Carousel>
-                <div>
-                    <PerfumeCard />
-                </div>
+              {listOfPerfumes}
             </Carousel>
         );
     }
