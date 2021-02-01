@@ -1,0 +1,9 @@
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  font-family:'Amiri', 'serif';
+  color:white;
+  border: 1px solid whitesmoke;
+}
