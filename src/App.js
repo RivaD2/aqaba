@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
-import Gifts from './components/Gifts';
-import AqabaHome from './AqabaHome';
+import Gifts from './pages/Gifts';
+import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer'
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';

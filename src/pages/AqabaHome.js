@@ -1,11 +1,10 @@
 import React from 'react'
-import ImageFade from './components/ImageFade';
-import TextButton from './components/TextButton';
+import ImageFade from '../components/ImageFade';
+import TextButton from '../components/TextButton';
 import {Link} from 'react-router-dom';
-import './AqabaHome.css';
+import '../pages/AqabaHome.css';
 
 const AqabaHome = props  => {
-  
   return (
     <div className="home">
         <ImageFade />

@@ -9,7 +9,7 @@ export default class PerfumesList extends React.Component {
       <div className="perfume-container">
         <div className="perfume-cards">
         </div>
-        <PerfumeCarousel cards={tempCards}/>
+          <PerfumeCarousel cards={tempCards}/>
       </div>
     )
   }
