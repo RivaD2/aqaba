@@ -1,5 +1,16 @@
 .perfume-container {
     display:flex;
-    flex-direction:row;
-    height:100vh;
+    flex-direction:column;
+    min-height:600px;
+    justify-content: center;
 }
+
+.perfume-cards {
+    align-items:center;
+}
+
+.perfumes-links {
+    text-align:center;
+    font-size:14pt;
+}
+

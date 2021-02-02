@@ -1,0 +1,17 @@
+.carousel-container {
+  flex-direction:row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height:270px;
+  align-items: center;
+}
+
+.carousel .slide {
+  background-color:white;
+}
+
+
