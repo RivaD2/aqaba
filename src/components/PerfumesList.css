@@ -1,23 +1,38 @@
 .perfume-container {
-    display:flex;
-    flex-direction:column;
-    min-height:600px;
-    justify-content: center;
+  display:flex;
+  flex-direction:column;
+  min-height:600px;
+  justify-content: center;
+}
+
+.most-popular {
+  text-align:center;
+  font-size:15pt;
+  padding-top:50px;
 }
 
 .perfume-cards {
-    align-items:center;
+  align-items:center;
+}
+
+hr {
+  color:black;
+
 }
 
 .perfumes-links-container {
-    text-align:center;
-    font-size:14pt;
+  text-align:center;
+  font-size:14pt;
+  padding-top:16px;
 }
 
 .perfume-links {
-    color: black;
-    font-size: 12pt;
-    padding-left: 10px;
-    font-weight: bold;
+  color: black;
+  font-size: 15pt;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
+.card-container {
+    padding-bottom:16px;
+}

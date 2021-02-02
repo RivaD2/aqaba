@@ -25,3 +25,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.control-prev {
+  color: red;
+  width:50px;
+}
+
+.control-next {
+  color:red;
+  width:50px;
+}
