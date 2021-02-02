@@ -110,9 +110,76 @@
   ],
   "aqaba_body":[
     { 
-      "title":"Aqaba-Classic", 
-      "price": [92, 135],
-      "size": ["3.4oz", "1.7oz"],
-      "description":"Notes: Top notes of exotic Bulgarian Rose, Cinnamon, Cardamom and an array of Red Sea flowers, long treasured for their powers to evoke romantic passions, carry mid-notes of Egyptian Jasmine, Damask Rose and Clove.  Frankincense, combined with Peach, Tea Leaves, White Cedarwood and Fragrant Oak Moss, capture Sheba's lust for adventure, courage and curiosity."
+      "title":"Aqaba Perfume Body Lotion", 
+      "price": 35,
+      "size": "6oz",
+      "description":"Sensuous and smooth, non-oily and moisturizing. All Aqaba lotions include the following ingredients: Alphahydroxy Fruit Acids, Coconut Oil, Macademia Nut Oil, Sunflower, Olive and Apricot oils, Green Tea Extracts, Aloe, White Lily, Indian Hemp, Watercress extracts and Hydrolyzed Collagen. Your body lotion can be used alone or is perfect for layering with your corresponding Aqaba fragrance."
     },
+    { 
+      "title":"Aqaba Perfume Shower Gel", 
+      "price": 32,
+      "size": "6oz",
+      "description":"Soothing, moisturizing and envigorating, with Alphahydroxy Fruit Acids, Green Tea Extracts and Aloe."
+    },
+    { 
+      "title":"Aqaba Perfume Massage, Bath and Body Oil", 
+      "price": 45,
+      "size": "6oz",
+      "description":"Aqaba Massage Oil is water soluble, and is a blend of natural oils providing superior glide and absorption, reducing build up and stickiness for greater ease of use and comfort. This non-greasy formula contains rich Oils and Vitamins to aid the healing of dry and damaged skin while it soothes and moisturizes.Softly AQABA scented, Relaxing, Soothing and Moisturizing. Use as a Massage Oil, Body Moisturizer, in or after Bath Oil. Ingredients include: Alphahydroxy Fruit Acids, Safflower, Sunflower and Grape Seed Oil, Jojoba, Macademia Nut Oils and Green Tea Extracts, Aqaba Fragrance."
+    },
+    { 
+      "title":"Aqaba Linen and Room Spray", 
+      "price": 35,
+      "size": "6oz",
+      "description":"Scented with a fusion of Aqaba Classic essences, Mandarin Orange and Blackberry of Aqaba Spring. This linen and Room spray is a beautiful mist by which to either rest and fall asleep or to relax and entertain guests in a lingering beautiful aroma.Alcohol Free and water-based, this linen Spray is perfect for use at home, on linens, fabrics, at the office, hotel rooms or any space you want smelling fresh and clean."
+    },
+    { 
+      "title":"Aqaba Shampoo", 
+      "price": 32,
+      "size": "6oz",
+      "description":"For normal hair, Aqaba's Shampoo cleans and conditions whie moisturizing and detangling. Luxurious and sudsy, ingredients include Vitamin B and plant based humectants (moisturizing agents) to soften and shine. May be used daily if desired."
+    },
+    { 
+      "title":"Aqaba Argan Hair Mist and Shine", 
+      "price": 34,
+      "size": "6oz",
+      "description":"Vegan, Infused with Botanicals, Cruelty Free, Paraben Free, Preservative Free, Sulfate Free.In a blend of beneficial botanical extracts, this incredibly rich oil helps make your hair shine like never before while making it softer and more manageable.  Aqaba's cutting edge Argan Hair Shine Spray provides both nourishment and shine in a light, sprayable formula. Naturally derived ingredients penetrate to help moisturize each individual hair strand.Our Virgin Organic Argan Oil is harvested by a women's cooperative in the traditional manner by the local women of the Berber Tribe and rural Morocco.Ingredients include: Virgin Organic Argania Spinosa (Argan) Kernel Oil,  Organic Salvia Officinalis (Sage) Leaf Extract, Organic Equisetum Arvense (Horsetail) Extract, Organic Calendula Officinalis (Marigold) Flower Extract, Organic Chamomilla Recutita (Chamomile) Flower Extract, Organic Panax Ginseng (Ginseng) Root Extract, Avena Sativa (Oat) Extract, Organic Citrus Medica Limonum (Lemon) Peel Extract, Organic Aloe Barbadensis (Aloe Vera) Leaf Extract, Oryza Sativa (Rice) Bran Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Helianthus Annuus (Sunflower) Extract, Tocopherols"
+    },
+    { 
+      "title":"Aqaba Milk Bath", 
+      "price": 38,
+      "size": "6oz",
+      "description":"Infused with Botanicals, Paraben Free, Soy Free, Cruelty Free. The creamy pearlescent liquid produces mountains of foam in your bathtub and is just what is needed to relieve all the day's stress. This gently cleansing, pH balanced bath is made from vegetable derived surfactants and enriched with naturally derived ingredients.  Whole Milk, rich in B-vitamins, Hydroxy Acids, Calcium and more has long been used in traditional cultures for natural moisture and hydration for the skin.Milk contains proteins, enzymes, amino acids and antioxidants, all incredibly valuable for our skin. Milk proteins are skin-enhancing since they promote smoothness and help to strengthen skin structure.Pour a few capfuls of AQABA Milk Bath under running warm bath water and enjoy!"
+    },
+    { 
+      "title":"Aqaba Scented Hand Sanitizer Gel", 
+      "price": 24,
+      "size": "6oz",
+      "description":"Scented with AQABA essential oils.Aqaba scented Hand Sanitizer is a 70% Alcohol formulation with Aloe Vera.  While very effective, an alcohol sanitizer can be drying to the hands and, therefore, we recommended to wait at least 30-60 seconds before applying any hand moisturizer.Batched in an FDA sanitized facility the following precautions must be maintained: PLEASE KEEP OUT OF REACH OF CHILDREN. DO NOT INGEST, HAND SANITIZER IS FLAMMABLE AND RAGS SOAKED IN HAND SANITIZER WILL BE FLAMMABLE. RAGS OR GARMENTS SOAKED IN HAND SANITIZER SHOULD NOT BE DRIED IN A DRYER EVEN AFTER BEING WASHED."
+    },
+    { 
+      "title":"Aqaba No Rinse Foaming Hand Wash", 
+      "price": 18,
+      "size": "1.33oz",
+      "description":"Aqaba Foaming No Rinse Hand Wash is quick, cleans with no mess, is super easy to use and perfect for a speedy hand wash on the go with NO water necessary.  Non-drying to the hands, leaves hands soft and lightly moisturized. Use without water, simply dispense into hands and rub together until dry. Only a small amount is necessary for hands. Ingredients include Water, Aloe Vera and Vitamin E."
+    }
+  ],
+  "candles_misc":[
+    { 
+      "title":"Aqaba Gift Card", 
+      "price": 25
+    },
+    { 
+      "title":"Aqaba Perfume Glass Candle", 
+      "price": 35,
+      "size": "9oz",
+      "description":"Aqaba's 9oz hand poured AQABA scented candle is a deep woody scent, highlighting Aqaba notes of cinnamon, cardamom, cloves and Damask Rose . All blended in veiled woody embers of Incense, Oak Moss and Vanilla. Aqaba's warm and sensuous scent fills the whole house this Holiday Season.In amber glass, the 9oz burn time is a slow 35+ hours burn in a mixture of Apricot and Coconut wax.  The glass is securely covered with a gold metal lid and can easily travel in the enclosed AQABA velour red draw-string pouch.Candle jar, with lid, is 3.5 inches in height and the diameter is 2.5 inches."
+    },
+    { 
+      "title":"Aqaba Perfume Candle", 
+      "price": 28,
+      "size": "9oz",
+      "description":"Black brass candle plate included in package. Aqaba scent lingers throughout room(s).Candle burns completely, does not 'tunnel'."
+    }
+  ]
 }
