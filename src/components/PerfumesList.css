@@ -9,8 +9,15 @@
     align-items:center;
 }
 
-.perfumes-links {
+.perfumes-links-container {
     text-align:center;
     font-size:14pt;
+}
+
+.perfume-links {
+    color: black;
+    font-size: 12pt;
+    padding-left: 10px;
+    font-weight: bold;
 }
 
