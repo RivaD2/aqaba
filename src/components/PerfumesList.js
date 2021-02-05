@@ -20,7 +20,7 @@ export default class PerfumesList extends React.Component {
             <hr />
           </div>
           <div className="perfumes-links-container">
-            <Link to="/perfumes-masculine" className="perfume-links">
+            <Link to="/perfumes-feminine" className="perfume-links">
               AQABA FEMININE /
             </Link>
             <Link to="/perfumes-masculine" className="perfume-links">
