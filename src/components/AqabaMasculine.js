@@ -1,15 +1,15 @@
 import React from 'react'
 import PerfumeCard from './PerfumeCard';
-import './AqabaFeminine.css';
+import './AqabaMasculine.css';
 
-export default class AqabaFeminine extends React.Component {
+export default class AqabaMasculine extends React.Component {
   render() {
     return (
       <div className="list-container">
-        <div className="perfumes-feminine">
-          AQABA FEMININE
+        <div className="perfumes-masculine">
+          AQABA MASCULINE
         </div>
-        <div className="perfumes-list-feminine">
+        <div className="perfumes-list-masculine">
           <PerfumeCard />
         </div>
       </div>

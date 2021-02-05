@@ -3,6 +3,7 @@ import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import AqabaFeminine from './components/AqabaFeminine';
+import AqabaMasculine from './components/AqabaMasculine';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -30,8 +31,8 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfumes-feminine" component={AqabaFeminine} />
-              <Route path="/perfumes/masculine" component={PerfumesList} />
+              <Route exact path="/perfumes/feminine" component={AqabaFeminine} />
+              <Route exact path="/perfumes/masculine" component={AqabaMasculine} />
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />
