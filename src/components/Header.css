@@ -23,7 +23,7 @@
 
 .link-block, .icon-block {
   flex-grow:0;
-  flex-basis:200px;
+  /* flex-basis:200px; */
   display:flex;
   flex-direction:row;
   align-items:flex-end;

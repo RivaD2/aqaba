@@ -35,7 +35,7 @@ class Header extends React.Component {
         <div className="nav-container">
           <div className="link-block">
             <Link to="/" className="nav-item" color="inherit">
-            AQABA/
+            AQABA HOME/
             </Link>
             <Link to="/perfumes" className="nav-item">
               PERFUMES/

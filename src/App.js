@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import AqabaFeminine from './components/AqabaFeminine';
 import AqabaMasculine from './components/AqabaMasculine';
+import PerfumeSelected from './pages/PerfumeSelected';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -33,6 +34,7 @@ class App extends Component {
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/perfumes/feminine" component={AqabaFeminine} />
               <Route exact path="/perfumes/masculine" component={AqabaMasculine} />
+              <Route exact path="perfume/selected" component={PerfumeSelected} />
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />
