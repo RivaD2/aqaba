@@ -9,8 +9,8 @@ class PerfumeCarousel extends React.Component {
         let perfumeCards = this.props.cards;
         const listOfPerfumes = perfumeCards.map(card => <PerfumeCard key={card}/>)
         return (
-            <div className="carousel-container">
-              <Carousel>
+          <div className="carousel-container">
+              <Carousel showArrows={true} showThumbs={true}>
                 {listOfPerfumes}
               </Carousel>
             </div>
@@ -19,3 +19,14 @@ class PerfumeCarousel extends React.Component {
 };
 
 export default PerfumeCarousel;
+/*<Carousel showArrows={true} showThumbs={true}>
+{
+  images.map((url, index) => (
+      <div key={index}>
+         <img src={url} />
+         <p>Legend</p>
+      </div>
+  ))
+}
+</Carousel>
+*/

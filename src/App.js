@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
-import AqabaFeminine from './components/AqabaFeminine';
-import AqabaMasculine from './components/AqabaMasculine';
 import PerfumeSelected from './pages/PerfumeSelected';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
@@ -22,7 +20,7 @@ let theme = createMuiTheme({
   }
 })
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
@@ -32,9 +30,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfumes/feminine" component={AqabaFeminine} />
-              <Route exact path="/perfumes/masculine" component={AqabaMasculine} />
-              <Route exact path="perfume/selected" component={PerfumeSelected} />
+              <Route exact path="/perfume/selected" component={PerfumeSelected} />
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />

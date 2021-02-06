@@ -1,12 +1,32 @@
+import { Divider } from '@material-ui/core';
 import React from 'react'
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
-import {Link} from 'react-router-dom';
 import './PerfumesList.css';
 
 export default class PerfumesList extends React.Component {
+  // Need to do ajax call to get list of perfumes from DB
+  state = {filterByCategory: undefined};
+
+  onListFilter = category => {
+    this.setState({
+      filterByCategory: category
+    })
+  };
+
   render() {
-    const tempCards = [{},{},{},{},{}];
+    const tempCards = [
+      {category: 'masculine'},
+      {category: 'masculine'},
+      {category:'feminine'},
+      {category: 'feminine'},
+      {category: 'feminine'}
+    ];
+
+    const filteredCards = tempCards.filter(card => {
+      return card.category === this.state.filterByCategory
+    });
+
     return (
       <div className="perfume-container">
         <div className="most-popular">
@@ -20,17 +40,18 @@ export default class PerfumesList extends React.Component {
             <hr />
           </div>
           <div className="perfumes-links-container">
-            <Link to="/perfumes/feminine" className="perfume-links">
+            <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
               AQABA FEMININE /
-            </Link>
-            <Link to="/perfumes/masculine" className="perfume-links">
+            </div>
+            <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
               AQABA MASCULINE
-            </Link>
+            </div>
               <div className="card-container">
-               {/* Grid for Card layout */}
-               <div className="card">
-               <PerfumeCard />
-               </div>
+              {filteredCards.map(card => (
+                <div className="card" key={card}>
+                 <PerfumeCard />
+                </div>
+              ))}
               </div>
           </div>
       </div>
