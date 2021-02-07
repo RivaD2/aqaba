@@ -1,9 +1,10 @@
-{
-  "perfumes_feminine":[
+
+  [
     { 
       "perfume_title":"Aqaba-Classic", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Oriental Floral Spice",
       "description":"Notes: Top notes of exotic Bulgarian Rose, Cinnamon, Cardamom and an array of Red Sea flowers, long treasured for their powers to evoke romantic passions, carry mid-notes of Egyptian Jasmine, Damask Rose and Clove.  Frankincense, combined with Peach, Tea Leaves, White Cedarwood and Fragrant Oak Moss, capture Sheba's lust for adventure, courage and curiosity."
     },
@@ -11,6 +12,7 @@
       "perfume_title":"Aqaba-Spring", 
       "price": [92, 132],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Fresh Floral",
       "description":"Notes: Exquisite and Fresh, in fields of flowers, SPRING's top notes evoke a gentle breeze of Mandarin Orange with flower buds of Black Currant and Cinnamon.  Middle notes of nightblooming Egyptian Jasmine blend with Damask Rose, Rose of Morocco and Turkish Rose.  Peach and Apricot flowers flow into a long-lasting dry-down of clove-pink buds, tobacco and vanilla bourbon."
     },
@@ -18,6 +20,7 @@
       "perfume_title":"Jewels of Blu", 
       "price":[92, 135],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Fresh Fruity-Floral",
       "description":"Notes: Fresh, fruity and floral, top notes seduce in bursts of peach and apricot, blending into veils of Rose de Mai and Ylang Ylang, with bottom notes of Vanilla Bourbon, Egyptian Jasmine and Patchouli."
     },
@@ -25,6 +28,7 @@
       "perfume_title":"Sands of Aqaba", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Oriental Woody",
       "description":"Notes: Invitingly warm and mysterious, SANDS of AQABA opens with the allure of Florentine Iris, Roman Chamomille and Algerian Geranium.  Middle notes extend an invitingly warm embrace of Coriander and Cardamom, resting on a lavish and lingering trail of Vetiver, Frankincense and Tuberose."
     },
@@ -32,6 +36,7 @@
       "perfume_title":"Midnight Sun", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Oriental Floral",
       "description":"Notes: Combining a rich floral bouquet of freesia and gardenia, which blends into veils of Damask Rose and Orange Flowers, Midnight Sun's primary character rests on a rich and exotic base of oud, sandalwood and tuberose."
     },
@@ -39,6 +44,7 @@
       "perfume_title":"Vie d'Amour Woman", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Floral, Woody, Musk",
       "description":"Notes: Invitingly warm and elegantly sensual, Vie d'Amour woman is alluring with top notes of Bergamot, Fresh Greens and Jasmine.  Resting on veils of Blackberry, White Flowers and Roses of Arabia, Vie d'Amour captures your spirit and lingers, amidst a warm embrace of Patchouli and Incense. "
     },
@@ -46,6 +52,7 @@
       "perfume_title":"Aqaba-White", 
       "price": 110,
       "size": ".25oz",
+      "category": "feminine",
       "type": "Minty Floral",
       "description":"Notes: A fresh and uplifting AQABA fragrance, AQABA WHITE is a sultry white. Love is in the air with notes of Lemongrass, Lavender and White Flowers. Infused with Eucalyptus and Sandalwood, WHITE is perfectly relaxing, in the cool of winter or in the heat of summer."
     },
@@ -53,15 +60,15 @@
       "perfume_title":"Aqaba-Perfume", 
       "price":92,
       "size": ["3.4oz", "1.7oz"],
+      "category": "feminine",
       "type": "Warm, spicy",
       "description":"Hand made Gold Leaf bottle with ruby cap and decorated with swarovski crystals design. Perfume notes include: cinnamon, cardamom, damask rose, egyptian jasmine and incense."
-    }
-  ],
-  "perfumes_masculine":[
+    },
     { 
       "perfume_title":"Aqaba-Men", 
       "price": 100,
       "size": "3.4oz",
+      "category":"masculine",
       "type": "Citrus, Spicy",
       "description":"Notes: California Citrus, white flowers and Green notes. Dry down: Leather, Cognac, Sandalwood and Musk."
     },
@@ -69,6 +76,7 @@
       "perfume_title":"Aqaba-Men II", 
       "price": 100,
       "size": "3.4oz",
+      "category":"masculine",
       "type": "Citrus/Fresh/Oriental Woody",
       "description":"Notes: Fresh Greens, Tea Leaves and Leather gently blend with notes of Cardamom, Peppercorn and Thyme. Bottom notes of Amber and Sandalwood create an inviting dry-down."
     },
@@ -76,6 +84,7 @@
       "perfume_title":"Vie d'Amour MEN", 
       "price":100,
       "size": "3.4oz",
+      "category":"masculine",
       "type": "Citrus/Fresh",
       "description":"Notes: Fresh, energizing and envigorating, Vie d'Amour MEN captures the romance and spirit of man. Crisp top notes of lime, ginger, and fresh greens blend into an exhilarating fusion of Bergamot, Pear and Almond. A fresh and sensuous base of cedarwood and sandalwood embrace a dry-down of tonka bean and vanilla bourbon."
     },
@@ -83,6 +92,7 @@
       "perfume_title":"Aqaba Incense - unisex", 
       "price": [92, 135],
       "size": "1.7oz",
+      "category":"masculine",
       "type": "Woody, dark",
       "description":"Notes: Woody notes of Incense and Amber are brightened with wildberries, lavender and rose, while deep notes of black pepper and Oud blend with sprinkles of Cassia and Clove."
     },
@@ -90,6 +100,7 @@
       "perfume_title":"Aqaba Black", 
       "price": 100,
       "size": "1.7oz",
+      "category":"masculine",
       "type": "Sensual, Warm",
       "description":"Notes: Capturing the dramatic allure of an Arabian Wedding, AQABA Black represents the sensuality of love's warm embrace. In notes of Oud, wrapped in Amber, emotions are ignited in this lover's scents of Sandalwood and Incense."
     },
@@ -97,6 +108,7 @@
       "perfume_title":"Aqaba Oud", 
       "price": 135,
       "size": "1.7oz",
+      "category":"masculine",
       "type": "Sensual, Warm",
       "description":"Notes: As the incense burning in ancient temples, Aqaba Oud carries exotic notes of rose woods and borrowed cardamom from Aqaba Classic, to develop a sensuous veil of sandalwoods with warm amber and hints of vetiver."
     },
@@ -104,8 +116,8 @@
       "perfume_title":"Aqaba Oud Black", 
       "price": 130,
       "size": "1.7oz",
+      "category":"masculine",
       "type": "Woody Floral",
       "description":"Notes: With hints of deep red Roses and precious Agarwood, Oud Black is richly scented with woody notes in veils of Vanilla, Sandalwood and Incense. Exotic florals and sensuous woods provide for an alluring trail."
     }
   ]
-}

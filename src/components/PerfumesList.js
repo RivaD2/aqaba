@@ -1,4 +1,3 @@
-import { Divider } from '@material-ui/core';
 import React from 'react'
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
@@ -6,7 +5,7 @@ import './PerfumesList.css';
 
 export default class PerfumesList extends React.Component {
   // Need to do ajax call to get list of perfumes from DB
-  state = {filterByCategory: undefined};
+  state = {filterByCategory: 'feminine'};
 
   onListFilter = category => {
     this.setState({
