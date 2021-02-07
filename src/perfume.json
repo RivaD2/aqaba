@@ -1,7 +1,7 @@
 
   [
     { 
-      "perfume_title":"Aqaba-Classic", 
+      "title":"Aqaba-Classic", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -9,7 +9,7 @@
       "description":"Notes: Top notes of exotic Bulgarian Rose, Cinnamon, Cardamom and an array of Red Sea flowers, long treasured for their powers to evoke romantic passions, carry mid-notes of Egyptian Jasmine, Damask Rose and Clove.  Frankincense, combined with Peach, Tea Leaves, White Cedarwood and Fragrant Oak Moss, capture Sheba's lust for adventure, courage and curiosity."
     },
     { 
-      "perfume_title":"Aqaba-Spring", 
+      "title":"Aqaba-Spring", 
       "price": [92, 132],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -17,7 +17,7 @@
       "description":"Notes: Exquisite and Fresh, in fields of flowers, SPRING's top notes evoke a gentle breeze of Mandarin Orange with flower buds of Black Currant and Cinnamon.  Middle notes of nightblooming Egyptian Jasmine blend with Damask Rose, Rose of Morocco and Turkish Rose.  Peach and Apricot flowers flow into a long-lasting dry-down of clove-pink buds, tobacco and vanilla bourbon."
     },
     { 
-      "perfume_title":"Jewels of Blu", 
+      "title":"Jewels of Blu", 
       "price":[92, 135],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -25,7 +25,7 @@
       "description":"Notes: Fresh, fruity and floral, top notes seduce in bursts of peach and apricot, blending into veils of Rose de Mai and Ylang Ylang, with bottom notes of Vanilla Bourbon, Egyptian Jasmine and Patchouli."
     },
     { 
-      "perfume_title":"Sands of Aqaba", 
+      "title":"Sands of Aqaba", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -33,7 +33,7 @@
       "description":"Notes: Invitingly warm and mysterious, SANDS of AQABA opens with the allure of Florentine Iris, Roman Chamomille and Algerian Geranium.  Middle notes extend an invitingly warm embrace of Coriander and Cardamom, resting on a lavish and lingering trail of Vetiver, Frankincense and Tuberose."
     },
     { 
-      "perfume_title":"Midnight Sun", 
+      "title":"Midnight Sun", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -41,7 +41,7 @@
       "description":"Notes: Combining a rich floral bouquet of freesia and gardenia, which blends into veils of Damask Rose and Orange Flowers, Midnight Sun's primary character rests on a rich and exotic base of oud, sandalwood and tuberose."
     },
     { 
-      "perfume_title":"Vie d'Amour Woman", 
+      "title":"Vie d'Amour Woman", 
       "price": [92, 135],
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -49,7 +49,7 @@
       "description":"Notes: Invitingly warm and elegantly sensual, Vie d'Amour woman is alluring with top notes of Bergamot, Fresh Greens and Jasmine.  Resting on veils of Blackberry, White Flowers and Roses of Arabia, Vie d'Amour captures your spirit and lingers, amidst a warm embrace of Patchouli and Incense. "
     },
     { 
-      "perfume_title":"Aqaba-White", 
+      "title":"Aqaba-White", 
       "price": 110,
       "size": ".25oz",
       "category": "feminine",
@@ -57,7 +57,7 @@
       "description":"Notes: A fresh and uplifting AQABA fragrance, AQABA WHITE is a sultry white. Love is in the air with notes of Lemongrass, Lavender and White Flowers. Infused with Eucalyptus and Sandalwood, WHITE is perfectly relaxing, in the cool of winter or in the heat of summer."
     },
     { 
-      "perfume_title":"Aqaba-Perfume", 
+      "title":"Aqaba-Perfume", 
       "price":92,
       "size": ["3.4oz", "1.7oz"],
       "category": "feminine",
@@ -65,7 +65,7 @@
       "description":"Hand made Gold Leaf bottle with ruby cap and decorated with swarovski crystals design. Perfume notes include: cinnamon, cardamom, damask rose, egyptian jasmine and incense."
     },
     { 
-      "perfume_title":"Aqaba-Men", 
+      "title":"Aqaba-Men", 
       "price": 100,
       "size": "3.4oz",
       "category":"masculine",
@@ -73,7 +73,7 @@
       "description":"Notes: California Citrus, white flowers and Green notes. Dry down: Leather, Cognac, Sandalwood and Musk."
     },
     { 
-      "perfume_title":"Aqaba-Men II", 
+      "title":"Aqaba-Men II", 
       "price": 100,
       "size": "3.4oz",
       "category":"masculine",
@@ -81,7 +81,7 @@
       "description":"Notes: Fresh Greens, Tea Leaves and Leather gently blend with notes of Cardamom, Peppercorn and Thyme. Bottom notes of Amber and Sandalwood create an inviting dry-down."
     },
     { 
-      "perfume_title":"Vie d'Amour MEN", 
+      "title":"Vie d'Amour MEN", 
       "price":100,
       "size": "3.4oz",
       "category":"masculine",
@@ -89,7 +89,7 @@
       "description":"Notes: Fresh, energizing and envigorating, Vie d'Amour MEN captures the romance and spirit of man. Crisp top notes of lime, ginger, and fresh greens blend into an exhilarating fusion of Bergamot, Pear and Almond. A fresh and sensuous base of cedarwood and sandalwood embrace a dry-down of tonka bean and vanilla bourbon."
     },
     { 
-      "perfume_title":"Aqaba Incense - unisex", 
+      "title":"Aqaba Incense - unisex", 
       "price": [92, 135],
       "size": "1.7oz",
       "category":"masculine",
@@ -97,7 +97,7 @@
       "description":"Notes: Woody notes of Incense and Amber are brightened with wildberries, lavender and rose, while deep notes of black pepper and Oud blend with sprinkles of Cassia and Clove."
     },
     { 
-      "perfume_title":"Aqaba Black", 
+      "title":"Aqaba Black", 
       "price": 100,
       "size": "1.7oz",
       "category":"masculine",
@@ -105,7 +105,7 @@
       "description":"Notes: Capturing the dramatic allure of an Arabian Wedding, AQABA Black represents the sensuality of love's warm embrace. In notes of Oud, wrapped in Amber, emotions are ignited in this lover's scents of Sandalwood and Incense."
     },
     { 
-      "perfume_title":"Aqaba Oud", 
+      "title":"Aqaba Oud", 
       "price": 135,
       "size": "1.7oz",
       "category":"masculine",
@@ -113,11 +113,93 @@
       "description":"Notes: As the incense burning in ancient temples, Aqaba Oud carries exotic notes of rose woods and borrowed cardamom from Aqaba Classic, to develop a sensuous veil of sandalwoods with warm amber and hints of vetiver."
     },
     { 
-      "perfume_title":"Aqaba Oud Black", 
+      "title":"Aqaba Oud Black", 
       "price": 130,
       "size": "1.7oz",
       "category":"masculine",
       "type": "Woody Floral",
       "description":"Notes: With hints of deep red Roses and precious Agarwood, Oud Black is richly scented with woody notes in veils of Vanilla, Sandalwood and Incense. Exotic florals and sensuous woods provide for an alluring trail."
+    },
+    { 
+      "title":"Aqaba Perfume Body Lotion", 
+      "price": 35,
+      "category":"body",
+      "size": "6oz",
+      "description":"Sensuous and smooth, non-oily and moisturizing. All Aqaba lotions include the following ingredients: Alphahydroxy Fruit Acids, Coconut Oil, Macademia Nut Oil, Sunflower, Olive and Apricot oils, Green Tea Extracts, Aloe, White Lily, Indian Hemp, Watercress extracts and Hydrolyzed Collagen. Your body lotion can be used alone or is perfect for layering with your corresponding Aqaba fragrance."
+    },
+    { 
+      "title":"Aqaba Perfume Shower Gel", 
+      "price": 32,
+      "category":"body",
+      "size": "6oz",
+      "description":"Soothing, moisturizing and envigorating, with Alphahydroxy Fruit Acids, Green Tea Extracts and Aloe."
+    },
+    { 
+      "title":"Aqaba Perfume Massage, Bath and Body Oil", 
+      "price": 45,
+      "category":"body",
+      "size": "6oz",
+      "description":"Aqaba Massage Oil is water soluble, and is a blend of natural oils providing superior glide and absorption, reducing build up and stickiness for greater ease of use and comfort. This non-greasy formula contains rich Oils and Vitamins to aid the healing of dry and damaged skin while it soothes and moisturizes.Softly AQABA scented, Relaxing, Soothing and Moisturizing. Use as a Massage Oil, Body Moisturizer, in or after Bath Oil. Ingredients include: Alphahydroxy Fruit Acids, Safflower, Sunflower and Grape Seed Oil, Jojoba, Macademia Nut Oils and Green Tea Extracts, Aqaba Fragrance."
+    },
+    { 
+      "title":"Aqaba Linen and Room Spray", 
+      "price": 35,
+      "category":"body",
+      "size": "6oz",
+      "description":"Scented with a fusion of Aqaba Classic essences, Mandarin Orange and Blackberry of Aqaba Spring. This linen and Room spray is a beautiful mist by which to either rest and fall asleep or to relax and entertain guests in a lingering beautiful aroma.Alcohol Free and water-based, this linen Spray is perfect for use at home, on linens, fabrics, at the office, hotel rooms or any space you want smelling fresh and clean."
+    },
+    { 
+      "title":"Aqaba Shampoo", 
+      "price": 32,
+      "category":"body",
+      "size": "6oz",
+      "description":"For normal hair, Aqaba's Shampoo cleans and conditions whie moisturizing and detangling. Luxurious and sudsy, ingredients include Vitamin B and plant based humectants (moisturizing agents) to soften and shine. May be used daily if desired."
+    },
+    { 
+      "title":"Aqaba Argan Hair Mist and Shine", 
+      "price": 34,
+      "category":"body",
+      "size": "6oz",
+      "description":"Vegan, Infused with Botanicals, Cruelty Free, Paraben Free, Preservative Free, Sulfate Free.In a blend of beneficial botanical extracts, this incredibly rich oil helps make your hair shine like never before while making it softer and more manageable.  Aqaba's cutting edge Argan Hair Shine Spray provides both nourishment and shine in a light, sprayable formula. Naturally derived ingredients penetrate to help moisturize each individual hair strand.Our Virgin Organic Argan Oil is harvested by a women's cooperative in the traditional manner by the local women of the Berber Tribe and rural Morocco.Ingredients include: Virgin Organic Argania Spinosa (Argan) Kernel Oil,  Organic Salvia Officinalis (Sage) Leaf Extract, Organic Equisetum Arvense (Horsetail) Extract, Organic Calendula Officinalis (Marigold) Flower Extract, Organic Chamomilla Recutita (Chamomile) Flower Extract, Organic Panax Ginseng (Ginseng) Root Extract, Avena Sativa (Oat) Extract, Organic Citrus Medica Limonum (Lemon) Peel Extract, Organic Aloe Barbadensis (Aloe Vera) Leaf Extract, Oryza Sativa (Rice) Bran Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Helianthus Annuus (Sunflower) Extract, Tocopherols"
+    },
+    { 
+      "title":"Aqaba Milk Bath", 
+      "price": 38,
+      "category":"body",
+      "size": "6oz",
+      "description":"Infused with Botanicals, Paraben Free, Soy Free, Cruelty Free. The creamy pearlescent liquid produces mountains of foam in your bathtub and is just what is needed to relieve all the day's stress. This gently cleansing, pH balanced bath is made from vegetable derived surfactants and enriched with naturally derived ingredients.  Whole Milk, rich in B-vitamins, Hydroxy Acids, Calcium and more has long been used in traditional cultures for natural moisture and hydration for the skin.Milk contains proteins, enzymes, amino acids and antioxidants, all incredibly valuable for our skin. Milk proteins are skin-enhancing since they promote smoothness and help to strengthen skin structure.Pour a few capfuls of AQABA Milk Bath under running warm bath water and enjoy!"
+    },
+    { 
+      "title":"Aqaba Scented Hand Sanitizer Gel", 
+      "price": 24,
+      "category":"body",
+      "size": "6oz",
+      "description":"Scented with AQABA essential oils.Aqaba scented Hand Sanitizer is a 70% Alcohol formulation with Aloe Vera.  While very effective, an alcohol sanitizer can be drying to the hands and, therefore, we recommended to wait at least 30-60 seconds before applying any hand moisturizer.Batched in an FDA sanitized facility the following precautions must be maintained: PLEASE KEEP OUT OF REACH OF CHILDREN. DO NOT INGEST, HAND SANITIZER IS FLAMMABLE AND RAGS SOAKED IN HAND SANITIZER WILL BE FLAMMABLE. RAGS OR GARMENTS SOAKED IN HAND SANITIZER SHOULD NOT BE DRIED IN A DRYER EVEN AFTER BEING WASHED."
+    },
+    { 
+      "title":"Aqaba No Rinse Foaming Hand Wash", 
+      "price": 18,
+      "category":"body",
+      "size": "1.33oz",
+      "description":"Aqaba Foaming No Rinse Hand Wash is quick, cleans with no mess, is super easy to use and perfect for a speedy hand wash on the go with NO water necessary.  Non-drying to the hands, leaves hands soft and lightly moisturized. Use without water, simply dispense into hands and rub together until dry. Only a small amount is necessary for hands. Ingredients include Water, Aloe Vera and Vitamin E."
+    },
+    { 
+      "title":"Aqaba Gift Card", 
+      "price": 25,
+      "category": "gift"
+    },
+    { 
+      "title":"Aqaba Perfume Glass Candle", 
+      "price": 35,
+      "category": "gift",
+      "size": "9oz",
+      "description":"Aqaba's 9oz hand poured AQABA scented candle is a deep woody scent, highlighting Aqaba notes of cinnamon, cardamom, cloves and Damask Rose . All blended in veiled woody embers of Incense, Oak Moss and Vanilla. Aqaba's warm and sensuous scent fills the whole house this Holiday Season.In amber glass, the 9oz burn time is a slow 35+ hours burn in a mixture of Apricot and Coconut wax.  The glass is securely covered with a gold metal lid and can easily travel in the enclosed AQABA velour red draw-string pouch.Candle jar, with lid, is 3.5 inches in height and the diameter is 2.5 inches."
+    },
+    { 
+      "title":"Aqaba Perfume Candle", 
+      "price": 28,
+      "category": "gift",
+      "size": "9oz",
+      "description":"Black brass candle plate included in package. Aqaba scent lingers throughout room(s).Candle burns completely, does not 'tunnel'."
     }
   ]
