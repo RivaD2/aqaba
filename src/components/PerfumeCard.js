@@ -6,11 +6,9 @@ import './PerfumeCard.css';
 
 const PerfumeCard = props => {
 const history = useHistory();
-console.log('in history object in perfumeCard', history)
 
 const onCardClick = () => {
-  console.log('in onCardClick');
-  history.push("/perfume/selected");
+  history.push(`/perfume/${props.product._id}`);
 }
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -20,10 +18,10 @@ const [animateProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5
 console.log(onCardClick)
 return (
   <animated.div
-    class="card"
+    className="card"
     onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
     onMouseLeave={() => set({ xys: [0, 0, 1] })}
-    style={{ transform: animateProps.xys.interpolate(trans) }}
+    style={{ transform: animateProps.xys.interpolate(trans), backgroundImage:`url('/assets/${props.product.image}')` }}
     onClick={onCardClick}
   > {props.product.title}
   </animated.div>

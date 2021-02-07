@@ -24,13 +24,6 @@ export default class PerfumesList extends React.Component {
   };
 
   render() {
-    const tempCards = [
-      {category: 'masculine'},
-      {category: 'masculine'},
-      {category:'feminine'},
-      {category: 'feminine'},
-      {category: 'feminine'}
-    ];
     const {list} = this.state;
     const filteredCards = list === undefined ? [] : list.filter(card => {
       return card.category === this.state.filterByCategory
@@ -58,7 +51,7 @@ export default class PerfumesList extends React.Component {
           </div>
           <div className="card-container">
               {filteredCards.map(card => (
-                <div className="card" key={card}>
+                <div className="card" key={card._id}>
                  <PerfumeCard product={card} />
                 </div>
               ))}
