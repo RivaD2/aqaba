@@ -1,12 +1,22 @@
 import React from 'react'
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
+import {getPerfumes} from '../Axios';
 import './PerfumesList.css';
 
 export default class PerfumesList extends React.Component {
-  // Need to do ajax call to get list of perfumes from DB
-  state = {filterByCategory: 'feminine'};
+  state = {
+    filterByCategory: 'feminine',
+    list: undefined
+  };
 
+  async componentDidMount() {
+   const list = await getPerfumes();
+   this.setState({
+     list
+   })
+  }
+ 
   onListFilter = category => {
     this.setState({
       filterByCategory: category
@@ -21,8 +31,8 @@ export default class PerfumesList extends React.Component {
       {category: 'feminine'},
       {category: 'feminine'}
     ];
-
-    const filteredCards = tempCards.filter(card => {
+    const {list} = this.state;
+    const filteredCards = list === undefined ? [] : list.filter(card => {
       return card.category === this.state.filterByCategory
     });
 
@@ -32,8 +42,8 @@ export default class PerfumesList extends React.Component {
           MOST POPULAR
         </div>
         <div className="perfume-cards">
-          {/* Replace cards in Carousel with full size images, no effects */}
-          <PerfumeCarousel cards={tempCards}/>
+          {/* if list is defined, show carousel */}
+          {list && <PerfumeCarousel cards={list}/>}
           </div>
           <div>
             <hr />
@@ -49,7 +59,7 @@ export default class PerfumesList extends React.Component {
           <div className="card-container">
               {filteredCards.map(card => (
                 <div className="card" key={card}>
-                 <PerfumeCard />
+                 <PerfumeCard product={card} />
                 </div>
               ))}
               </div>

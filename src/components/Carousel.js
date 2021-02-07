@@ -7,7 +7,12 @@ import './Carousel.css';
 class PerfumeCarousel extends React.Component {
     render() {
         let perfumeCards = this.props.cards;
-        const listOfPerfumes = perfumeCards.map(card => <PerfumeCard key={card}/>)
+        const mostPopular = ['Midnight Sun', 'Aqaba-Sands', 'Aqaba-Classic'];
+        const listOfPerfumes = perfumeCards.filter(card => {
+          console.log('looking for' + card.title);
+          return mostPopular.includes(card.title)
+        }).map(card => <PerfumeCard key={card} product={card}/>)
+
         return (
           <div className="carousel-container">
               <Carousel showArrows={true} showThumbs={true}>
