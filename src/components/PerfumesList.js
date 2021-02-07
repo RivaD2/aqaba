@@ -46,14 +46,14 @@ export default class PerfumesList extends React.Component {
             <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
               AQABA MASCULINE
             </div>
-              <div className="card-container">
+          </div>
+          <div className="card-container">
               {filteredCards.map(card => (
                 <div className="card" key={card}>
                  <PerfumeCard />
                 </div>
               ))}
               </div>
-          </div>
       </div>
     )
   }
