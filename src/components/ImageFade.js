@@ -4,7 +4,7 @@ import './ImageFade.css';
 
 const slides = [
   { id: 2, url: '/assets/aqaba-shore.png' },
-  { id: 3, url: '/assets/aqaba-tala-bay.png'},
+  { id: 3, url: '/assets/aqabashore2.jpg'}
 ]
 
 const ImageFade = () => {
