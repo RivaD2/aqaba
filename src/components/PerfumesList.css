@@ -47,6 +47,7 @@ hr {
     max-width:125ch;
     justify-content: space-between;
     margin-left:52px;
+    align-self:center;
 }
 
 .card {

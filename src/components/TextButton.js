@@ -7,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
       fontFamily:['Amiri', 'serif'],
-      border: '1px solid white',
-      color: 'white',
+      border: '1px solid black',
+      color: 'black',
       fontSize:'16pt'
     },
   },

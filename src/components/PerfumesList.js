@@ -7,7 +7,7 @@ import './PerfumesList.css';
 export default class PerfumesList extends React.Component {
   state = {
     filterByCategory: 'feminine',
-    list: undefined
+    list: undefined,
   };
 
   async componentDidMount() {
@@ -19,7 +19,7 @@ export default class PerfumesList extends React.Component {
  
   onListFilter = category => {
     this.setState({
-      filterByCategory: category
+      filterByCategory: category,
     })
   };
 

@@ -2,7 +2,7 @@ import React from 'react'
 import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
-import PerfumeSelected from './pages/PerfumeSelected';
+import ProductSelected from './pages/ProductSelected';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -30,7 +30,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" component={PerfumeSelected} />
+              <Route exact path="/perfume/:id" component={ProductSelected} />
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />

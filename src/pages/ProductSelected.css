@@ -1,8 +1,10 @@
 .perfume-details-container {
   display:flex;
   flex-direction:row;
-  max-height:520px;
-  font-size:15pt;
+  max-height:600px;
+  font-size:18pt;
+  font-weight:bold;
+  margin-left:16pt;
 }
 
 .perfume-card {
@@ -12,5 +14,6 @@
 .perfume-details {
   display:flex;
   flex-direction:column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-left:16pt;
 }
