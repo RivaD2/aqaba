@@ -20,6 +20,11 @@
   flex-direction:row;
 }
 
+a:hover {
+  font-weight:bold;
+  color: rgb(240, 96, 29);
+}
+
 .link-block, .icon-block {
   flex-grow:0;
   flex-basis:280px; 

@@ -27,13 +27,13 @@ class Header extends React.Component {
       showCartModal: !this.state.showCartModal
     })
   }
-
+  
   render() {
     return (
       <div className="header">
         <div className="nav-container">
-          <div className="link-block">
-            <Link to="/" className="nav-item" color="inherit">
+          <div className="link-block" >
+            <Link to="/" className="nav-item" style={{fontWeight: this.state.fontWeight}} onClick={this.onLinkClicked}>
             AQABA HOME/
             </Link>
             <Link to="/perfumes" className="nav-item">

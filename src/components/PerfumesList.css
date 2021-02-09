@@ -37,6 +37,10 @@ hr {
   padding-bottom: 15px;
 }
 
+.perfume-links:hover {
+  color: rgb(240, 96, 29);
+}
+
 .card-container {
     padding-bottom:16px;
     flex-direction:row;

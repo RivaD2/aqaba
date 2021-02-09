@@ -20,6 +20,8 @@ import './App.css';
 // Finish linking cartIcon to CartModal and updating items added using state or redux...
 // Style Aqaba Masculine
 // Move on to CartModal
+// Change images on Home to have perfume layers added so it is clear what the site is about
+// Add style to app for Jordinian theme
 
 
 let font =  "font-family: 'Cairo', sans-serif"

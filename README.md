@@ -1,5 +1,11 @@
 # Aqaba: A complete makeover of the Aqaba website
 
+### I took a site that offers a unique product and decided to completely redo it. Aqaba by Miriam Mirini is a perfume site that also offers other products related to body care and home decor. 
+
+### BEFORE:
+
+### AFTER:
+
 ### Author: Riva Davidowski
 
 ### Tools Used:
@@ -16,9 +22,6 @@
 - Figma (for wireframes)
 
 ### How to use Aqaba:
-
-
-### Finished result:
 
 
 ### Wireframes:
