@@ -3,7 +3,6 @@ import { useSpring, animated } from 'react-spring';
 import {useHistory, withRouter} from 'react-router-dom';
 import './PerfumeCard.css';
 
-
 const PerfumeCard = props => {
 const history = useHistory();
 

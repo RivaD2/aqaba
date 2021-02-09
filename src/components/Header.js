@@ -5,7 +5,6 @@ import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import IconButton from "@material-ui/core/IconButton";
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
-
 import './Header.css';
 
 class Header extends React.Component {

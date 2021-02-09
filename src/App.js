@@ -12,6 +12,15 @@ import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
+// TODO's:
+// On PerfumeSelected, map through list of prices and sizes, fix error with props and fix footer
+// Remove underline from TextButton
+// On Product List move titles outside of cards and render price, size dynamically
+// Finish linking add to card button to CartModal
+// Finish linking cartIcon to CartModal and updating items added using state or redux...
+// Style Aqaba Masculine
+// Move on to CartModal
+
 
 let font =  "font-family: 'Cairo', sans-serif"
 let theme = createMuiTheme({

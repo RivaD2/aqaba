@@ -20,7 +20,6 @@
   flex-direction:row;
 }
 
-
 .link-block, .icon-block {
   flex-grow:0;
   flex-basis:280px; 
