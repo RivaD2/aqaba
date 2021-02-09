@@ -21,6 +21,7 @@ import './App.css';
 // Style Aqaba Masculine
 // Move on to CartModal
 // Change images on Home to have perfume layers added so it is clear what the site is about
+// Give pages clear names so user knows where they are!
 // Add style to app for Jordinian theme
 
 
@@ -31,26 +32,23 @@ let theme = createMuiTheme({
   }
 })
 
-class App extends React.Component {
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-      <div className="router-container App">
-          <Router history={history}>
-          <Header />
-            <Switch>
-              <Route exact path="/" component={AqabaHome}/>
-              <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" component={ProductSelected} />
-              <Route exact path="/gifts" component={Gifts} />
-            </Switch>
-            <Footer />
-          </Router>
-          </div>
-      </ThemeProvider>
-
-    )
-  }
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+    <div className="router-container App">
+        <Router history={history}>
+        <Header />
+          <Switch>
+            <Route exact path="/" component={AqabaHome}/>
+            <Route exact path="/perfumes" component={PerfumesList} />
+            <Route exact path="/perfume/:id" component={ProductSelected} />
+            <Route exact path="/gifts" component={Gifts} />
+          </Switch>
+          <Footer />
+        </Router>
+        </div>
+    </ThemeProvider>
+  )
 }
 
 export default App;
