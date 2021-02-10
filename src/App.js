@@ -33,24 +33,28 @@ let theme = createMuiTheme({
 })
 
 class App extends React.Component {
-  state = {showModal: false}
-  toggleModal = () => {}
-
-  toggleModalCallback = toggleFunction => {
-  this.toggleModal = toggleFunction;
+  state = {
+    showModal: false,
+    toggleModal: () => {}
   }
+ 
+  toggleModalCallback = toggleFunction => {
+    this.setState({
+      toggleModal: toggleFunction
+    })
+ }
   
   render() {
     return (
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
-          <Header />
+          <Header toggleModal={this.state.toggleModal}/>
           <Modal toggleModalCallback={this.toggleModalCallback}/>
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" component={ProductSelected} />
+              <Route exact path="/perfume/:id" render={() => <ProductSelected toggleModal={this.state.toggleModal} /> }/> 
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />

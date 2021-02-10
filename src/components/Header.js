@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import CartModal from '../modals/CartModal';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
@@ -9,7 +10,7 @@ import './Header.css';
 
 class Header extends React.Component {
   state = {showSearchField: false};
-
+  
   toggleSearchField = () => {
     this.setState({
       showSearchField: !this.state.showSearchField
@@ -26,6 +27,7 @@ class Header extends React.Component {
     this.setState({
       showCartModal: !this.state.showCartModal
     })
+    this.props.toggleModal(<CartModal />);
   }
   
   render() {
@@ -50,7 +52,7 @@ class Header extends React.Component {
           <div className="icon-block">
             <div className="cart-icon">
               <IconButton>
-                <AddShoppingCartOutlinedIcon onClick={this.showCartModal}/>
+                <AddShoppingCartOutlinedIcon onClick={this.onCartClicked}/>
               </IconButton>
             </div>
             <div className="search-icon">

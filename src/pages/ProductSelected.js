@@ -1,19 +1,19 @@
 import React from 'react';
 import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
-import Modal from '../modals/Modal';
+import CartModal from '../modals/CartModal';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {getProduct} from '../Axios';
 import './ProductSelected.css';
 
-const ProductSelected = () => {
+const ProductSelected = props => {
   const [product, setProduct] = useState();
   
-  let toggleModal = () => {};
-  const toggleModalCallback = toggleFunction => {
-    toggleModal = toggleFunction;
+  const onCartIconClicked = () => {
+    props.toggleModal(<CartModal />)
   }
+
   const {id} = useParams();
   useEffect(() => {
     (async () => {
@@ -38,14 +38,11 @@ const ProductSelected = () => {
           <div className="size">
             <SimpleSelect />
           </div>
-          <TextButton className="add-to-cart" text='ADD TO CART' onClick={() => toggleModal(true)}></TextButton>
+          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onCartIconClicked}></TextButton>
           <div className="product-desc">
             {product.description}
           </div>
         </div>
-        <Modal toggleModalCallback={toggleModalCallback}>
-          <div>Cart Modal goes here</div>
-        </Modal>
       </div>
     )
   }

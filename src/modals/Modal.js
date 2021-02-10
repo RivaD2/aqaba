@@ -53,13 +53,20 @@ Fade.propTypes = {
 const SpringModal = ({children, toggleModalCallback}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  
+  // content for any modal!
+  const [content, setContent] = React.useState(null);
+
   React.useEffect(() => {
     // Passing setOpen function to Parent, App
     if(!toggleModalCallback) return;
-    toggleModalCallback(setOpen);
+    toggleModalCallback(toggleModalContent);
   },[toggleModalCallback]);
-
+  
+  const toggleModalContent = newContent => {
+   setContent(newContent);
+  //  call Modal with arg will open modal
+   setOpen(!!newContent);
+  }
 
   const handleClose = () => {
     setOpen(false);
@@ -81,7 +88,7 @@ const SpringModal = ({children, toggleModalCallback}) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            {children}
+            {content}
           </div>
         </Fade>
       </Modal>
