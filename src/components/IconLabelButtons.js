@@ -16,10 +16,13 @@ const IconLabelButtons = () => {
     <div>
       <Button
         variant="contained"
-        color="secondary"
+        color="default"
         className={classes.button}
         startIcon={<DeleteIcon />}
       >
-        Delete
+        REMOVE FROM CART
       </Button>
     </div>
+  )
+}
+export default IconLabelButtons;
