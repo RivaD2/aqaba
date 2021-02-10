@@ -1,0 +1,29 @@
+.cart-container {
+  display:flex;
+  flex-direction:row;
+  font-size:12pt;
+  font-weight:bold;
+  margin-left: 14pt;
+}
+
+.cart-item-count {
+  font-size: 20pt;
+}
+
+.perfume-card {
+  padding-bottom:12px;
+}
+
+.product-title {
+  font-size:22pt;
+}
+
+.cart-details {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left:16pt;
+}
+
+
+

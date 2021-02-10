@@ -38,7 +38,7 @@ const ProductSelected = props => {
           <div className="size">
             <SimpleSelect />
           </div>
-          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onCartIconClicked}></TextButton>
+          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onCartIconClicked}>REMOVE</TextButton>
           <div className="product-desc">
             {product.description}
           </div>
