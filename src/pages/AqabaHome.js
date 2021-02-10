@@ -9,7 +9,7 @@ const AqabaHome = props  => {
     <div className="home">
         <ImageFade />
       <div className="home-content">
-        <Link to="/perfumes">
+        <Link to="/perfumes" style={{ textDecoration: 'inherit'}} className="perfume-link">
           <TextButton text='Discover Aqaba'/>
         </Link>
       </div>

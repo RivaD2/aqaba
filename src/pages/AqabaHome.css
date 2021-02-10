@@ -15,3 +15,7 @@
   justify-content: center;
   padding-top:30%;
 }
+
+.perfume-link:hover {
+  color:rgb(240, 96, 29);
+}
