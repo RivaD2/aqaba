@@ -9,17 +9,27 @@ const useStyles = makeStyles((theme) => ({
       fontFamily:['Amiri', 'serif'],
       border: '1px solid black',
       color: 'black',
-      fontSize:'16pt'
+      fontSize:'16pt',
     },
   },
+  underline: {
+    "&&&:before": {
+      borderBottom: "none"
+    },
+    "&&:after": {
+      borderBottom: "none"
+    }
+  }
 }));
+
 
 const TextButton = props => {
   const {onClick, text} = props;
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
-      <Button onClick={onClick}>{text}</Button>
+      <Button onClick={onClick} defaultValue="default text" InputProps={{classes}} >{text}</Button>
     </div>
   );
 }
