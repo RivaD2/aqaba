@@ -55,13 +55,11 @@ const SpringModal = ({children, toggleModalCallback}) => {
   const [open, setOpen] = React.useState(false);
   
   React.useEffect(() => {
+    // Passing setOpen function to Parent, App
     if(!toggleModalCallback) return;
     toggleModalCallback(setOpen);
   },[toggleModalCallback]);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -69,9 +67,6 @@ const SpringModal = ({children, toggleModalCallback}) => {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
-        react-spring
-      </button>
       <Modal
         aria-labelledby="spring-modal-title"
         aria-describedby="spring-modal-description"

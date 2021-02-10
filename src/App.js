@@ -6,6 +6,7 @@ import ProductSelected from './pages/ProductSelected';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
+import Modal from './modals/Modal';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import {createMuiTheme} from '@material-ui/core/styles';
@@ -32,12 +33,20 @@ let theme = createMuiTheme({
 })
 
 class App extends React.Component {
+  state = {showModal: false}
+  toggleModal = () => {}
+
+  toggleModalCallback = toggleFunction => {
+  this.toggleModal = toggleFunction;
+  }
+  
   render() {
     return (
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
           <Header />
+          <Modal toggleModalCallback={this.toggleModalCallback}/>
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />

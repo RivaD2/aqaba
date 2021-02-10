@@ -29,7 +29,7 @@ const TextButton = props => {
 
   return (
     <div className={classes.root}>
-      <Button onClick={onClick} defaultValue="default text" InputProps={{classes}} >{text}</Button>
+      <Button onClick={onClick} defaultValue="default text" inputProps={{classes}} >{text}</Button>
     </div>
   );
 }

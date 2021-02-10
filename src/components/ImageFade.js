@@ -19,7 +19,7 @@ const ImageFade = () => {
   return transitions.map(({ item, props, key }) => (
     <animated.div
       key={key}
-      class="bg"
+      className="bg"
       style={{ ...props, backgroundImage: `url(${item.url})` }}
     />
   ))
