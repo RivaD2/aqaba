@@ -14,7 +14,6 @@ import './App.css';
 
 // TODO's:
 // On PerfumeSelected, map through list of prices and sizes, fix error with props and fix footer
-// Remove underline from TextButton
 // On Product List move titles outside of cards and render price, size dynamically
 // Finish linking add to card button to CartModal
 // Finish linking cartIcon to CartModal and updating items added using state or redux...
@@ -32,23 +31,26 @@ let theme = createMuiTheme({
   }
 })
 
-const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-    <div className="router-container App">
-        <Router history={history}>
-        <Header />
-          <Switch>
-            <Route exact path="/" component={AqabaHome}/>
-            <Route exact path="/perfumes" component={PerfumesList} />
-            <Route exact path="/perfume/:id" component={ProductSelected} />
-            <Route exact path="/gifts" component={Gifts} />
-          </Switch>
-          <Footer />
-        </Router>
-        </div>
-    </ThemeProvider>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+      <div className="router-container App">
+          <Router history={history}>
+          <Header />
+            <Switch>
+              <Route exact path="/" component={AqabaHome}/>
+              <Route exact path="/perfumes" component={PerfumesList} />
+              <Route exact path="/perfume/:id" component={ProductSelected} />
+              <Route exact path="/gifts" component={Gifts} />
+            </Switch>
+            <Footer />
+          </Router>
+          </div>
+      </ThemeProvider>
+
+    )
+  }
 }
 
 export default App;
