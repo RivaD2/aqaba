@@ -3,19 +3,25 @@ import TextButton from '../components/TextButton';
 import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
-const CartModal = () => {
+const CartModal = props => {
+  console.log('cart has items', props.items);
+  // map over props.items
+  
   return (
     <div className="cart-container">
       <div className="perfume-card">
       <div className="cart-item-count">
-          CART(1)
+          CART ({props.items.length})
         </div>
         <img src={'/assets/aqaba-classic.png'} alt="product"></img>
       </div>
       <div className="cart-details">
-        <div className="product-title">
-          PERFUME TITLE
+        {/* finish mapping through items to display data in cartModal dynamically */}
+        {props.items.map(item => (
+          <div className="product-title">
+          {item.title}
         </div>
+      ))}
         <div className="product-price">
           PRICE
         </div>

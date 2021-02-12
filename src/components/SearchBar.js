@@ -12,8 +12,8 @@ export default class SearchBar extends React.Component {
   onFormSubmit = e => {
     e.preventDefault();
     this.props.onTermSubmit(this.state.term);
-    console.log('in on Form Submit', this.state.term);
   }
+  
   render() {
     return (
       <div> 

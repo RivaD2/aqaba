@@ -1,7 +1,6 @@
 import React from 'react';
 import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
-import CartModal from '../modals/CartModal';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {getProduct} from '../Axios';
@@ -9,11 +8,11 @@ import './ProductSelected.css';
 
 const ProductSelected = props => {
   const [product, setProduct] = useState();
-  
-  const onCartIconClicked = () => {
-    props.toggleModal(<CartModal />)
-  }
 
+  const onAddItemToCart = () => {
+    props.onAddItemToCart(product)
+  }
+  
   const {id} = useParams();
   useEffect(() => {
     (async () => {
@@ -38,7 +37,7 @@ const ProductSelected = props => {
           <div className="size">
             <SimpleSelect />
           </div>
-          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onCartIconClicked}>REMOVE</TextButton>
+          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart}></TextButton>
           <div className="product-desc">
             {product.description}
           </div>

@@ -3,6 +3,7 @@ import history from './history';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import ProductSelected from './pages/ProductSelected';
+import CartModal from './modals/CartModal';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -16,10 +17,8 @@ import './App.css';
 // TODO's:
 // On PerfumeSelected, map through list of prices and sizes, fix error with props and fix footer
 // On Product List move titles outside of cards and render price, size dynamically
-// Finish linking add to card button to CartModal
-// Finish linking cartIcon to CartModal and updating items added using state or redux...
+// Updating items/show items in cart when item is added
 // Style Aqaba Masculine
-// Move on to CartModal
 // Change images on Home to have perfume layers added so it is clear what the site is about
 // Give pages clear names so user knows where they are!
 // Add style to app for Jordinian theme
@@ -35,7 +34,9 @@ let theme = createMuiTheme({
 class App extends React.Component {
   state = {
     showModal: false,
-    toggleModal: () => {}
+    toggleModal: () => {},
+    cartItems:[],
+    cartTotal: 0
   }
  
   toggleModalCallback = toggleFunction => {
@@ -43,6 +44,16 @@ class App extends React.Component {
       toggleModal: toggleFunction
     })
  }
+
+  onAddItemToCart = product => {
+    this.state.cartItems.push(product);
+    this.state.toggleModal(<CartModal items={this.state.cartItems}/>)
+  }
+  
+  // Create method to remove item
+  // Accepts an arg of index of item to be removed
+  // Use slice/splice to remove item at index
+  // Pass it to cart modal onto the remove button, with prop of removeItem 
   
   render() {
     return (
@@ -54,7 +65,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={AqabaHome}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" render={() => <ProductSelected toggleModal={this.state.toggleModal} /> }/> 
+              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/> 
               <Route exact path="/gifts" component={Gifts} />
             </Switch>
             <Footer />

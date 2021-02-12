@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
+    border: '2px solid #E4AFC0',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -52,9 +53,9 @@ Fade.propTypes = {
 
 const SpringModal = ({children, toggleModalCallback}) => {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   // content for any modal!
-  const [content, setContent] = React.useState(null);
+  const [content, setContent] = useState(null);
 
   React.useEffect(() => {
     // Passing setOpen function to Parent, App

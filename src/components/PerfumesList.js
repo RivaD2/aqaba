@@ -7,7 +7,7 @@ import './PerfumesList.css';
 export default class PerfumesList extends React.Component {
   state = {
     filterByCategory: 'feminine',
-    list: undefined,
+    list: undefined
   };
 
   async componentDidMount() {
@@ -28,7 +28,7 @@ export default class PerfumesList extends React.Component {
     const filteredCards = list === undefined ? [] : list.filter(card => {
       return card.category === this.state.filterByCategory
     });
-
+  
     return (
       <div className="perfume-container">
         <div className="most-popular">

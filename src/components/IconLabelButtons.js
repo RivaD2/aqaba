@@ -6,6 +6,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
+    fontFamily:['Amiri', 'serif'],
   },
 }));
 
