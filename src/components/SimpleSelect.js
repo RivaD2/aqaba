@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SimpleSelect = () => {
+const SimpleSelect = props => {
   const classes = useStyles();
   const [size, setSize] = useState('');
   const onChange = e => {
@@ -35,8 +35,9 @@ const SimpleSelect = () => {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={2.5}>2.5mL</MenuItem>
-          <MenuItem value={1.5}>1.5mL</MenuItem>
+           {props.items.map(item => (
+             <MenuItem value={item}>{item}</MenuItem>
+           ))}
         </Select>
       </FormControl>
     </div>

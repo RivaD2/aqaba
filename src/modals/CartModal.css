@@ -1,6 +1,6 @@
 .cart-container {
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   font-size:12pt;
   font-weight:bold;
   margin-left: 14pt;
@@ -12,6 +12,12 @@
 
 .perfume-card {
   padding-bottom:12px;
+  display:flex;
+  flex-direction: row;
+}
+
+.aqaba-image {
+  height:120px;
 }
 
 .product-title {

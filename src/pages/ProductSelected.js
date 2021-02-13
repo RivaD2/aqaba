@@ -18,6 +18,7 @@ const ProductSelected = props => {
     (async () => {
       const product = await getProduct(id);
       setProduct(product);
+      console.log('setting product', product);
     })();
   }, [id]);
    if(!product ) return null;
@@ -35,7 +36,7 @@ const ProductSelected = props => {
             PRICE
           </div>
           <div className="size">
-            <SimpleSelect />
+            <SimpleSelect items={product.size}/>
           </div>
           <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart}></TextButton>
           <div className="product-desc">
