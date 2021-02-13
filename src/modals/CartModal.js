@@ -10,7 +10,8 @@ const CartModal = props => {
       <div className="cart-item-count">
           CART ({props.items.length})
       </div>
-          {props.items.map(item => (
+       {!props.items && (<div> Your Cart is Empty</div>)}
+        {props.items && props.items.map((item, index) => (
       <div className="perfume-card">
         <div className="cart-image">
           <img src={`/assets/${item.image}`} className="aqaba-image" alt="product"></img>
@@ -28,7 +29,7 @@ const CartModal = props => {
           <div className="qty">
             Qty: 
           </div>
-            <IconLabelButtons className="remove-item"/>
+            <IconLabelButtons className="remove-item" onClick={() => props.onRemoveItemFromCart(index)}/>
         </div>
       </div>
         ))}

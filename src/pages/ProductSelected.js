@@ -12,11 +12,11 @@ const ProductSelected = props => {
   const [price, setPrice] = useState();
 
   const onAddItemToCart = () => {
-    console.log(size)
-    // Changing array of possible values to one selected value
-    product.size = size;
-    product.price = price;
-    props.onAddItemToCart(product);
+    // Making copy of product and adding copy to cart
+    // So I can change array of possible values to one selected value
+    // Left to right I copy properties from one object to the next
+    const copyOfProduct =  Object.assign({}, product, {size, price});
+    props.onAddItemToCart(copyOfProduct);
   }
 
   const onSizeSelected = size => {
@@ -47,7 +47,7 @@ const ProductSelected = props => {
             {product.title}
           </div>
           <div className="price">
-           PRICE: $ {price} USD
+           PRICE: ${price} USD
           </div>
           <div className="size">
             <SimpleSelect items={product.size} onChange={onSizeSelected} selected={size}/>

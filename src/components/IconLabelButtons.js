@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const IconLabelButtons = () => {
+const IconLabelButtons = props => {
   const classes = useStyles();
 
   return (
@@ -19,6 +19,7 @@ const IconLabelButtons = () => {
       <Button
         variant="contained"
         color="default"
+        onClick={props.onClick}
         className={classes.button}
         startIcon={<DeleteIcon />}
       >

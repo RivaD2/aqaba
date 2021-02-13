@@ -15,9 +15,6 @@ import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
 // TODO's:
-// On PerfumeSelected, map through list of prices and sizes, fix error with props and fix footer
-// On Product List move titles outside of cards and render price, size dynamically
-// Updating items/show items in cart when item is added
 // Style Aqaba Masculine
 // Change images on Home to have perfume layers added so it is clear what the site is about
 // Give pages clear names so user knows where they are!
@@ -47,13 +44,20 @@ class App extends React.Component {
 
   onAddItemToCart = product => {
     this.state.cartItems.push(product);
-    this.state.toggleModal(<CartModal items={this.state.cartItems}/>)
+    this.showCart();
   }
   
-  // Create method to remove item
-  // Accepts an arg of index of item to be removed
-  // Use slice/splice to remove item at index
-  // Pass it to cart modal onto the remove button, with prop of removeItem 
+  onRemoveItemFromCart = indexOfItem => {
+  console.log('indexOFItem', indexOfItem);
+   this.state.cartItems.splice(indexOfItem, 1);
+   this.setState({
+     cartItems: [...this.state.cartItems]
+   }, this.showCart)
+  }
+
+  showCart = () => {
+    this.state.toggleModal(<CartModal items={this.state.cartItems} onRemoveItemFromCart={this.onRemoveItemFromCart}/>)
+  }
 
   render() {
     return (
