@@ -8,6 +8,7 @@
 
 .cart-item-count {
   font-size: 20pt;
+  padding-bottom:20px;
 }
 
 .perfume-card {
@@ -20,10 +21,6 @@
   height:120px;
 }
 
-.product-title {
-  font-size:16pt;
-}
-
 .cart-details {
   display:flex;
   flex-direction: column;
@@ -31,9 +28,26 @@
   margin-left:16pt;
 }
 
+.product-title {
+  font-size:16pt;
+}
+
+.product-price {
+  padding-top: 10px;
+}
+
+.product-size-selected {
+  padding-top:2px;
+}
+
+.qty {
+  padding-top:2px;
+  padding-bottom:10px;
+}
+
 .edit-and-checkout {
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
 }
 
 

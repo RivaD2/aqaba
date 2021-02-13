@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
       border: '1px solid black',
       color: 'black',
       fontSize:'16pt',
-      width: '100%'
     },
   },
   underline: {
@@ -30,7 +29,7 @@ const TextButton = props => {
 
   return (
     <div className={classes.root}>
-      <Button onClick={onClick} defaultValue="default text" inputProps={{classes}} >{text}</Button>
+      <Button onClick={onClick} defaultValue="default text">{text}</Button>
     </div>
   );
 }

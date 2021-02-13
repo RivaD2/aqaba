@@ -20,15 +20,15 @@ const CartModal = props => {
             {item.title}
           </div>
           <div className="product-price">
-            PRICE: {item.price}
+            Price: ${item.price} USD
           </div>
-          <div ClassName="product-size-selected">
-            SIZE: {item.size}
+          <div className="product-size-selected">
+            Size: {item.size}
           </div>
           <div className="qty">
-            QTY: 
+            Qty: 
           </div>
-            <IconLabelButtons/>
+            <IconLabelButtons className="remove-item"/>
         </div>
       </div>
         ))}
