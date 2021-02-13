@@ -4,8 +4,9 @@
   max-height:600px;
   font-size:14pt;
   font-weight:bold;
-  margin-left:14pt;
-  margin-top:50px;
+  padding-left:14pt;
+  padding-top:50px;
+  box-sizing: border-box;
 }
 
 .title {

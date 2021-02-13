@@ -1,6 +1,7 @@
 .header {
   z-index: 100;
   width:100vw;
+  height: 72px;
   background-color: rgba(175, 80, 91, 0.113);
 }
 

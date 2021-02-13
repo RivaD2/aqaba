@@ -6,7 +6,7 @@ import '../pages/AqabaHome.css';
 
 const AqabaHome = props  => {
   return (
-    <div className="home">
+    <div className="home App-body">
         <ImageFade />
       <div className="home-content">
         <Link to="/perfumes" style={{ textDecoration: 'inherit'}} className="perfume-link">

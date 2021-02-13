@@ -12,7 +12,7 @@ const ProductSelected = props => {
   const onAddItemToCart = () => {
     props.onAddItemToCart(product)
   }
-  
+
   const {id} = useParams();
   useEffect(() => {
     (async () => {
@@ -23,7 +23,7 @@ const ProductSelected = props => {
    if(!product ) return null;
    
     return (
-      <div className="perfume-details-container">
+      <div className="perfume-details-container App-body">
         <div className="perfume-card">
           <img src={`/assets/${product.image}`} alt="product"/>
         </div>
