@@ -22,12 +22,12 @@ const CartModal = props => {
             {item.title}
           </div>
           <div className="product-price">
+            PRICE: {item.price}
           </div>
           <div ClassName="product-size-selected">
-            SIZE
+            SIZE: {item.size}
           </div>
           <div className="qty">
-            {/* use SimpleSelect component with props so I can input qty and size depending */}
             QTY: 
           </div>
             <IconLabelButtons/>

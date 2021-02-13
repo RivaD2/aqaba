@@ -17,9 +17,8 @@ const useStyles = makeStyles((theme) => ({
 
 const SimpleSelect = props => {
   const classes = useStyles();
-  const [size, setSize] = useState('');
   const onChange = e => {
-    setSize(e.target.value);
+    props.onChange(e.target.value);
   };
 
   return (
@@ -29,7 +28,7 @@ const SimpleSelect = props => {
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
-          value={size}
+          value={props.selected}
           onChange={onChange}
         >
           <MenuItem value="">

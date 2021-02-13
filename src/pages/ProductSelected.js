@@ -8,9 +8,21 @@ import './ProductSelected.css';
 
 const ProductSelected = props => {
   const [product, setProduct] = useState();
+  const [size, setSize] = useState();
+  const [price, setPrice] = useState();
 
   const onAddItemToCart = () => {
-    props.onAddItemToCart(product)
+    console.log(size)
+    // Changing array of possible values to one selected value
+    product.size = size;
+    product.price = price;
+    props.onAddItemToCart(product);
+  }
+
+  const onSizeSelected = size => {
+    const indexSelected = product.size.indexOf(size);
+    setPrice(product.price[indexSelected]);
+    setSize(size)
   }
 
   const {id} = useParams();
@@ -33,10 +45,10 @@ const ProductSelected = props => {
             {product.title}
           </div>
           <div className="price">
-            PRICE
+            {price}
           </div>
           <div className="size">
-            <SimpleSelect items={product.size}/>
+            <SimpleSelect items={product.size} onChange={onSizeSelected} selected={size}/>
           </div>
           <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart}></TextButton>
           <div className="product-desc">
