@@ -21,7 +21,7 @@
 }
 
 .product-title {
-  font-size:22pt;
+  font-size:16pt;
 }
 
 .cart-details {
@@ -29,6 +29,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   margin-left:16pt;
+}
+
+.edit-and-checkout {
+  display:flex;
+  flex-direction:column;
 }
 
 

@@ -51,8 +51,8 @@ class Header extends React.Component {
           </div>
           <div className="icon-block">
             <div className="cart-icon">
-              <IconButton>
-                <AddShoppingCartOutlinedIcon onClick={this.onCartClicked}/>
+              <IconButton onClick={this.onCartClicked}>
+                <AddShoppingCartOutlinedIcon />
               </IconButton>
             </div>
             <div className="search-icon">

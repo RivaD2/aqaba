@@ -5,8 +5,6 @@ import '../modals/CartModal.css';
 
 const CartModal = props => {
   console.log('cart has items', props.items);
-  // map over props.items
-  
   return (
     <div className="cart-container">
       <div className="cart-item-count">
@@ -35,7 +33,7 @@ const CartModal = props => {
       </div>
         ))}
       <div className="edit-and-checkout">
-        <TextButton className="edit-cart" text='EDIT CART'></TextButton>
+        <TextButton className="checkout" text='EDIT CART'></TextButton>
         <TextButton className="checkout" text='CHECKOUT'></TextButton>
       </div>
     </div>

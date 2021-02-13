@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -31,11 +31,8 @@ const SimpleSelect = props => {
           value={props.selected}
           onChange={onChange}
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
            {props.items.map(item => (
-             <MenuItem value={item}>{item}</MenuItem>
+             <MenuItem key={item} value={item}>{item}</MenuItem>
            ))}
         </Select>
       </FormControl>

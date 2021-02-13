@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
       border: '1px solid black',
       color: 'black',
       fontSize:'16pt',
+      width: '100%'
     },
   },
   underline: {

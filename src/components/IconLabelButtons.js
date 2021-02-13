@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
     fontFamily:['Amiri', 'serif'],
+    width:'100px'
   },
 }));
 
@@ -21,7 +22,7 @@ const IconLabelButtons = () => {
         className={classes.button}
         startIcon={<DeleteIcon />}
       >
-        REMOVE FROM CART
+        REMOVE 
       </Button>
     </div>
   )

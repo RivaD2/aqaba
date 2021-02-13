@@ -8,7 +8,7 @@ import './ProductSelected.css';
 
 const ProductSelected = props => {
   const [product, setProduct] = useState();
-  const [size, setSize] = useState();
+  const [size, setSize] = useState('');
   const [price, setPrice] = useState();
 
   const onAddItemToCart = () => {
@@ -29,8 +29,10 @@ const ProductSelected = props => {
   useEffect(() => {
     (async () => {
       const product = await getProduct(id);
-      setProduct(product);
       console.log('setting product', product);
+      setProduct(product);
+      setSize(product.size[0]);
+      setPrice(product.price[0]);
     })();
   }, [id]);
    if(!product ) return null;
@@ -45,7 +47,7 @@ const ProductSelected = props => {
             {product.title}
           </div>
           <div className="price">
-            {price}
+           PRICE: $ {price} USD
           </div>
           <div className="size">
             <SimpleSelect items={product.size} onChange={onSizeSelected} selected={size}/>

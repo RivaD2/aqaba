@@ -54,7 +54,7 @@ class App extends React.Component {
   // Accepts an arg of index of item to be removed
   // Use slice/splice to remove item at index
   // Pass it to cart modal onto the remove button, with prop of removeItem 
-  
+
   render() {
     return (
       <ThemeProvider theme={theme}>
@@ -63,10 +63,10 @@ class App extends React.Component {
           <Header toggleModal={this.state.toggleModal}/>
           <Modal toggleModalCallback={this.toggleModalCallback}/>
             <Switch>
-              <Route exact path="/" component={AqabaHome}/>
+              <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/> 
-              <Route exact path="/gifts" component={Gifts} />
+              {/* <Route exact path="/gifts" component={Gifts} /> */}
             </Switch>
             <Footer />
           </Router>
