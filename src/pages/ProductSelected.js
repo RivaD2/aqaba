@@ -39,8 +39,8 @@ const ProductSelected = props => {
    
     return (
       <div className="perfume-details-container App-body">
-        <div className="perfume-card">
-          <img src={`/assets/${product.image}`} alt="product"/>
+        <div className="perfume-card ">
+          <img src={`/assets/${product.image}`} className="productSelected-image" alt="product"/>
         </div>
         <div className="perfume-details">
         <div className="title">

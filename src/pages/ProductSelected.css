@@ -9,12 +9,19 @@
   box-sizing: border-box;
 }
 
-.title {
-  font-size: 22pt;
-}
-
 .perfume-card {
   padding-bottom: 12px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.productSelected-image {
+  flex-grow:0;
+}
+
+.title {
+  font-size: 22pt;
 }
 
 .perfume-details {
