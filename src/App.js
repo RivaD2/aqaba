@@ -64,7 +64,7 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
-          <Header toggleModal={this.state.toggleModal}/>
+          <Header showCart={this.showCart}/>
           <Modal toggleModalCallback={this.toggleModalCallback}/>
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />}/>

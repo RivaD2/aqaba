@@ -2,11 +2,11 @@
   z-index: 100;
   width:100vw;
   height: 72px;
-  background-color: rgba(175, 80, 91, 0.113);
+  background-color: #FBF7F4;
 }
 
 .nav-item {
-  color:black;
+  color:#A44200;
   font-size:12pt;
   padding-left:10px;
   font-weight: bold;
@@ -23,7 +23,7 @@
 
 a:hover {
   font-weight:bold;
-  color: rgb(240, 96, 29);
+  color: #2B9EB3;
 }
 
 .link-block, .icon-block {

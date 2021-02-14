@@ -1,11 +1,10 @@
 
 .bg {
   position: absolute;
-  top: 20;
   left: 0;
   width: 100vw;
   background-size:cover;
-  background-position:center;
+  background-position:50% 66%;
   background-repeat: no-repeat;
   will-change: opacity;
   background-color: white;

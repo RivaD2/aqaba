@@ -7,9 +7,11 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
       fontFamily:['Amiri', 'serif'],
-      border: '1px solid black',
-      color: 'black',
+      border: '2px solid white',
+      color: 'white',
       fontSize:'16pt',
+      fontWeight: 'bold',
+      backgroundColor: '#DC9B56'
     },
   },
   underline: {

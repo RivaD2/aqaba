@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import CartModal from '../modals/CartModal';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
@@ -23,13 +22,6 @@ class Header extends React.Component {
     })
   }
 
-  onCartClicked = () => {
-    this.setState({
-      showCartModal: !this.state.showCartModal
-    })
-    this.props.toggleModal(<CartModal />);
-  }
-  
   render() {
     return (
       <div className="header">
@@ -51,7 +43,7 @@ class Header extends React.Component {
           </div>
           <div className="icon-block">
             <div className="cart-icon">
-              <IconButton onClick={this.onCartClicked}>
+              <IconButton onClick={this.props.showCart}>
                 <AddShoppingCartOutlinedIcon />
               </IconButton>
             </div>
