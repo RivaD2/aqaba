@@ -1,6 +1,6 @@
-# Aqaba: A complete makeover of the Aqaba website
+# Aqaba: A complete makeover of the website for Aqaba perfumes
 
-### I took a site that offers a unique product and decided to completely redo it. Aqaba by Miriam Mirini is a perfume site that also offers other products related to body care and home decor. 
+### I took a site that offers a unique product and decided to completely redo it. Aqaba by Miriam Mirani is a perfume site that also offers other products related to body care and home decor. 
 
 ### BEFORE:
 

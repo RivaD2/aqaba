@@ -39,7 +39,7 @@ class Header extends React.Component {
           </div>
           <div className="title-block">
             AQABA
-            <div className="creator-title">by Miriam Mirini</div>
+            <div className="creator-title">by Miriam Mirani</div>
           </div>
           <div className="icon-block">
             <div className="cart-icon">
