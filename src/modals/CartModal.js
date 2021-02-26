@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import TextButton from '../components/TextButton';
 import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
@@ -35,7 +36,9 @@ const CartModal = props => {
         ))}
       <div className="edit-and-checkout">
         <TextButton className="checkout" text='EDIT CART'></TextButton>
-        <TextButton className="checkout" text='CHECKOUT'></TextButton>
+        <Link to="/checkout" style={{ textDecoration: 'inherit'}} className="checkout">
+          <TextButton text='CHECKOUT'/>
+        </Link>
       </div>
     </div>
   )

@@ -29,7 +29,6 @@ const ProductSelected = props => {
   useEffect(() => {
     (async () => {
       const product = await getProduct(id);
-      console.log('setting product', product);
       setProduct(product);
       setSize(product.size[0]);
       setPrice(product.price[0]);
