@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
+import Checkout from './pages/Checkout';
 import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -19,6 +20,8 @@ import './App.css';
 // Change images on Home to have perfume layers added so it is clear what the site is about
 // Give pages clear names so user knows where they are!
 // Add style to app for Jordinian theme
+// Finish checkout page 
+// Create page for additional products
 
 
 let font =  "font-family: 'Cairo', sans-serif"
@@ -69,7 +72,8 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/> 
+              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/>
+              <Route exact path="/checkout" component={Checkout} />
               {/* <Route exact path="/gifts" component={Gifts} /> */}
             </Switch>
             <Footer />
