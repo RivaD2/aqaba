@@ -1,8 +1,33 @@
 import React, { Component } from 'react'
 import TextField from '../components/TextField';
+import Accordian from '../components/Accordian';
 import '../pages/Checkout.css'
 
 export default class Checkout extends Component {
+  shippingInfo = [
+    {
+      label: 'First Name*'
+    },
+    {
+      label: 'Last Name*'
+    },
+    {
+      label: 'Address*'
+    },
+    {
+      label: ''
+    },
+    {
+      label: 'City*'
+    },
+    {
+      label: 'Zipcode*'
+    },
+    {
+      label: 'State/Province*'
+    }
+];
+
   render() {
     return (
       <div className="checkout-container">
@@ -13,7 +38,10 @@ export default class Checkout extends Component {
            Shipping Address
          </div>
       <div className="shipping-details">
-         <TextField />
+        {this.shippingInfo.map(field => (
+        <TextField key={field.label} field={field} />
+        ))}
+        <Accordian />
       </div>
     </div>
     )

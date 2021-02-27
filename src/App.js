@@ -59,9 +59,14 @@ class App extends React.Component {
   }
 
   showCart = () => {
-    this.state.toggleModal(<CartModal items={this.state.cartItems} onRemoveItemFromCart={this.onRemoveItemFromCart}/>)
+    this.state.toggleModal(
+      <CartModal 
+        items={this.state.cartItems} 
+        onRemoveItemFromCart={this.onRemoveItemFromCart}
+        toggleModal={this.state.toggleModal}
+      />)
   }
-
+  
   render() {
     return (
       <ThemeProvider theme={theme}>
