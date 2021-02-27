@@ -34,12 +34,12 @@ export default class Checkout extends Component {
         <div className="checkout-header">
           Checkout
           </div>
-         <div ClassName="shipping-header">
-           Shipping Address
-         </div>
       <div className="shipping-details">
+        <div className="shipping-header">
+          Shipping Address
+        </div>
         {this.shippingInfo.map(field => (
-        <TextField key={field.label} field={field} />
+          <TextField key={field.label} field={field} />
         ))}
         <Accordian />
       </div>

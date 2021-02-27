@@ -10,10 +10,15 @@
 }
 
 .shipping-header {
-  text-align:center;
-  padding-bottom: 22px;
+  padding-bottom:20px;
+  font-size:14pt;
+  font-weight: bold;
 }
 
 .shipping-details {
   padding-top: 22px;
+  padding-left:100px;
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 100px;
 }

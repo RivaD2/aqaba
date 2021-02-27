@@ -21,7 +21,7 @@ const TextFieldSizes = props => {
         <TextField
           id="outlined-full-width"
           defaultValue={props.field.label}
-          style={{margin: 8, width: '30%'}}
+          style={{width: '30%'}}
           variant="outlined"
           margin="normal"
           InputLabelProps={{
