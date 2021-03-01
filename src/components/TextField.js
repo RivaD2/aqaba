@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
     },
     textField: {
       marginLeft: theme.spacing(1),
