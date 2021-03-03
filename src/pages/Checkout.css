@@ -1,7 +1,19 @@
 .checkout-container {
   display:flex;
-  flex-direction:column;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+
+.shipping-container {
+  display:flex;
+  flex-direction:row;
   min-height:100vh;
+}
+
+.shipping-container {
+  display:flex;
+  flex-direction:column;
+  background-color: rgb(235, 232, 227);
 }
 
 .checkout-header {
@@ -12,6 +24,7 @@
 .contact-details-container {
   display:flex;
   flex-direction:column;
+  width: 300px;
 }
 
 .contact-header {
@@ -29,9 +42,19 @@
 
 .shipping-details {
   padding-top: 22px;
-  padding-left:100px;
   display:flex;
   flex-direction: column;
   padding-bottom: 100px;
+}
+
+.checkout-items-container {
+  display:flex;
+  flex-direction:column;
   background-color: rgb(235, 232, 227);
+  width: 300px;
+}
+
+.checkout-buttons {
+  display:flex;
+  flex-direction:row;
 }
