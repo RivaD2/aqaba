@@ -61,33 +61,39 @@ export default class Checkout extends Component {
       <div className="checkout-items-container">
           <div className="item-details">
               <div className="items-header">
-                ITEMS(3)
+                Items In Cart(1)
               </div>
-              <div className="product-selected">
-                <img src="/assets/aqaba-sands.png" alt="perfume" ></img>
-              </div>
-              <div className="items-added">
-              AqabaSands
-              </div>
-              <div className="item-price">
-                $100.00
-              </div>
-              <div className="item-size">
-                2.5oz
-              </div>
-              <div className="item-qty">
-                Qty: 1
-              </div>
-              <div className="shipping-total">
-                Shipping: FREE
-              </div>
-              <div className="total">
-                TOTAL: $110.00
-              </div>
-              <IconLabelButtons className="remove-item" />
-              <div className="placeOrder-button">
-                <TextButton text='PLACE ORDER'/>
-              </div>
+              <div className="item-container">
+                <div className="image-container">
+                  <img src="/assets/aqaba-sands.png" alt="perfume" className="item-image" />
+                </div>
+                <div className="items-added-container">
+                  <div className="item-title">
+                  AQABA SANDS
+                  </div>
+                  <div className="item-price">
+                    $100.00
+                  </div>
+                  <div className="item-size">
+                    2.5oz
+                  </div>
+                  <div className="item-qty">
+                    Qty: 1
+                  </div>
+                  <div className="shipping-total">
+                    Shipping: FREE
+                  </div>
+                  <div className="total">
+                    TOTAL: $110.00
+                  </div>
+                  <IconLabelButtons className="remove-item" />
+                  <div className="checkout-button">
+                    <div className="placeOrder-button">
+                     <TextButton text='PLACE ORDER'/>
+                    </div>
+                  </div>
+                </div>
+             </div>
           </div>
        </div>
      </div>
