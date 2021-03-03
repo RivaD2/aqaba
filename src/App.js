@@ -5,7 +5,7 @@ import PerfumesList from './components/PerfumesList';
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
 import Checkout from './pages/Checkout';
-import Gifts from './pages/Gifts';
+// import Gifts from './pages/Gifts';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
 import Modal from './modals/Modal';
@@ -16,12 +16,13 @@ import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
 // TODO's:
-// Style Aqaba Masculine
 // Change images on Home to have perfume layers added so it is clear what the site is about
 // Give pages clear names so user knows where they are!
-// Add style to app for Jordinian theme
-// Finish checkout page 
+// Finish checkout page/hook up remove from cart button
+// Revisit cartModal and add ability for user to edit cart
+// Fix layout of search icon button
 // Create page for additional products
+// Style Aqaba Masculine/change style for theme
 
 
 let font =  "font-family: 'Cairo', sans-serif"
@@ -78,7 +79,7 @@ class App extends React.Component {
               <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/>
-              <Route exact path="/checkout" component={Checkout} />
+              <Route exact path="/checkout" render={() => <Checkout items={this.state.cartItems} /> } />
               {/* <Route exact path="/gifts" component={Gifts} /> */}
             </Switch>
             <Footer />
