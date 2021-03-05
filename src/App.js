@@ -15,14 +15,19 @@ import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
-// TODO's:
-// Change images on Home to have perfume layers added so it is clear what the site is about
-// Give pages clear names so user knows where they are!
-// Finish checkout page/hook up remove from cart button
-// Revisit cartModal and add ability for user to edit cart
-// Fix layout of search icon button
-// Create page for additional products
-// Style Aqaba Masculine/change style for theme
+/* TODO's:
+ - Give pages clear names so user knows where they are!
+ - Upon adding/remove items to cart/from cart, add to localStorage/remove from localStorage
+ - Finish checkout page:
+    - Style simpleSelect for qty (size is too large)
+- Revisit CartModal and add ability for user to edit items incart
+   - Style simpleSelect for qty (size is too large)
+- Fix layout of search icon search display
+- Create page for additional products
+- Styling:
+   - Style Aqaba Masculine/change style for theme
+   - Change images on Home to have perfume layers added so it is clear what the site is about
+ */
 
 
 let font =  "font-family: 'Cairo', sans-serif"
@@ -79,7 +84,7 @@ class App extends React.Component {
               <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/>
-              <Route exact path="/checkout" render={() => <Checkout items={this.state.cartItems} /> } />
+              <Route exact path="/checkout" render={() => <Checkout items={this.state.cartItems}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
               {/* <Route exact path="/gifts" component={Gifts} /> */}
             </Switch>
             <Footer />

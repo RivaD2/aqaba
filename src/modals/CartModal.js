@@ -1,11 +1,13 @@
 import React from 'react'
+import {useState} from 'react';
 import {Link} from 'react-router-dom';
 import TextButton from '../components/TextButton';
+import SimpleSelect from '../components/SimpleSelect';
 import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
 const CartModal = props => {
-  console.log('cart has items', props.items);
+  const [quantity, setQuantity] = useState([1]);
   return (
     <div className="cart-container">
       <div className="cart-item-count">
@@ -15,7 +17,11 @@ const CartModal = props => {
         {props.items && props.items.map((item, index) => (
       <div className="perfume-card">
         <div className="cart-image">
-          <img src={`/assets/${item.image}`} className="aqaba-image" alt="product"></img>
+          <img 
+            src={`/assets/${item.image}`} 
+            className="aqaba-image" 
+            alt="product">
+          </img>
         </div>
         <div className="cart-details">
             <div className="product-title">
@@ -28,7 +34,12 @@ const CartModal = props => {
             Size: {item.size}
           </div>
           <div className="qty">
-            Qty: 
+            <SimpleSelect
+              items={[1, 2, 3, 4, 5, 6, 7]} 
+              onChange={setQuantity} 
+              selected={quantity}
+              label='qty'
+            />
           </div>
             <IconLabelButtons className="remove-item" onClick={() => props.onRemoveItemFromCart(index)}/>
         </div>

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SimpleSelect = props => {
+const SimpleSelect = (props) => {
   const classes = useStyles();
   const onChange = e => {
     props.onChange(e.target.value);
@@ -24,7 +24,7 @@ const SimpleSelect = props => {
   return (
     <div>
       <FormControl variant="filled" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-filled-label">Size</InputLabel>
+        <InputLabel id="demo-simple-select-filled-label">{props.label}</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"

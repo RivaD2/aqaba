@@ -66,20 +66,24 @@ export default class Checkout extends Component {
               {this.props.items && this.props.items.map((item, index) => (
                   <div className="item-container">
                     <div className="image-container">
-                      <img src="/assets/aqaba-sands.png" alt="perfume" className="item-image" />
+                      <img 
+                        src={`/assets/${item.image}`} 
+                        alt="product" 
+                        className="aqaba-image" 
+                      />
                     </div>
                     <div className="items-added-container">
                       <div className="item-title">
-                      AQABA SANDS
+                      {item.title}
                       </div>
                       <div className="item-price">
-                        $100.00
+                        Price: ${item.price}
                       </div>
                       <div className="item-size">
-                        2.5oz
+                        Size: {item.size}
                       </div>
                       <div className="item-qty">
-                        Qty: 1
+                        Qty: {item.qty}
                       </div>
                       <div className="shipping-total">
                         Shipping: FREE
@@ -87,7 +91,7 @@ export default class Checkout extends Component {
                       <div className="total">
                         TOTAL: $110.00
                       </div>
-                      <IconLabelButtons className="remove-item" />
+                      <IconLabelButtons className="remove-item" onClick={() => this.props.onRemoveItemFromCart(index)} />
                     </div>
                 </div>
               ))}
