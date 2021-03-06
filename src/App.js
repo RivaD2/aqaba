@@ -20,8 +20,10 @@ import './App.css';
  - Upon adding/remove items to cart/from cart, add to localStorage/remove from localStorage
  - Finish checkout page:
     - Style simpleSelect for qty (size is too large)
+    - Cover storage of qty chosen
 - Revisit CartModal and add ability for user to edit items incart
    - Style simpleSelect for qty (size is too large)
+   - Cover storage of quantity chosen- 
 - Fix layout of search icon search display
 - Create page for additional products
 - Styling:
@@ -44,26 +46,36 @@ class App extends React.Component {
     cartItems:[],
     cartTotal: 0
   }
- 
+
+  componentDidMount() {
+    let savedCartItems = localStorage.getItem('cartItems');
+    if(savedCartItems !== null) {
+      this.setState({
+        cartItems: JSON.parse(savedCartItems)
+      })
+    }
+  }
+
   toggleModalCallback = toggleFunction => {
     this.setState({
       toggleModal: toggleFunction
     })
- }
+  }
 
   onAddItemToCart = product => {
     this.state.cartItems.push(product);
     this.showCart();
+    localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
   }
   
   onRemoveItemFromCart = indexOfItem => {
-  console.log('indexOFItem', indexOfItem);
    this.state.cartItems.splice(indexOfItem, 1);
    this.setState({
      cartItems: [...this.state.cartItems]
    }, this.showCart)
+   localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
   }
-
+  
   showCart = () => {
     this.state.toggleModal(
       <CartModal 
