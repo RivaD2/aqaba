@@ -8,6 +8,7 @@ import '../modals/CartModal.css';
 
 const CartModal = props => {
   const [quantity, setQuantity] = useState([1]);
+
   return (
     <div className="cart-container">
       <div className="cart-item-count">
@@ -15,7 +16,7 @@ const CartModal = props => {
       </div>
        {!props.items && (<div> Your Cart is Empty</div>)}
         {props.items && props.items.map((item, index) => (
-      <div className="perfume-card">
+      <div className="perfume-card" key={index}>
         <div className="cart-image">
           <img 
             src={`/assets/${item.image}`} 
@@ -33,12 +34,16 @@ const CartModal = props => {
           <div className="product-size-selected">
             Size: {item.size}
           </div>
+          <div className="product-qty">
+            Qty:{item.qty}
+          </div>
           <div className="qty">
             <SimpleSelect
               items={[1, 2, 3, 4, 5, 6, 7]} 
               onChange={setQuantity} 
               selected={quantity}
               label='qty'
+              value={quantity}
             />
           </div>
             <IconLabelButtons className="remove-item" onClick={() => props.onRemoveItemFromCart(index)}/>

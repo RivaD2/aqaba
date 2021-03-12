@@ -64,7 +64,7 @@ export default class Checkout extends Component {
                 Items In Cart({this.props.items.length})
               </div>
               {this.props.items && this.props.items.map((item, index) => (
-                  <div className="item-container">
+                  <div className="item-container" key={index}>
                     <div className="image-container">
                       <img 
                         src={`/assets/${item.image}`} 
