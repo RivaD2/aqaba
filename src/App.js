@@ -1,5 +1,7 @@
 import React from 'react'
 import history from './history';
+import {Route, Switch} from 'react-router-dom';
+import {Router} from 'react-router-dom';
 import Header from "./components/Header";
 import PerfumesList from './components/PerfumesList';
 import ProductSelected from './pages/ProductSelected';
@@ -9,20 +11,16 @@ import Checkout from './pages/Checkout';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
 import Modal from './modals/Modal';
-import {Route, Switch} from 'react-router-dom';
-import {Router} from 'react-router-dom';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
 /* TODO's:
  - Give pages clear names so user knows where they are!
- - Upon adding/remove items to cart/from cart, add to localStorage/remove from localStorage
+ - Fix animated image in Carousel. It needs to be static
  - Finish checkout page:
-    - Style simpleSelect for qty (size is too large)
     - Cover storage of qty chosen
 - Revisit CartModal and add ability for user to edit items incart
-   - Style simpleSelect for qty (size is too large)
    - Cover storage of quantity chosen- 
 - Fix layout of search icon search display
 - Create page for additional products
@@ -44,7 +42,7 @@ class App extends React.Component {
     showModal: false,
     toggleModal: () => {},
     cartItems:[],
-    cartTotal: 0
+    cartTotal: 0,
   }
 
   componentDidMount() {
@@ -62,11 +60,22 @@ class App extends React.Component {
     })
   }
 
-  onAddItemToCart = product => {
-    this.state.cartItems.push(product);
+    //TODO: Given an array of objects(products), each obj has id, size, and quantity,
+    // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
+    // If not, add that obj to arr.
+  onAddItemToCart = (product, qty) => {
+    this.state.cartItems.forEach(obj=> {
+      if(product._id + product.size === obj._id + obj.size){
+        obj.qty = qty;
+      } else {
+        this.state.cartItems.push(obj)
+      }
+    })
     this.showCart();
     localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
+    this.state.cartItems.push(product);
   }
+  
   
   onRemoveItemFromCart = indexOfItem => {
    this.state.cartItems.splice(indexOfItem, 1);
@@ -95,7 +104,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" component={PerfumesList} />
-              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart} /> }/>
+              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
               <Route exact path="/checkout" render={() => <Checkout items={this.state.cartItems}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
               {/* <Route exact path="/gifts" component={Gifts} /> */}
             </Switch>
