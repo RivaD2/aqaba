@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
@@ -7,12 +7,19 @@ import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
 const CartModal = props => {
-  const [quantity, setQuantity] = useState(1);
-console.log('quantity', quantity)
+  const [sum, setSum] = useState(1);
+  
+  const calculateSum = () => {
+    setSum(props.items.reduce((acc, curr) => {
+      return acc + curr.qty
+    }, 0))
+  }
+  useEffect(calculateSum, [props.items]);
+  
   return (
     <div className="cart-container">
       <div className="cart-item-count">
-          CART ({props.items.length})
+          CART ({sum})
       </div>
        {!props.items && (<div> Your Cart is Empty</div>)}
         {props.items && props.items.map((item, index) => (
@@ -40,10 +47,13 @@ console.log('quantity', quantity)
           <div className="qty">
             <SimpleSelect
               items={[1, 2, 3, 4, 5, 6, 7]} 
-              onChange={setQuantity} 
-              selected={quantity}
+              onChange={(newQty) => {
+                item.qty = newQty;
+                calculateSum();
+              }} 
+              selected={item.qty}
               label='qty'
-              value={quantity}
+              value={item.qty}
             />
           </div>
             <IconLabelButtons className="remove-item" onClick={() => props.onRemoveItemFromCart(index)}/>
