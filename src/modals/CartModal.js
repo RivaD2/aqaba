@@ -7,8 +7,8 @@ import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
 const CartModal = props => {
-  const [quantity, setQuantity] = useState([1]);
-
+  const [quantity, setQuantity] = useState(1);
+console.log('quantity', quantity)
   return (
     <div className="cart-container">
       <div className="cart-item-count">

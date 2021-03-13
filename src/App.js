@@ -64,16 +64,24 @@ class App extends React.Component {
     // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
     // If not, add that obj to arr.
   onAddItemToCart = (product, qty) => {
-    this.state.cartItems.forEach(obj=> {
+    console.log('adding product', product)
+    console.log('adding qty', qty)
+    const alreadyInCart = this.state.cartItems.some(obj => {
       if(product._id + product.size === obj._id + obj.size){
+        console.log('found matching product', product)
         obj.qty = qty;
+        return true;
       } else {
-        this.state.cartItems.push(obj)
+        return false;
       }
     })
+    if(!alreadyInCart){
+      product.qty = qty;
+      console.log('adding new product', product)
+      this.state.cartItems.push(product)
+    }
     this.showCart();
     localStorage.setItem('cartItems', JSON.stringify(this.state.cartItems));
-    this.state.cartItems.push(product);
   }
   
   
