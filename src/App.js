@@ -7,7 +7,7 @@ import PerfumesList from './components/PerfumesList';
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
 import Checkout from './pages/Checkout';
-// import Gifts from './pages/Gifts';
+import BodyProductsList from './pages/BodyProductsList';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
 import Modal from './modals/Modal';
@@ -18,10 +18,7 @@ import './App.css';
 /* TODO's:
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
- - Finish checkout page:
-    - Cover storage of qty chosen
 - Revisit CartModal and add ability for user to edit items incart
-   - Cover storage of quantity chosen- 
 - Fix layout of search icon search display
 - Create page for additional products
 - Styling:
@@ -67,7 +64,7 @@ class App extends React.Component {
     console.log('adding product', product)
     console.log('adding qty', qty)
     const alreadyInCart = this.state.cartItems.some(obj => {
-      if(product._id + product.size === obj._id + obj.size){
+      if(product._id + product.size  === obj._id + obj.size){
         console.log('found matching product', product)
         obj.qty = qty;
         return true;
@@ -114,7 +111,7 @@ class App extends React.Component {
               <Route exact path="/perfumes" component={PerfumesList} />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
               <Route exact path="/checkout" render={() => <Checkout items={this.state.cartItems}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
-              {/* <Route exact path="/gifts" component={Gifts} /> */}
+              <Route exact path="/bath&body" component={BodyProductsList} />
             </Switch>
             <Footer />
           </Router>

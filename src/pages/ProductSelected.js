@@ -17,7 +17,7 @@ const ProductSelected = props => {
     // So I can change array of possible values to one selected value
     // Left to right I copy properties from one object to the next
     const copyOfProduct =  Object.assign({}, product, {size, price});
-    props.onAddItemToCart(copyOfProduct, quantity);
+    props.onAddItemToCart(copyOfProduct, quantity, price);
   }
 
   const onSizeSelected = size => {

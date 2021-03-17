@@ -8,14 +8,14 @@ import '../modals/CartModal.css';
 
 const CartModal = props => {
   const [sum, setSum] = useState(1);
-  
+
   const calculateSum = () => {
     setSum(props.items.reduce((acc, curr) => {
-      return acc + curr.qty
+      return acc + curr.qty 
     }, 0))
   }
   useEffect(calculateSum, [props.items]);
-  
+
   return (
     <div className="cart-container">
       <div className="cart-item-count">
