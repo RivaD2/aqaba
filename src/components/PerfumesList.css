@@ -42,15 +42,15 @@ hr {
 }
 
 .card-container {
-    padding-bottom:16px;
-    flex-direction:row;
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-height:125ch;
-    max-width:125ch;
-    justify-content: space-between;
-    align-self:center;
+  padding-bottom:16px;
+  flex-direction:row;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height:125ch;
+  max-width:125ch;
+  justify-content: space-between;
+  align-self:center;
 }
 
 .card {
