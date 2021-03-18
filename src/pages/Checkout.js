@@ -3,6 +3,7 @@ import TextField from '../components/TextField';
 import Accordian from '../components/Accordian';
 import IconLabelButtons from '../components/IconLabelButtons';
 import TextButton from '../components/TextButton';
+import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
 
 export default class Checkout extends Component {
@@ -54,7 +55,7 @@ export default class Checkout extends Component {
                   {this.shippingInfo.map(field => (
                     <TextField key={field.label} field={field} />
                   ))}
-                  <Accordian />
+                  <CountrySelect/>
                 </div>
             </div>
           </div>
