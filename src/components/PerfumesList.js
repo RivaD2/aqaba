@@ -11,26 +11,24 @@ export default class PerfumesList extends React.Component {
     price: undefined
   };
 
-  async componentDidMount() {
-   const list = await getPerfumes();
-   this.setState({
-     list
-   })
+  componentDidMount() {
+   this.onListFilter(this.state.filterByCategory);
   }
  
-  onListFilter = category => {
-    this.setState({
-      filterByCategory: category,
-    })
+  onListFilter = async category => {
+    try {
+     const listOfProducts = await getPerfumes(category);
+     this.setState({
+       list: listOfProducts,
+       filterByCategory: category
+     })
+    } catch (err) {
+      console.log(err);
+    }
   };
   
-
   render() {
     const {list, price} = this.state;
-    const filteredCards = list === undefined ? [] : list.filter(card => {
-      return card.category === this.state.filterByCategory
-    });
-  
     return (
       <div className="perfume-container">
         <div className="most-popular">
@@ -52,12 +50,12 @@ export default class PerfumesList extends React.Component {
             </div>
           </div>
           <div className="card-container">
-              {filteredCards.map(card => (
-                <div className="card" key={card._id}>
-                 <PerfumeCard product={card}/>
-                </div>
-              ))}
+            {this.state.list.map(card => (
+              <div className="card" key={card._id}>
+                <PerfumeCard product={card}/>
               </div>
+            ))}
+          </div>
       </div>
     )
   }

@@ -9,16 +9,20 @@ export default class BodyProductsList extends React.Component {
     filterByCategory: 'body'
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.onListFilterBodyProducts(this.state.filterByCategory);
   }
    
   onListFilterBodyProducts = async category => {
-    const listOfProducts = await getPerfumes(category);
-    this.setState({
-      productsList: listOfProducts,
-      filterByCategory: category
+    try {
+      const listOfProducts = await getPerfumes(category);
+      this.setState({
+        productsList: listOfProducts,
+        filterByCategory: category
     })
+    } catch (err) {
+      console.log(err)
+    }
   }
   
   render() {
