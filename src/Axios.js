@@ -5,9 +5,10 @@ const instance = axios.create({
   timeout: 1000,
 });
 
-export const getPerfumes = async () => {
+export const getPerfumes = async category => {
   try {
-    const perfumesList = await instance.get('/perfumes');
+    const queryParam = category ? `?category=${category}`: ''
+    const perfumesList = await instance.get(`/perfumes${queryParam}`);
     return perfumesList.data;
   } catch (err) {
     console.error(err);

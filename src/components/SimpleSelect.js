@@ -13,6 +13,12 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  label: {
+    color:'black',
+    "&.Mui-focused": {
+      color: "black"
+    }
+  },
 }));
 
 const SimpleSelect = (props) => {
@@ -30,6 +36,7 @@ const SimpleSelect = (props) => {
           id="demo-simple-select-filled"
           value={props.selected}
           onChange={onChange}
+          className={classes.label}
         >
            {props.items.map(item => (
              <MenuItem key={item} value={item}>{item}</MenuItem>
