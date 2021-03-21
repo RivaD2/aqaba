@@ -1,5 +1,4 @@
 import React from 'react'
-import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
@@ -7,22 +6,13 @@ import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
 const CartModal = props => {
-  const [sum, setSum] = useState(1);
-
-  const calculateSum = () => {
-    setSum(props.items.reduce((acc, curr) => {
-      return acc + curr.qty 
-    }, 0))
-  }
-  useEffect(calculateSum, [props.items]);
-
   return (
     <div className="cart-container">
       <div className="cart-item-count">
-          CART ({sum})
+          CART ({props.cart.qty})
       </div>
-       {!props.items && (<div> Your Cart is Empty</div>)}
-        {props.items && props.items.map((item, index) => (
+       {!props.cart.items && (<div> Your Cart is Empty</div>)}
+        {props.cart.items && props.cart.items.map((item, index) => (
       <div className="perfume-card" key={index}>
         <div className="cart-image">
           <img 
@@ -49,7 +39,6 @@ const CartModal = props => {
               items={[1, 2, 3, 4, 5, 6, 7]} 
               onChange={(newQty) => {
                 item.qty = newQty;
-                calculateSum();
               }} 
               selected={item.qty}
               label='qty'

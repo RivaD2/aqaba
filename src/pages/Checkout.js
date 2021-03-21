@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import TextField from '../components/TextField';
-import Accordian from '../components/Accordian';
 import IconLabelButtons from '../components/IconLabelButtons';
 import TextButton from '../components/TextButton';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
 
-export default class Checkout extends Component {
+export default class Checkout extends React.Component {
   shippingInfo = [
     {
       label: 'First Name*'
@@ -21,7 +20,7 @@ export default class Checkout extends Component {
       label: ''
     },
     {
-      label: 'City*'
+      label: 'City*',
     },
     {
       label: 'Zipcode*'
@@ -38,6 +37,8 @@ export default class Checkout extends Component {
   ]
 
   render() {
+    console.log('what is total in checkout',this.props.cart.total);
+    console.log('what is this.prop.cart.items in checkout', this.props.cart.items)
     return (
       <div className="checkout-container">
           <div className="shipping-container">
@@ -62,9 +63,9 @@ export default class Checkout extends Component {
       <div className="checkout-items-container">
           <div className="item-details">
               <div className="items-header">
-                Items In Cart({this.props.items.length})
+                Items In Cart({this.props.cart.items.length})
               </div>
-              {this.props.items && this.props.items.map((item, index) => (
+              {this.props.cart.items && this.props.cart.items.map((item, index) => (
                   <div className="item-container" key={index}>
                     <div className="image-container">
                       <img 
@@ -75,7 +76,7 @@ export default class Checkout extends Component {
                     </div>
                     <div className="items-added-container">
                       <div className="item-title">
-                      {item.title}
+                        {item.title}
                       </div>
                       <div className="item-price">
                         Price: ${item.price}
@@ -86,21 +87,20 @@ export default class Checkout extends Component {
                       <div className="item-qty">
                         Qty: {item.qty}
                       </div>
-                      <div className="shipping-total">
-                        Shipping: FREE
-                      </div>
-                      <div className="total">
-                        TOTAL: $110.00
-                      </div>
-                      <IconLabelButtons className="remove-item" onClick={() => this.props.onRemoveItemFromCart(index)} />
+                        <IconLabelButtons className="remove-item" onClick={() => this.props.onRemoveItemFromCart(index)} />
                     </div>
-                </div>
-              ))}
-              <div className="checkout-button">
-                <div>TOTAL:</div>
-                <div className="placeOrder-button">
-                  <TextButton text='PLACE ORDER'/>
-                </div>
+                  </div>
+                 ))}
+              <div className="checkout-order-container">
+                  <div className="shipping-total">
+                    Shipping: FREE
+                  </div>
+                  <div className="total">
+                    TOTAL: {this.props.cart.total}
+                  </div>  
+                  <div className="placeOrder-button">
+                    <TextButton text='PLACE ORDER'/>
+                 </div>
               </div>
           </div>
        </div>
