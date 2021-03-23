@@ -18,6 +18,7 @@ const ProductSelected = props => {
     // Left to right I copy properties from one object to the next
     const copyOfProduct =  Object.assign({}, product, {size, price});
     props.onAddItemToCart(copyOfProduct, quantity, price);
+    console.log('what is copy of product', copyOfProduct);
   }
 
   const onSizeSelected = size => {

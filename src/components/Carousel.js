@@ -11,6 +11,8 @@ class PerfumeCarousel extends React.Component {
     
     const listOfPerfumes = perfumeCards.filter(card => {
       return mostPopular.includes(card.title)
+      // Create div with background image inside, add onClick and other attributes to div
+      // Remove PerfumeCard component as it is dynamic
     }).map(card => <PerfumeCard key={card._id} product={card}/>)
 
     return (
