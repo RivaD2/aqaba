@@ -17,6 +17,8 @@ import './App.css';
 
 /* TODO's:
 - Create a Cart Class with methods of its own (separate file)
+- Consolidate BodyProductsList and PerfumesList to One Component
+   to reduce redundant code
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
 - Revisit CartModal and add ability for user to edit items incart
@@ -64,10 +66,11 @@ class App extends React.Component {
     //TODO: Given an array of objects(products), each obj has id, size, and quantity,
     // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
     // If not, add that obj to arr.
-  onAddItemToCart = (product, qty) => {
-    const alreadyInCart = this.state.cart.items.some(obj => {
+  onAddItemToCart = async (product, qty) => {
+    // If product is undefined, then cart is unchanged and loop is skipped
+    // Cart total is still calculated
+    const alreadyInCart = product === undefined || this.state.cart.items.some(obj => {
       if(product._id + product.size  === obj._id + obj.size){
-        console.log('found matching product', product)
         obj.qty = qty;
         return true;
       } else {
@@ -76,43 +79,44 @@ class App extends React.Component {
     })
     if(!alreadyInCart){
       product.qty = qty;
-      console.log('what is product.qty', qty)
-      console.log('adding new product', product)
       this.state.cart.items.push(product)
-      console.log('what are products after push', product)
     }
-    this.calculateCartTotals();
+    await this.calculateCartTotals();
     this.showCart();
     localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
   }
   
-  onRemoveItemFromCart = indexOfItem => {
+  onRemoveItemFromCart = async indexOfItem => {
    this.state.cart.items.splice(indexOfItem, 1);
-   this.calculateCartTotals();
+   await this.calculateCartTotals();
    this.showCart();
    localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
   }
   
-  calculateCartTotals = () => {
+  calculateCartTotals = async () => {
     let totalQty = 0;
     let totalPrice = 0;
     this.state.cart.items.forEach(item => {
       totalPrice += item.price * item.qty;
       totalQty += item.qty;
     });
+    // Creating a promise to resolve once the new Cart is safely in state
+    return new Promise(resolve => {
     this.setState({
       cart: {
         qty: totalQty,
         price: totalPrice,
         items: this.state.cart.items
       }
-    })
+    }, resolve)
+   })
   }
   
   showCart = () => {
     this.state.toggleModal(
       <CartModal 
         cart={this.state.cart} 
+        onAddItemToCart={this.onAddItemToCart}
         onRemoveItemFromCart={this.onRemoveItemFromCart}
         toggleModal={this.state.toggleModal}
       />)

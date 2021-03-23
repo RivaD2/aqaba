@@ -37,8 +37,8 @@ export default class Checkout extends React.Component {
   ]
 
   render() {
-    console.log('what is total in checkout',this.props.cart.total);
-    console.log('what is this.prop.cart.items in checkout', this.props.cart.items)
+    console.log('what is total in checkout',this.props.cart.price);
+    console.log('what is this.props.cart.items in checkout', this.props.cart.items)
     return (
       <div className="checkout-container">
           <div className="shipping-container">
@@ -63,7 +63,7 @@ export default class Checkout extends React.Component {
       <div className="checkout-items-container">
           <div className="item-details">
               <div className="items-header">
-                Items In Cart({this.props.cart.items.length})
+                Items In Cart({this.props.cart.qty})
               </div>
               {this.props.cart.items && this.props.cart.items.map((item, index) => (
                   <div className="item-container" key={index}>
@@ -96,7 +96,7 @@ export default class Checkout extends React.Component {
                     Shipping: FREE
                   </div>
                   <div className="total">
-                    TOTAL: {this.props.cart.total}
+                    TOTAL: ${this.props.cart.price}
                   </div>  
                   <div className="placeOrder-button">
                     <TextButton text='PLACE ORDER'/>

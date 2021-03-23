@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useReducer} from 'react'
 import {Link} from 'react-router-dom';
 import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
@@ -39,6 +39,7 @@ const CartModal = props => {
               items={[1, 2, 3, 4, 5, 6, 7]} 
               onChange={(newQty) => {
                 item.qty = newQty;
+                props.onAddItemToCart();
               }} 
               selected={item.qty}
               label='qty'

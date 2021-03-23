@@ -28,7 +28,7 @@ export default class PerfumesList extends React.Component {
   };
   
   render() {
-    const {list, price} = this.state;
+    const {list} = this.state;
     return (
       <div className="perfume-container">
         <div className="most-popular">
