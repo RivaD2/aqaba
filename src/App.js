@@ -3,11 +3,11 @@ import history from './history';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import Header from "./components/Header";
-import PerfumesList from './components/PerfumesList';
+import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
 import Checkout from './pages/Checkout';
-import BodyProductsList from './pages/BodyProductsList';
+// import BodyProductsList from './pages/BodyProductsList';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
 import Modal from './modals/Modal';
@@ -21,14 +21,12 @@ import './App.css';
    to reduce redundant code
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
-- Revisit CartModal and add ability for user to edit items incart
 - Fix layout of search icon search display
 - Create page for additional products
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Change images on Home to have perfume layers added so it is clear what the site is about
  */
-
 
 let font =  "font-family: 'Cairo', sans-serif"
 let theme = createMuiTheme({
@@ -131,16 +129,15 @@ class App extends React.Component {
           <Modal toggleModalCallback={this.toggleModalCallback}/>
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />}/>
-              <Route exact path="/perfumes" component={PerfumesList} />
+              <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
               <Route exact path="/checkout" render={() => <Checkout cart={this.state.cart}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
-              <Route exact path="/bath&body" component={BodyProductsList} />
+              <Route exact path="/bathandbody" render={() => <ProductList page="body" /> } />
             </Switch>
             <Footer />
           </Router>
           </div>
       </ThemeProvider>
-
     )
   }
 }
