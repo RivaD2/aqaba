@@ -13,7 +13,7 @@ export default class ProductList extends React.Component {
 
   componentDidMount() {
     this.onListFilter(this.state.filterByCategory);
-   }
+  }
   
   onListFilter = async category => {
     try {
@@ -26,9 +26,39 @@ export default class ProductList extends React.Component {
       console.log(err);
     }
   };
-
+  
   render() {
     const {list} = this.state;
+    const {page} = this.props;
+    let filterSections;
+    switch(page) {
+      case 'perfumes':
+        filterSections = [
+        <>
+          <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
+            AQABA FEMININE /
+          </div>
+          <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
+            AQABA MASCULINE
+          </div>
+        </>
+        ];
+        break;
+        case 'body':
+          filterSections = [
+            <>
+              <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
+                BATH /
+              </div>
+              <div className="perfume-links" onClick={() => this.onListFilter('body')}>
+                BODY
+              </div>
+            </>
+          ];
+          break;
+          default: 
+          return [<div className="most-popular">MOST POPULAR</div> ];
+    }
     return (
       <div className="perfume-container">
         <div className="most-popular">
@@ -42,21 +72,22 @@ export default class ProductList extends React.Component {
             <hr />
           </div>
           <div className="perfumes-links-container">
-            <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
+            {/* <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
               AQABA FEMININE /
             </div>
             <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
               AQABA MASCULINE
-            </div>
-            <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
+            </div> */}
+            {/* <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
               BATH /
             </div>
             <div className="perfume-links" onClick={() => this.onListFilter('body')}>
               BODY
-            </div>
+            </div> */}
             {/* <div className="perfume-links" onClick={() => this.onListFilterBodyProducts('gifts')}>
               GIFTS
             </div> */}
+            {filterSections}
           </div>
           <div className="card-container">
             {this.state.list.map(card => (
