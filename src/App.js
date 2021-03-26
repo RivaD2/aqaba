@@ -61,7 +61,7 @@ class App extends React.Component {
     })
   }
 
-    //TODO: Given an array of objects(products), each obj has id, size, and quantity,
+    //Given an array of objects(products), each obj has id, size, and quantity,
     // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
     // If not, add that obj to arr.
   onAddItemToCart = async (product, qty) => {

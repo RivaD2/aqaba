@@ -7,7 +7,13 @@ import './Carousel.css';
 class PerfumeCarousel extends React.Component {
   render() {
     let perfumeCards = this.props.cards;
-    const mostPopular = ['MIDNIGHT SUN', 'AQABA SANDS', 'AQABA CLASSIC'];
+    const mostPopular = [
+      'MIDNIGHT SUN', 
+      'AQABA SANDS', 
+      'AQABA CLASSIC', 
+      'AQABA HAIR MIST', 
+      'AQABA BODY LOTION'
+    ];
     
     const listOfPerfumes = perfumeCards.filter(card => {
       return mostPopular.includes(card.title)

@@ -6,27 +6,35 @@ import './PerfumesList.css';
 
 export default class ProductList extends React.Component {
   state = {
-    filterByCategory: ['feminine', 'masculine', 'body', 'bath', 'gifts'],
     list: [],
     price: undefined
   }
 
   componentDidMount() {
-    this.onListFilter(this.state.filterByCategory);
+    this.onListFilter();
   }
-  
+ 
   onListFilter = async category => {
     try {
-    const listOfProducts = await getPerfumes(category);
-    this.setState({
-      list: listOfProducts,
-      filterByCategory: category
-    })
+      if(category === undefined) {
+        // If onListFilter is called without category, category is picked based off page name
+        category = this.props.page === 'perfumes'? 'feminine' : 'bath'
+      }
+      const listOfProducts = await getPerfumes(category);
+      this.setState({
+        list: listOfProducts, 
+      })
     } catch (err) {
       console.log(err);
     }
-  };
-  
+  }
+ 
+  componentDidUpdate = async prevProps => {
+    if(this.props.page !== prevProps.page){
+      this.onListFilter();
+    }
+  }
+
   render() {
     const {list} = this.state;
     const {page} = this.props;
@@ -57,7 +65,7 @@ export default class ProductList extends React.Component {
           ];
           break;
           default: 
-          return [<div className="most-popular">MOST POPULAR</div> ];
+          return [<div></div> ];
     }
     return (
       <div className="perfume-container">
@@ -72,25 +80,10 @@ export default class ProductList extends React.Component {
             <hr />
           </div>
           <div className="perfumes-links-container">
-            {/* <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
-              AQABA FEMININE /
-            </div>
-            <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
-              AQABA MASCULINE
-            </div> */}
-            {/* <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
-              BATH /
-            </div>
-            <div className="perfume-links" onClick={() => this.onListFilter('body')}>
-              BODY
-            </div> */}
-            {/* <div className="perfume-links" onClick={() => this.onListFilterBodyProducts('gifts')}>
-              GIFTS
-            </div> */}
             {filterSections}
           </div>
           <div className="card-container">
-            {this.state.list.map(card => (
+            {list.map(card => (
               <div className="card" key={card._id}>
                 <PerfumeCard product={card}/>
               </div>
@@ -99,4 +92,5 @@ export default class ProductList extends React.Component {
         </div>
     )
   }
+  
 }
