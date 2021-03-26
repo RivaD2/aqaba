@@ -29,7 +29,7 @@ export default class ProductList extends React.Component {
     }
   }
  
-  componentDidUpdate = async prevProps => {
+  componentDidUpdate = prevProps => {
     if(this.props.page !== prevProps.page){
       this.onListFilter();
     }
@@ -52,20 +52,20 @@ export default class ProductList extends React.Component {
         </>
         ];
         break;
-        case 'body':
-          filterSections = [
-            <>
-              <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
-                BATH /
-              </div>
-              <div className="perfume-links" onClick={() => this.onListFilter('body')}>
-                BODY
-              </div>
-            </>
-          ];
-          break;
-          default: 
-          return [<div></div> ];
+      case 'body':
+        filterSections = [
+          <>
+            <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
+              BATH /
+            </div>
+            <div className="perfume-links" onClick={() => this.onListFilter('body')}>
+              BODY
+            </div>
+          </>
+        ];
+        break;
+      default: 
+      return [<div></div> ];
     }
     return (
       <div className="perfume-container">
@@ -73,24 +73,23 @@ export default class ProductList extends React.Component {
           MOST POPULAR
         </div>
         <div className="perfume-cards">
-          {/* if list is defined, show carousel */}
-          {list && <PerfumeCarousel cards={list}/>}
-          </div>
-          <div>
-            <hr />
-          </div>
-          <div className="perfumes-links-container">
-            {filterSections}
-          </div>
-          <div className="card-container">
-            {list.map(card => (
-              <div className="card" key={card._id}>
-                <PerfumeCard product={card}/>
-              </div>
-            ))}
-          </div>
+           {/* if list is defined, show carousel */}
+           {list && <PerfumeCarousel cards={list}/>}
         </div>
+        <div>
+          <hr />
+        </div>
+        <div className="perfumes-links-container">
+          {filterSections}
+        </div>
+        <div className="card-container">
+          {list.map(card => (
+            <div className="card" key={card._id}>
+              <PerfumeCard product={card}/>
+            </div>
+          ))}
+        </div>
+      </div>
     )
   }
-  
 }

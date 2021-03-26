@@ -16,16 +16,16 @@ import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
 
 /* TODO's:
-- Create a Cart Class with methods of its own (separate file)
-- Consolidate BodyProductsList and PerfumesList to One Component
-   to reduce redundant code
+- Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
 - Fix layout of search icon search display
-- Create page for additional products
+- Add in logic to show Gifts on Products List page adding in case in switch etc.
+- Add scroll to cartModal
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Change images on Home to have perfume layers added so it is clear what the site is about
+   - Change color of text on body/bath products
  */
 
 let font =  "font-family: 'Cairo', sans-serif"
