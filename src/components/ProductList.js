@@ -2,7 +2,7 @@ import React from 'react'
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
 import {getPerfumes} from '../Axios';
-import './PerfumesList.css';
+import './ProductsList.css';
 
 export default class ProductList extends React.Component {
   state = {
