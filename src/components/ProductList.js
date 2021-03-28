@@ -18,7 +18,7 @@ export default class ProductList extends React.Component {
     try {
       if(category === undefined) {
         // If onListFilter is called without category, category is picked based off page name
-        category = this.props.page === 'perfumes'? 'feminine' : 'bath'
+        category = this.props.page === 'perfumes' ? 'feminine' : 'bath'
       }
       const listOfProducts = await getPerfumes(category);
       this.setState({
@@ -42,14 +42,14 @@ export default class ProductList extends React.Component {
     switch(page) {
       case 'perfumes':
         filterSections = [
-        <>
+         <>
           <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
             AQABA FEMININE /
           </div>
           <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
             AQABA MASCULINE
           </div>
-        </>
+         </>
         ];
         break;
       case 'body':
@@ -63,6 +63,13 @@ export default class ProductList extends React.Component {
             </div>
           </>
         ];
+        break;
+      case 'gifts':
+          filterSections = [
+            <div className="perfume-links" onClick={() => this.onListFilter('gifts')}>
+              GIFTS
+            </div>
+          ];
         break;
       default: 
       return [<div></div> ];

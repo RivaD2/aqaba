@@ -48,6 +48,13 @@ a:hover {
   font-size:10pt;
 }
 
+.searchbar-container {
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  padding-right:10px;
+}
+
 
 
 

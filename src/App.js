@@ -7,7 +7,6 @@ import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
 import Checkout from './pages/Checkout';
-// import BodyProductsList from './pages/BodyProductsList';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
 import Modal from './modals/Modal';
@@ -19,7 +18,6 @@ import './App.css';
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
-- Fix layout of search icon search display
 - Add in logic to show Gifts on Products List page adding in case in switch etc.
 - Add scroll to cartModal
 - Styling:
@@ -133,6 +131,7 @@ class App extends React.Component {
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
               <Route exact path="/checkout" render={() => <Checkout cart={this.state.cart}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
               <Route exact path="/bathandbody" render={() => <ProductList page="body" /> } />
+              <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />
             </Switch>
             <Footer />
           </Router>
