@@ -33,7 +33,7 @@ class Header extends React.Component {
             <Link to="/perfumes" className="nav-item">
               PERFUMES/
             </Link>
-            <Link to="/bathandbody" className="nav-item">
+            <Link to="/bath_and_body" className="nav-item">
               BATH/BODY/
             </Link>
             <Link to="/gifts" className="nav-item">

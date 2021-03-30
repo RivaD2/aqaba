@@ -19,9 +19,9 @@ import './App.css';
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
 - Add in logic to show Gifts on Products List page adding in case in switch etc.
-- Add scroll to cartModal
 - Styling:
    - Style Aqaba Masculine/change style for theme
+   - Add close icon from material ui to cartModal
    - Change images on Home to have perfume layers added so it is clear what the site is about
    - Change color of text on body/bath products
  */
@@ -130,7 +130,7 @@ class App extends React.Component {
               <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
               <Route exact path="/checkout" render={() => <Checkout cart={this.state.cart}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
-              <Route exact path="/bathandbody" render={() => <ProductList page="body" /> } />
+              <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />
             </Switch>
             <Footer />

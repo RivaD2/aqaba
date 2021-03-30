@@ -4,6 +4,9 @@
   font-size:12pt;
   font-weight:bold;
   margin-left: 14pt;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  max-width: 350px
 }
 
 .cart-item-count {

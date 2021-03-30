@@ -18,7 +18,8 @@ export default class ProductList extends React.Component {
     try {
       if(category === undefined) {
         // If onListFilter is called without category, category is picked based off page name
-        category = this.props.page === 'perfumes' ? 'feminine' : 'bath'
+        category = this.props.page === 'perfumes' ? 'feminine' : 
+         (this.props.page === 'bath_and_body' ? 'body' : 'gift');
       }
       const listOfProducts = await getPerfumes(category);
       this.setState({
@@ -30,6 +31,8 @@ export default class ProductList extends React.Component {
   }
  
   componentDidUpdate = prevProps => {
+    console.log('what is prevProps', prevProps);
+    console.log('what is this.props.page', this.props.page)
     if(this.props.page !== prevProps.page){
       this.onListFilter();
     }
@@ -52,7 +55,7 @@ export default class ProductList extends React.Component {
          </>
         ];
         break;
-      case 'body':
+      case 'bath_and_body':
         filterSections = [
           <>
             <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
@@ -66,7 +69,7 @@ export default class ProductList extends React.Component {
         break;
       case 'gifts':
           filterSections = [
-            <div className="perfume-links" onClick={() => this.onListFilter('gifts')}>
+            <div className="perfume-links" onClick={() => this.onListFilter('gift')}>
               GIFTS
             </div>
           ];
@@ -81,7 +84,7 @@ export default class ProductList extends React.Component {
         </div>
         <div className="perfume-cards">
            {/* if list is defined, show carousel */}
-           {list && <PerfumeCarousel cards={list}/>}
+           {list && <PerfumeCarousel cards={list} />}
         </div>
         <div>
           <hr />
@@ -92,7 +95,7 @@ export default class ProductList extends React.Component {
         <div className="card-container">
           {list.map(card => (
             <div className="card" key={card._id}>
-              <PerfumeCard product={card}/>
+              <PerfumeCard product={card} />
             </div>
           ))}
         </div>
