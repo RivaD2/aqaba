@@ -4,8 +4,15 @@
   justify-content: center;
 }
 
+.carousel-item {
+  width:260px;
+  height:340px;
+  background-size:cover;
+  background-position: center center;
+  cursor: pointer
+}
+
 .slider {
-  height:270px;
   align-items: center;
 }
 

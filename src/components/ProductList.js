@@ -84,7 +84,7 @@ export default class ProductList extends React.Component {
         </div>
         <div className="perfume-cards">
            {/* if list is defined, show carousel */}
-           {list && <PerfumeCarousel cards={list} />}
+           {list && <PerfumeCarousel products={list} />}
         </div>
         <div>
           <hr />

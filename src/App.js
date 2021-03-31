@@ -18,7 +18,6 @@ import './App.css';
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
  - Fix animated image in Carousel. It needs to be static
-- Add in logic to show Gifts on Products List page adding in case in switch etc.
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
