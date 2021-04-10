@@ -4,7 +4,7 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import IconButton from "@material-ui/core/IconButton";
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import GoogleAuth from '../modals/LoginModal';
 import './Header.css';
 
 class Header extends React.Component {
@@ -56,9 +56,7 @@ class Header extends React.Component {
               </IconButton>
             </div>
             <div className="account-icon">
-              <IconButton >
-                <PermIdentityOutlinedIcon onClick={this.showAccountModal}/>
-              </IconButton>
+              <GoogleAuth/>
             </div>
           </div>
         </div>
