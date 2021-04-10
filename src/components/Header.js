@@ -11,6 +11,10 @@ class Header extends React.Component {
   state = {showSearchField: false};
   
   toggleSearchField = () => {
+    if(this.state.searchTerm) {
+      console.log('searching for something', this.state.searchTerm);
+      return;
+    }
     this.setState({
       showSearchField: !this.state.showSearchField
     })
@@ -19,6 +23,12 @@ class Header extends React.Component {
   onLoginClicked = () => {
     this.setState({
       showAccountModal: !this.state.showAccountModal
+    })
+  }
+  
+  onSearchChanged = searchTerm => {
+    this.setState({
+     searchTerm
     })
   }
 
@@ -45,23 +55,21 @@ class Header extends React.Component {
             <div className="creator-title">by Miriam Mirani</div>
           </div>
           <div className="icon-block">
+          {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
+          <div className="search-icon">
+              <IconButton onClick={this.toggleSearchField}> 
+                <SearchOutinedIcon />
+              </IconButton>
+            </div>
             <div className="cart-icon">
               <IconButton onClick={this.props.showCart}>
                 <AddShoppingCartOutlinedIcon />
-              </IconButton>
-            </div>
-            <div className="search-icon">
-              <IconButton onClick={this.toggleSearchField}> 
-                <SearchOutinedIcon />
               </IconButton>
             </div>
             <div className="account-icon">
               <GoogleAuth/>
             </div>
           </div>
-        </div>
-        <div className="searchbar-container">
-           {this.state.showSearchField && <SearchBar />}
         </div>
       </div>
     )
