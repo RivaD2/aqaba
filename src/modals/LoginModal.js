@@ -3,7 +3,10 @@ import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import IconButton from "@material-ui/core/IconButton";
 
 export default class LoginModal extends React.Component {
-  state = {isSignedIn: null}
+  state = {
+    isSignedIn: null,
+    name: undefined
+  }
 
   componentDidMount = async () => {
     try {
@@ -18,19 +21,32 @@ export default class LoginModal extends React.Component {
         })
       });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   }
 
-  handleSignIn = () => {
-    this.auth.signIn();
+  handleSignIn = async () => {
+    try {
+      await this.auth.signIn();
+      const user = this.auth.currentUser.get().getBasicProfile();
+      console.log('show me user', user);
+      const name = user.getGivenName();
+      this.setState({
+        name
+      })
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   render() {
     return (
-     <IconButton onClick={this.handleSignIn}>
-      <PermIdentityOutlinedIcon/>
-     </IconButton>
+      <div>
+       <IconButton onClick={this.handleSignIn}>
+        <PermIdentityOutlinedIcon/>
+       </IconButton>
+        {this.state.name && 'Hello ' + this.state.name}
+      </div>
     )
   }
 }

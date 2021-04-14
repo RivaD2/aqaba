@@ -23,3 +23,27 @@ export const getProduct = async id => {
     console.error(err);
   }
 };
+
+export const signIn = async token => {
+  console.log('show me the token', token);
+  try {
+    const requestOptions = {
+      mode: 'cors',
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        token
+      })
+    }
+    const endpoint = '/user/sign-in';
+    const response = await instance.post(endpoint, requestOptions);
+    const json = await response.json();
+    return json;
+  }
+  catch (err) {
+    console.error(err);
+  }
+};
+
