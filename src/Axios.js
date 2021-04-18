@@ -25,7 +25,6 @@ export const getProduct = async id => {
 };
 
 export const signIn = async token => {
-  console.log('show me the token', token);
   try {
     const requestOptions = {
       mode: 'cors',

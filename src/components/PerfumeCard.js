@@ -14,16 +14,20 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 const [animateProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
-console.log(onCardClick)
 return (
+  <div className="card-container">
   <animated.div
     className="card"
     onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
     onMouseLeave={() => set({ xys: [0, 0, 1] })}
     style={{ transform: animateProps.xys.interpolate(trans), backgroundImage:`url('/assets/${props.product.image}')` }}
     onClick={onCardClick}
-  > {props.product.title}
+  > 
   </animated.div>
+    <div className="card-title">
+      {props.product.title}
+    </div>
+  </div>
   )
 }
 

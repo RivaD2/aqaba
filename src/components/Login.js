@@ -2,7 +2,7 @@ import React from 'react'
 import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import IconButton from "@material-ui/core/IconButton";
 
-export default class LoginModal extends React.Component {
+export default class Login extends React.Component {
   state = {
     isSignedIn: null,
     name: undefined
@@ -19,29 +19,50 @@ export default class LoginModal extends React.Component {
         this.setState({
           isSignedIn: this.auth.isSignedIn.get()
         })
+        this.auth.isSignedIn.listen(this.AuthChange);
       });
     } catch (err) {
       console.error(err);
     }
   }
+  
+  handleAuthChange = () => {
+    this.setState({isSignedIn: this.auth.isSignedIn.get()});
+  };
 
-  handleSignIn = async () => {
+  handleSignIn = async e => {
     try {
       await this.auth.signIn();
+      e.preventDefault();
       const user = this.auth.currentUser.get().getBasicProfile();
-      console.log('show me user', user);
       const name = user.getGivenName();
       this.setState({
         name
       })
+      localStorage.setItem('user', name);
     } catch (err) {
       console.error(err);
     }
   }
 
+  // handleSignOut = () => {
+  //   this.auth.signOut();
+  // };
+  
+  componentDidUpdate = async () => {
+    const loggedInUser = localStorage.getItem('user');
+    console.log('who is the logged in user', loggedInUser);
+    if(loggedInUser) {
+      const userFound = JSON.parse(loggedInUser);
+      this.setState({
+        userFound
+      })
+    }
+  }
+
   render() {
     return (
-      <div>
+      <div className="login-icon-container">
        <IconButton onClick={this.handleSignIn}>
         <PermIdentityOutlinedIcon/>
        </IconButton>

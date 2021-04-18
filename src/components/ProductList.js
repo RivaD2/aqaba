@@ -31,8 +31,6 @@ export default class ProductList extends React.Component {
   }
  
   componentDidUpdate = prevProps => {
-    console.log('what is prevProps', prevProps);
-    console.log('what is this.props.page', this.props.page)
     if(this.props.page !== prevProps.page){
       this.onListFilter();
     }
@@ -92,9 +90,9 @@ export default class ProductList extends React.Component {
         <div className="perfumes-links-container">
           {filterSections}
         </div>
-        <div className="card-container">
+        <div className="product-list-card-container">
           {list.map(card => (
-            <div className="card" key={card._id}>
+            <div className="product-list-card" key={card._id}>
               <PerfumeCard product={card} />
             </div>
           ))}

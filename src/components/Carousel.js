@@ -20,11 +20,12 @@ const history = useHistory();
     'AQABA CLASSIC', 
     'AQABA HAIR MIST', 
     'AQABA BODY LOTION',
-    'AQABA PERFUME CANDLE'
+    'AQABA PERFUME CANDLE',
+    'AQABA INCENCE',
+    'AQABA BLACK'
   ];
     
   const carouselItems = products.filter(item => {
-    console.log('show me an item', item)
     return mostPopular.includes(item.title)
   }).map(item => 
     <div 
