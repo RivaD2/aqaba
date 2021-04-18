@@ -16,8 +16,9 @@ export default class Login extends React.Component {
           scope:'email'
         });
         this.auth = window.gapi.auth2.getAuthInstance();
+        const name = localStorage.getItem('user');
         this.setState({
-          isSignedIn: this.auth.isSignedIn.get()
+         name
         })
         this.auth.isSignedIn.listen(this.AuthChange);
       });
@@ -32,34 +33,26 @@ export default class Login extends React.Component {
 
   handleSignIn = async e => {
     try {
+      if(this.state.isSignedIn) {
+        this.auth.signOut();
+        this.setState({
+          name: undefined,
+          isSignedIn: false
+        })
+        return;
+      }
       await this.auth.signIn();
       e.preventDefault();
       const user = this.auth.currentUser.get().getBasicProfile();
       const name = user.getGivenName();
       this.setState({
-        name
+        name, isSignedIn: true
       })
       localStorage.setItem('user', name);
     } catch (err) {
       console.error(err);
     }
   }
-
-  // handleSignOut = () => {
-  //   this.auth.signOut();
-  // };
-  
-  componentDidUpdate = async () => {
-    const loggedInUser = localStorage.getItem('user');
-    console.log('who is the logged in user', loggedInUser);
-    if(loggedInUser) {
-      const userFound = JSON.parse(loggedInUser);
-      this.setState({
-        userFound
-      })
-    }
-  }
-
   render() {
     return (
       <div className="login-icon-container">
