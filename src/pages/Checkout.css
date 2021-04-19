@@ -6,14 +6,9 @@
 
 .shipping-container {
   display:flex;
-  flex-direction:row;
-  min-height:100vh;
-}
-
-.shipping-container {
-  display:flex;
   flex-direction:column;
   background-color: rgb(235, 232, 227);
+  padding: 22px;
 }
 
 .checkout-header {
@@ -31,7 +26,6 @@
   font-size: 14pt;
   padding-bottom: 14pt;
   font-weight:bold;
-  padding-left:100px;
 }
 
 .shipping-details {
@@ -49,9 +43,9 @@
 
 .checkout-items-container {
   display:flex;
-  flex-direction:row;
   background-color: rgb(235, 232, 227);
   width: 300px;
+  padding: 22px;
 }
 
 .items-header {
@@ -88,20 +82,24 @@
   padding-bottom: 5px;
 }
 
-.shipping-total {
-  padding-bottom: 5px;
-  padding-top:20px;
-  background-color: rgb(216, 214, 213);
-  border: 1px solid rgb(146, 145, 145)
+.checkout-order-container {
+  display:flex;
+  flex-direction:column;
+  background-color: rgb(235, 232, 227);
+  padding: 22px;
+  margin-left: 100px;
 }
 
 .total {
   padding-bottom: 5px;
   padding-top: 20px;
   font-size: 14pt;
-  background-color: rgb(216, 214, 213);
-  border: 1px solid rgb(146, 145, 145)
 }
+
+.shipping-total {
+  font-size: 14pt;
+}
+
 
 
 

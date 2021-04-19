@@ -17,6 +17,7 @@ import './App.css';
 /* TODO's:
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
+ - Add email TextField into checkout, so user can in if they are already a user
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
