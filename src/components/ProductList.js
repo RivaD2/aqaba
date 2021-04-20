@@ -42,7 +42,8 @@ export default class ProductList extends React.Component {
     let filterSections;
     switch(page) {
       case 'perfumes':
-        filterSections = [
+        // Making a single JSX element
+        filterSections = (
          <>
           <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
             AQABA FEMININE /
@@ -51,10 +52,10 @@ export default class ProductList extends React.Component {
             AQABA MASCULINE
           </div>
          </>
-        ];
+        );
         break;
       case 'bath_and_body':
-        filterSections = [
+        filterSections = (
           <>
             <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
               BATH /
@@ -63,18 +64,19 @@ export default class ProductList extends React.Component {
               BODY
             </div>
           </>
-        ];
+        );
         break;
       case 'gifts':
-          filterSections = [
+          filterSections = (
             <div className="perfume-links" onClick={() => this.onListFilter('gift')}>
               GIFTS
             </div>
-          ];
+          );
         break;
       default: 
-      return [<div></div> ];
+      return (<div></div> );
     }
+
     return (
       <div className="perfume-container">
         <div className="most-popular">

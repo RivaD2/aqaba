@@ -15,7 +15,13 @@ const ImageFade = () => {
     leave: { opacity: 0 },
     config: config.molasses,
   })
-  useEffect(() => void setInterval(() => set(state => (state + 1) % slides.length), 4000), [])
+  // Interval is still happening after I navigate away
+  useEffect(() => {
+    const timeoutId = setInterval(() => set(state => (state + 1) % slides.length), 4000);
+    return () => {
+      clearTimeout(timeoutId);
+    }
+  }, [])
   return transitions.map(({ item, props, key }) => (
     <animated.div
       key={key}

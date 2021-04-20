@@ -20,7 +20,7 @@ export default class Login extends React.Component {
         this.setState({
          name
         })
-        this.auth.isSignedIn.listen(this.AuthChange);
+        this.auth.isSignedIn.listen(this.handleAuthChange);
       });
     } catch (err) {
       console.error(err);

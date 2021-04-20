@@ -38,7 +38,7 @@ const history = useHistory();
 
   return (
     <div className="carousel-container">
-        <Carousel showArrows={true} showThumbs={true}>
+        <Carousel showArrows={true} showThumbs={false}>
           {carouselItems}
         </Carousel>
       </div>
