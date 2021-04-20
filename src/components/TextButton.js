@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize:'16pt',
       fontWeight: 'bold',
       backgroundColor: '#DC9B56',
-      width: '152px'
+      whiteSpace: 'nowrap'
     },
   },
   underline: {

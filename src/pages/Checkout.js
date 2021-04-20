@@ -8,12 +8,6 @@ import '../pages/Checkout.css'
 export default class Checkout extends React.Component {
   shippingInfo = [
     {
-      label: 'First Name*'
-    },
-    {
-      label: 'Last Name*'
-    },
-    {
       label: 'Address*'
     },
     {
@@ -30,7 +24,13 @@ export default class Checkout extends React.Component {
     }
   ];
   
-  contactEmail = [
+  contactInfo = [
+    {
+      label: 'First Name*'
+    },
+    {
+      label: 'Last Name*'
+    },
     {
       label: 'Email Address'
     }
@@ -44,9 +44,20 @@ export default class Checkout extends React.Component {
                 Checkout
               </div>
               <div className="contact-details-container">
-                <div className="contact-header">
-                  Contact information
+                <div className="contact-info-container">
+                  <div className="name-and-email-text">
+                    Contact information
+                  </div>
+                  <div className="checkout-sign-in">
+                    Already have an account? 
+                    <div className="sign-in-link">
+                      Sign In
+                    </div>
+                  </div>
                 </div>
+                {this.contactInfo.map(field => (
+                    <TextField key={field.label} field={field} />
+                  ))}
                 <div className="shipping-details">
                   <div className="shipping-header">
                     Shipping Address
@@ -97,7 +108,7 @@ export default class Checkout extends React.Component {
                     Total: ${this.props.cart.price}
                   </div>  
                   <div className="placeorder-button">
-                    <TextButton text='Place Order' />
+                    <TextButton text='Place order' />
                  </div>
               </div>
           </div>

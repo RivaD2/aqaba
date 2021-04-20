@@ -19,13 +19,27 @@
 .contact-details-container {
   display:flex;
   flex-direction:column;
-  width: 300px;
+  width: 432px;
 }
 
-.contact-header {
-  font-size: 14pt;
-  padding-bottom: 14pt;
-  font-weight:bold;
+.contact-info-container {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.name-and-email-text {
+ font-size: 12pt;
+}
+
+.checkout-sign-in {
+  font-size: 12pt;
+  display: flex;
+  flex-direction:row;
+}
+
+.sign-in-link {
+  padding-left: 8px;
 }
 
 .shipping-details {
@@ -45,7 +59,7 @@
   display:flex;
   background-color: rgb(235, 232, 227);
   width: 300px;
-  padding: 22px;
+  padding: 42px;
 }
 
 .items-header {
@@ -99,6 +113,7 @@
 .shipping-total {
   font-size: 14pt;
 }
+
 
 
 
