@@ -51,13 +51,12 @@ const CartModal = props => {
       </div>
         ))}
       <div className="edit-and-checkout">
-        <TextButton className="checkout" text='EDIT CART'></TextButton>
           <Link 
             to="/checkout" 
             style={{ textDecoration: 'inherit'}} 
             className="checkout"
             onClick={() => props.toggleModal()}>
-        <TextButton text='CHECKOUT'/>
+        <TextButton text='CHECKOUT' className="checkout-button" />
         </Link>
       </div>
     </div>

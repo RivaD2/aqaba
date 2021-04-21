@@ -15,14 +15,14 @@ const useStyles = makeStyles((theme) => ({
 
 const TextFieldSizes = props => {
   const classes = useStyles();
-
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.root} noValidate autoComplete="off" >
         <TextField
           id="outlined-full-width"
-          defaultValue={props.field.label}
+          placeholder={props.field.label}
           style={{width: '100%'}}
           variant="outlined"
+          type="text"
           margin="normal"
           InputLabelProps={{
             shrink: true,

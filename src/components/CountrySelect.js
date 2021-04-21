@@ -27,7 +27,7 @@ const CountrySelect = () => {
   return (
     <Autocomplete
       id="country-select"
-      style={{width: 300}}
+      style={{width: 432}}
       options={countries}
       classes={{
         option: classes.option,
