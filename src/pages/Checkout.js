@@ -4,36 +4,23 @@ import IconLabelButtons from '../components/IconLabelButtons';
 import TextButton from '../components/TextButton';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
+import { Link } from '@material-ui/core';
+
 
 export default class Checkout extends React.Component {
+  
   shippingInfo = [
-    {
-      label: 'Address*'
-    },
-    {
-      label: ''
-    },
-    {
-      label: 'City*',
-    },
-    {
-      label: 'Zipcode*'
-    },
-    {
-      label: 'State/Province*'
-    }
+    {label: 'Address*'},
+    {label: ''},
+    {label: 'City*'},
+    {label: 'Zipcode*'},
+    {label: 'State/Province*'}
   ];
   
   contactInfo = [
-    {
-      label: 'First Name*'
-    },
-    {
-      label: 'Last Name*'
-    },
-    {
-      label: 'Email Address'
-    }
+    {label: 'First Name*'},
+    {label: 'Last Name*'},
+    {label: 'Email Address'}
   ]
 
   render() {
@@ -50,9 +37,9 @@ export default class Checkout extends React.Component {
                   </div>
                   <div className="checkout-sign-in">
                     Already have an account? 
-                    <div className="sign-in-link">
+                    <Link className="sign-in-link" onClick={() => this.props.showAccountModal()}>
                       Sign In
-                    </div>
+                    </Link>
                   </div>
                 </div>
                 {this.contactInfo.map(field => (

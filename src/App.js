@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
+import AccountModal from './modals/AccountModal';
 import Checkout from './pages/Checkout';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -13,11 +14,13 @@ import Modal from './modals/Modal';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
+import { findAllByDisplayValue } from '@testing-library/dom';
 
 /* TODO's:
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
- - Add email TextField into checkout, so user can in if they are already a user
+ - Refactor TextField to take in prop for label. Allow it to be dynamic
+   and clear text in input upon user typing.
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
@@ -35,6 +38,7 @@ let theme = createMuiTheme({
 class App extends React.Component {
   state = {
     showModal: false,
+    showAccountModal: false,
     toggleModal: () => {},
     cart: {
       total:0,
@@ -116,7 +120,23 @@ class App extends React.Component {
         toggleModal={this.state.toggleModal}
       />)
   }
+
+  showAccountModal = () => {
+    console.log('what is state here', this.state.toggleModal)
+    this.setState({
+      showAccountModal: true
+    })
+    this.state.toggleModal(
+      <AccountModal toggleModal={this.state.toggleModal} />
+    )
+  }
   
+  onAccountModalClose = () => {
+    this.setState({
+      showAccountModal: false
+    })
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
@@ -128,7 +148,12 @@ class App extends React.Component {
               <Route exact path="/" render={() => <AqabaHome />}/>
               <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
-              <Route exact path="/checkout" render={() => <Checkout cart={this.state.cart}  onRemoveItemFromCart={this.onRemoveItemFromCart} /> } />
+              <Route 
+                exact path="/checkout" 
+                render={() => <Checkout cart={this.state.cart}  
+                onRemoveItemFromCart={this.onRemoveItemFromCart} 
+                showAccountModal={this.showAccountModal}/> } 
+              />
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />
             </Switch>

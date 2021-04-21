@@ -1,0 +1,15 @@
+.modal-container {
+  display:flex;
+  flex-direction:column;
+  font-size:12pt;
+  font-weight:bold;
+  margin-left: 14pt;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  max-width: 350px;
+}
+
+.modal-header {
+  font-size: 14pt;
+  color:black;
+}
