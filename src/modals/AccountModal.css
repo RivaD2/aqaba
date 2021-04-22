@@ -1,15 +1,55 @@
 .modal-container {
+  font-weight:bold;
+  width: 420px;
+  height: 528px;
+  padding-right: 28px;
+}
+
+.modal-content {
   display:flex;
   flex-direction:column;
-  font-size:12pt;
-  font-weight:bold;
-  margin-left: 14pt;
-  max-height: calc(100vh - 300px);
-  overflow-y: auto;
-  max-width: 350px;
 }
 
 .modal-header {
-  font-size: 14pt;
-  color:black;
+  font-size: 20pt;
+  font-family: 'El Messiri', sans-serif;
+  text-align:center;
 }
+
+.header-slogan-text {
+  font-size: 12pt;
+  text-align:center;
+  padding-bottom: 10px;
+}
+
+.create-account-header {
+  font-size: 12pt;
+  text-align: center;
+}
+
+.modal-image-container {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.aqaba-product-image {
+  width: 126px;
+  padding-bottom: 20px;
+}
+
+.create-account-button {
+ padding-top: 26px;
+}
+
+/* This should be in Login modal once it's created
+ - Create three containers, one to hold  modal content container and image container.
+   Main container will display row. Other two containers display column  */
+   
+/* .account-modal-image {
+  background-image: url('https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg');
+  height: 400px;
+  width:300px;
+  background-size:cover;
+  background-repeat: no-repeat;
+} */
