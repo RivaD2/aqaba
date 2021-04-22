@@ -14,13 +14,11 @@ import Modal from './modals/Modal';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
-import { findAllByDisplayValue } from '@testing-library/dom';
 
 /* TODO's:
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
- - Refactor TextField to take in prop for label. Allow it to be dynamic
-   and clear text in input upon user typing.
+ - Refactor labels in Checkout
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
@@ -122,12 +120,8 @@ class App extends React.Component {
   }
 
   showAccountModal = () => {
-    console.log('what is state here', this.state.toggleModal)
-    this.setState({
-      showAccountModal: true
-    })
     this.state.toggleModal(
-      <AccountModal toggleModal={this.state.toggleModal} />
+      <AccountModal open={this.state.showAccountModal} close={this.onAccountModalClose}/>
     )
   }
   

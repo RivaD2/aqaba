@@ -1,5 +1,4 @@
 import React from 'react'
-import Modal from './Modal';
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
 import './AccountModal.css'
@@ -7,7 +6,6 @@ import './AccountModal.css'
 const AccountModal = props => {
   return (
     <div className="modal-container">
-      <Modal open={props.open}>
         <div className="modal-content">
          <div className="modal-header">
            Welcome to Aqaba
@@ -16,11 +14,10 @@ const AccountModal = props => {
           className="modal-image-container" 
           style={{backgroundImage:`url('${process.env.PUBLIC_URL}/assets/aqaba.amour.png')`}} 
          />
-         <TextField> Enter Username or Email</TextField>
-         <TextField> Enter Password</TextField>
+         <TextField field={{label: 'Username or email'}}> Enter Username or Email</TextField>
+         <TextField field={{label: 'Enter Password'}}> Enter Password </TextField>
          <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
         </div>
-      </Modal>
     </div>
   )
 }
