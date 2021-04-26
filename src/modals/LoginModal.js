@@ -1,6 +1,7 @@
 import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
+import GoogleAuth from '../components/Login';
 
 const LoginModal = props => {
   return (
@@ -20,15 +21,16 @@ const LoginModal = props => {
             Welcome To AQABA
           </div>
           <div className="header-slogan-text">A CELEBRATION OF LOVE</div>
-            <div className="create-account-header">
+            <div className="login-header">
               LOG IN 
             </div>
           <TextField field={{label: 'Username or email'}} className="form-text" />
           <TextField field={{label: 'Enter Password'}} className="form-text" />
           <p>Forgot Password</p>
-          <div className="create-account-button">
+          <div className="login-buttons">
             <TextButton text='Login' onClick={props.close}/>
-            <TextButton text='Login with Google' />
+            <TextButton text='Login with Google'/>
+            <GoogleAuth />
           </div>
         </div>
       </div>

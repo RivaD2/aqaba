@@ -138,7 +138,7 @@ class App extends React.Component {
 
   showLoginModal = () => {
     this.state.toggleModal(
-      <LoginModal open={this.state.showLoginModal} close={this.onAccountModalClose} />
+      <LoginModal open={this.state.showLoginModal} close={this.onLoginModalClose} />
     )
   }
 
@@ -153,14 +153,10 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
-          <Header showCart={this.showCart}/>
+          <Header showCart={this.showCart} showLoginModal={this.showLoginModal} />
           <Modal toggleModalCallback={this.toggleModalCallback} />
             <Switch>
-              <Route 
-                exact path="/" 
-                render={() => <AqabaHome />}
-                showLoginModal={this.showLoginModal} 
-              />
+              <Route exact path="/" render={() => <AqabaHome />} />
               <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> } />
               <Route 

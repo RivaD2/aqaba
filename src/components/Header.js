@@ -4,7 +4,7 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import IconButton from "@material-ui/core/IconButton";
-import GoogleAuth from './Login';
+import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 import './Header.css';
 
 class Header extends React.Component {
@@ -20,11 +20,11 @@ class Header extends React.Component {
     })
   }
   
-  onLoginClicked = () => {
-    this.setState({
-      showAccountModal: !this.state.showAccountModal
-    })
-  }
+  // onLoginClicked = () => {
+  //   this.setState({
+  //     showLoginModal: !this.state.showLoginModal
+  //   })
+  // }
   
   onSearchChanged = searchTerm => {
     this.setState({
@@ -55,20 +55,25 @@ class Header extends React.Component {
             <div className="creator-title">by Miriam Mirani</div>
           </div>
           <div className="icon-block">
-          {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
-          <div className="search-icon">
-              <IconButton onClick={this.toggleSearchField}> 
-                <SearchOutinedIcon />
-              </IconButton>
-            </div>
-            <div className="cart-icon">
-              <IconButton onClick={this.props.showCart}>
-                <AddShoppingCartOutlinedIcon />
-              </IconButton>
-            </div>
-            <div className="account-icon">
-              <GoogleAuth/>
-            </div>
+            {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
+            <div className="search-icon">
+                <IconButton onClick={this.toggleSearchField}> 
+                  <SearchOutinedIcon />
+                </IconButton>
+              </div>
+              <div className="cart-icon">
+                <IconButton onClick={this.props.showCart}>
+                  <AddShoppingCartOutlinedIcon />
+                </IconButton>
+              </div>
+              <div className="account-icon">
+                <div className="login-icon-container">
+                  {/* This was originally in Login component */}
+                  <IconButton onClick={this.props.showAccountModal}>
+                    <PermIdentityOutlinedIcon/>
+                  </IconButton>
+                </div>
+              </div>
           </div>
         </div>
       </div>

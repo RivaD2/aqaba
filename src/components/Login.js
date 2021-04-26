@@ -1,6 +1,5 @@
 import React from 'react'
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
-import IconButton from "@material-ui/core/IconButton";
+
 
 export default class Login extends React.Component {
   state = {
@@ -55,10 +54,10 @@ export default class Login extends React.Component {
   }
   render() {
     return (
-      <div className="login-icon-container">
-       <IconButton onClick={this.handleSignIn}>
-        <PermIdentityOutlinedIcon/>
-       </IconButton>
+      <div>
+        {/* The onClick prop was originally a part of account Icon 
+         that is now back in header */}
+        <button onClick={this.handleSignIn}></button>
         {this.state.name && 'Hello ' + this.state.name}
       </div>
     )
