@@ -7,10 +7,11 @@ import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
 import AccountModal from './modals/AccountModal';
+import Modal from './modals/Modal';
+import LoginModal from './modals/LoginModal';
 import Checkout from './pages/Checkout';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
-import Modal from './modals/Modal';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
@@ -19,6 +20,9 @@ import './App.css';
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
  - Refactor labels in Checkout
+ - LoginModal and CartModal are pretty similar, try and do refactor to increase reusability.
+   - What is redundant, what can be simplified?
+   - They have different styles so they can't share stylesheet. 
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
@@ -37,6 +41,7 @@ class App extends React.Component {
   state = {
     showModal: false,
     showAccountModal: false,
+    showLoginmodal: false,
     toggleModal: () => {},
     cart: {
       total:0,
@@ -131,22 +136,38 @@ class App extends React.Component {
     })
   }
 
+  showLoginModal = () => {
+    this.state.toggleModal(
+      <LoginModal open={this.state.showLoginModal} close={this.onAccountModalClose} />
+    )
+  }
+
+  onLoginModalClose = () => {
+    this.setState({
+      showLoginModal: false
+    })
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
           <Header showCart={this.showCart}/>
-          <Modal toggleModalCallback={this.toggleModalCallback}/>
+          <Modal toggleModalCallback={this.toggleModalCallback} />
             <Switch>
-              <Route exact path="/" render={() => <AqabaHome />}/>
+              <Route 
+                exact path="/" 
+                render={() => <AqabaHome />}
+                showLoginModal={this.showLoginModal} 
+              />
               <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
-              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> }/>
+              <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> } />
               <Route 
                 exact path="/checkout" 
                 render={() => <Checkout cart={this.state.cart}  
                 onRemoveItemFromCart={this.onRemoveItemFromCart} 
-                showAccountModal={this.showAccountModal}/> } 
+                showAccountModal={this.showAccountModal} /> } 
               />
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />

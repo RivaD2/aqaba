@@ -18,7 +18,10 @@
 - Axios
 - Figma (for wireframes)
 
-### How to use Aqaba: You can clone the repo and run `npm i` on the CLI to install all dependencies used. From there, explore the site! Add some items to your cart, switch back and forth between feminine and masculine scents, or check out gifts and bath and body products.
+### How to use Aqaba: 
+  You can clone the repo and run `npm i` on the CLI to install all dependencies used. From there, explore the site! Add some items to your cart, switch back and forth between feminine and masculine scents, or check out gifts and bath and body products.
+
+## Demo:
 
 ### Wireframes:
 

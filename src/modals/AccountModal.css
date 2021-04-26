@@ -41,15 +41,3 @@
 .create-account-button {
  padding-top: 26px;
 }
-
-/* This should be in Login modal once it's created
- - Create three containers, one to hold  modal content container and image container.
-   Main container will display row. Other two containers display column  */
-   
-/* .account-modal-image {
-  background-image: url('https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg');
-  height: 400px;
-  width:300px;
-  background-size:cover;
-  background-repeat: no-repeat;
-} */
