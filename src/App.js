@@ -41,7 +41,7 @@ class App extends React.Component {
   state = {
     showModal: false,
     showAccountModal: false,
-    showLoginmodal: false,
+    showLoginModal: false,
     toggleModal: () => {},
     cart: {
       total:0,
@@ -137,6 +137,7 @@ class App extends React.Component {
   }
 
   showLoginModal = () => {
+    this.onAccountModalClose();
     this.state.toggleModal(
       <LoginModal open={this.state.showLoginModal} close={this.onLoginModalClose} />
     )

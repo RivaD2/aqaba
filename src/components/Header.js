@@ -69,7 +69,7 @@ class Header extends React.Component {
               <div className="account-icon">
                 <div className="login-icon-container">
                   {/* This was originally in Login component */}
-                  <IconButton onClick={this.props.showAccountModal}>
+                  <IconButton onClick={this.props.showLoginModal}>
                     <PermIdentityOutlinedIcon/>
                   </IconButton>
                 </div>
