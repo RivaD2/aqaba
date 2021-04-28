@@ -4,7 +4,7 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import IconButton from "@material-ui/core/IconButton";
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import Login from '../components/Login';
 import './Header.css';
 
 class Header extends React.Component {
@@ -19,12 +19,6 @@ class Header extends React.Component {
       showSearchField: !this.state.showSearchField
     })
   }
-  
-  // onLoginClicked = () => {
-  //   this.setState({
-  //     showLoginModal: !this.state.showLoginModal
-  //   })
-  // }
   
   onSearchChanged = searchTerm => {
     this.setState({
@@ -68,10 +62,7 @@ class Header extends React.Component {
               </div>
               <div className="account-icon">
                 <div className="login-icon-container">
-                  {/* This was originally in Login component */}
-                  <IconButton onClick={this.props.showLoginModal}>
-                    <PermIdentityOutlinedIcon/>
-                  </IconButton>
+                  <Login showLoginModal={this.props.showLoginModal}/>
                 </div>
               </div>
           </div>

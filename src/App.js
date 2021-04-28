@@ -39,9 +39,6 @@ let theme = createMuiTheme({
 
 class App extends React.Component {
   state = {
-    showModal: false,
-    showAccountModal: false,
-    showLoginModal: false,
     toggleModal: () => {},
     cart: {
       total:0,
@@ -121,32 +118,25 @@ class App extends React.Component {
         onAddItemToCart={this.onAddItemToCart}
         onRemoveItemFromCart={this.onRemoveItemFromCart}
         toggleModal={this.state.toggleModal}
-      />)
+      />
+    )
   }
 
   showAccountModal = () => {
     this.state.toggleModal(
-      <AccountModal open={this.state.showAccountModal} close={this.onAccountModalClose}/>
+      <AccountModal onClose={this.closeModal}/>
     )
   }
   
-  onAccountModalClose = () => {
-    this.setState({
-      showAccountModal: false
-    })
-  }
-
   showLoginModal = () => {
-    this.onAccountModalClose();
+    // close Modal is not called yet, but is here for use later!
     this.state.toggleModal(
-      <LoginModal open={this.state.showLoginModal} close={this.onLoginModalClose} />
+      <LoginModal onClose={this.closeModal} />
     )
   }
-
-  onLoginModalClose = () => {
-    this.setState({
-      showLoginModal: false
-    })
+  
+  closeModal = () => {
+    this.state.toggleModal();
   }
 
   render() {

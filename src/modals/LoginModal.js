@@ -1,11 +1,21 @@
 import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
-import GoogleAuth from '../components/Login';
 import {Link} from 'react-router-dom';
 import './LoginModal.css'
 
 const LoginModal = props => {
+
+  const handleSignIn = async e => {
+    try {
+      const auth = window.gapi.auth2.getAuthInstance();
+      await auth.signIn();
+      e.preventDefault();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
     <div>
       <div>
@@ -35,8 +45,7 @@ const LoginModal = props => {
           </div>
           <div className="login-button-container">
             <TextButton text='Login'/>
-            <TextButton text='Login with Google'onClick={props.close}/>
-            {/* <GoogleAuth /> */}
+            <TextButton text='Login with Google' onClick={handleSignIn}/>
           </div>
         </div>
       </div>

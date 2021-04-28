@@ -1,5 +1,6 @@
 import React from 'react'
-
+import IconButton from "@material-ui/core/IconButton";
+import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
 
 export default class Login extends React.Component {
   state = {
@@ -14,6 +15,7 @@ export default class Login extends React.Component {
           clientId:'940348597150-aoo83rfir0di6ser2tlos3q99mh1p0jg.apps.googleusercontent.com',
           scope:'email'
         });
+        console.log('window gapi init', window.gapi.auth2);
         this.auth = window.gapi.auth2.getAuthInstance();
         const name = localStorage.getItem('user');
         this.setState({
@@ -27,37 +29,34 @@ export default class Login extends React.Component {
   }
   
   handleAuthChange = () => {
-    this.setState({isSignedIn: this.auth.isSignedIn.get()});
+    const user = this.auth.currentUser.get().getBasicProfile();
+    const name = user.getGivenName();
+    this.setState({
+      isSignedIn: this.auth.isSignedIn.get(),
+      name: name
+    });
+    localStorage.setItem('user', name);
   };
-
-  handleSignIn = async e => {
-    try {
-      if(this.state.isSignedIn) {
-        this.auth.signOut();
-        this.setState({
-          name: undefined,
-          isSignedIn: false
-        })
-        return;
-      }
-      await this.auth.signIn();
-      e.preventDefault();
-      const user = this.auth.currentUser.get().getBasicProfile();
-      const name = user.getGivenName();
+  
+  toggleSignIn = () => {
+    if(this.state.isSignedIn) {
+      this.auth.signOut();
       this.setState({
-        name, isSignedIn: true
+        name: undefined,
+        isSignedIn: false
       })
-      localStorage.setItem('user', name);
-    } catch (err) {
-      console.error(err);
+      localStorage.removeItem('user');
+      return;
     }
+    this.props.showLoginModal();
   }
+  
   render() {
     return (
       <div>
-        {/* The onClick prop was originally a part of account Icon 
-         that is now back in header */}
-        <button onClick={this.handleSignIn}></button>
+        <IconButton onClick={this.toggleSignIn}>
+          <PermIdentityOutlinedIcon/>
+        </IconButton>
         {this.state.name && 'Hello ' + this.state.name}
       </div>
     )
