@@ -1,6 +1,7 @@
 import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
+import GoogleButton from 'react-google-button';
 import {Link} from 'react-router-dom';
 import './LoginModal.css'
 
@@ -45,9 +46,12 @@ const LoginModal = props => {
               text='Login' 
               className="login-buttton" 
             />
-            <button className="login-google" onClick={handleSignIn}>
-              Login with Google
-            </button>
+            <div className="google-login-button">
+              <GoogleButton 
+                type="dark" 
+                onClick={handleSignIn}
+              />
+            </div>
           </div>
         </div>
       </div>

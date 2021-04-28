@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 'bold',
       backgroundColor: '#DC9B56',
       whiteSpace: 'nowrap',
-      width: '100%'
+      width: '98%'
     },
   },
   underline: {
