@@ -37,18 +37,23 @@ export default class Login extends React.Component {
     });
     localStorage.setItem('user', name);
   };
-  
-  toggleSignIn = () => {
-    if(this.state.isSignedIn) {
-      this.auth.signOut();
-      this.setState({
-        name: undefined,
-        isSignedIn: false
-      })
-      localStorage.removeItem('user');
-      return;
+  // Fix error with user signOut, user is not able to sign out
+  // Error has to be in the method below or one above
+  toggleSignIn = async () => {
+    try{
+      if(this.state.isSignedIn) {
+        await this.auth.signOut();
+        this.setState({
+          name: undefined,
+          isSignedIn: false
+        })
+        localStorage.removeItem('user') 
+        return;
+      }
+      this.props.showLoginModal();
+    } catch (err){
+      console.error(err);
     }
-    this.props.showLoginModal();
   }
   
   render() {

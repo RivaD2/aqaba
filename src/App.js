@@ -20,9 +20,10 @@ import './App.css';
 - Create a Cart Class with methods of its own (separate file) 
  - Give pages clear names so user knows where they are!
  - Refactor labels in Checkout
- - LoginModal and CartModal are pretty similar, try and do refactor to increase reusability.
-   - What is redundant, what can be simplified?
-   - They have different styles so they can't share stylesheet. 
+ - Fix user sign out in Login.js
+  - If user is already is signed In, and they click on account icon, 
+    show them an account modal(with a logout button etc.)
+    - If user is sign out, loginModal is currently shown
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
