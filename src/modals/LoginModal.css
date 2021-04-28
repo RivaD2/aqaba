@@ -12,7 +12,6 @@
   font-weight:bold;
   justify-content: right;
   margin-left: 20px;
-  align-items: center;
 }
 
 .login-modal-image-container {
@@ -22,8 +21,8 @@
 
 .login-modal-image{
   background-image: url('https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg');
-  height: 400px;
-  width:300px;
+  height: 100%;
+  width:320px;
   background-size:contain;
   background-repeat: no-repeat;
 }
@@ -37,7 +36,7 @@
 }
 
 .login-header-slogan-text {
- padding-bottom:40px;
+ padding-bottom:20px;
  text-align:center; 
 }
 
@@ -54,5 +53,4 @@
 .login-button-container {
   display:flex;
   flex-direction:column;
-  align-items:center;
 }

@@ -15,24 +15,21 @@ const LoginModal = props => {
       console.error(err);
     }
   }
-
+  
   return (
     <div>
-      <div>
-        <div className="login-modal-header">
-            Welcome To AQABA
-        </div>
-        <div className="login-header-slogan-text">
-            A CELEBRATION OF LOVE
-        </div>
-      </div>
       <div className="login-modal-container">
         <div className="login-modal-image-container">
           <div className="login-modal-image"></div>
         </div>
         <div className="login-modal-content">
-          <div className="login-header">
-            LOG IN 
+          <div>
+            <div className="login-modal-header">
+              Welcome To AQABA
+            </div>
+            <div className="login-header-slogan-text">
+              A CELEBRATION OF LOVE
+            </div>
           </div>
           <TextField field={{label: 'Username or email'}} className="form-text" />
           <div className="password-container">
@@ -44,8 +41,13 @@ const LoginModal = props => {
             </div>
           </div>
           <div className="login-button-container">
-            <TextButton text='Login'/>
-            <TextButton text='Login with Google' onClick={handleSignIn}/>
+            <TextButton 
+              text='Login' 
+              className="login-buttton" 
+            />
+            <button className="login-google" onClick={handleSignIn}>
+              Login with Google
+            </button>
           </div>
         </div>
       </div>

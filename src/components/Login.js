@@ -37,6 +37,7 @@ export default class Login extends React.Component {
     });
     localStorage.setItem('user', name);
   };
+
   // Fix error with user signOut, user is not able to sign out
   // Error has to be in the method below or one above
   toggleSignIn = async () => {
@@ -55,7 +56,7 @@ export default class Login extends React.Component {
       console.error(err);
     }
   }
-  
+
   render() {
     return (
       <div>
@@ -64,6 +65,7 @@ export default class Login extends React.Component {
         </IconButton>
         {this.state.name && 'Hello ' + this.state.name}
       </div>
+      
     )
   }
 }

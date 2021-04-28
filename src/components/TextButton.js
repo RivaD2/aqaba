@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
       fontSize:'16pt',
       fontWeight: 'bold',
       backgroundColor: '#DC9B56',
-      whiteSpace: 'nowrap'
+      whiteSpace: 'nowrap',
+      width: '100%'
     },
   },
   underline: {
@@ -27,12 +28,17 @@ const useStyles = makeStyles((theme) => ({
 
 
 const TextButton = props => {
-  const {onClick, text} = props;
+  const {onClick, text, className} = props;
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button onClick={onClick} defaultValue="default text">{text}</Button>
+      <Button 
+        onClick={onClick} 
+        defaultValue="default text"
+        className={className}>
+        {text}
+      </Button>
     </div>
   );
 }
