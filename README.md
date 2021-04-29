@@ -12,8 +12,7 @@
 - react-router-dom
 - Material-UI
 - react-google-login
-- Google Developers Console
-- google-auth-library
+- Google Developers Console/GAPI for Google Sign-In
 - My API server for database API and server-side verification
 - Axios
 - Figma (for wireframes)

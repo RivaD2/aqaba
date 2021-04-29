@@ -17,10 +17,14 @@ export default class Login extends React.Component {
         });
         console.log('window gapi init', window.gapi.auth2);
         this.auth = window.gapi.auth2.getAuthInstance();
+        console.log('what is auth', this.auth)
         const name = localStorage.getItem('user');
+        console.log('user logged in', name)
         this.setState({
-         name
+         name,
+         isSignedIn: this.auth.isSignedIn.get()
         })
+        console.log('who is stored in state', name)
         this.auth.isSignedIn.listen(this.handleAuthChange);
       });
     } catch (err) {
@@ -37,26 +41,34 @@ export default class Login extends React.Component {
     });
     localStorage.setItem('user', name);
   };
+  
+  // SignOut() will be used on Profile page 
+  // onSignInClick = () => {
+  //   this.auth.signIn();
+  // }
+  
+  // onSignOutClick = () => {
+  //   this.auth.signOut()
+  // }
 
-  // Fix error with user signOut, user is not able to sign out
-  // Error has to be in the method below or one above
+ 
   toggleSignIn = async () => {
-    try{
-      if(this.state.isSignedIn) {
+    try {
+      if (this.state.isSignedIn) {
+        console.log('what is this.state', this.state.isSignedIn)
         await this.auth.signOut();
         this.setState({
           name: undefined,
           isSignedIn: false
         })
-        localStorage.removeItem('user') 
-        return;
+        localStorage.removeItem('user');
       }
       this.props.showLoginModal();
-    } catch (err){
+    } catch (err) {
       console.error(err);
     }
   }
-  
+
   render() {
     return (
       <div>

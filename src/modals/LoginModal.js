@@ -1,5 +1,6 @@
 import React from 'react'
 import TextField from '../components/TextField';
+import PasswordInput from '../components/PasswordInput';
 import TextButton from '../components/TextButton';
 import GoogleButton from 'react-google-button';
 import {Link} from 'react-router-dom';
@@ -35,7 +36,8 @@ const LoginModal = props => {
           <TextField field={{label: 'Username or email'}} className="form-text" />
           <div className="password-container">
             <div className="form-text">
-              <TextField field={{label: 'Password'}} />
+              {/* <TextField field={{label: 'Password'}} /> */}
+              <PasswordInput />
             </div>
             <div className="forgot-password-link">
               <Link>Forgot Password</Link>
