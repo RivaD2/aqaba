@@ -10,21 +10,17 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    width: '100%'
   },
   margin: {
     margin: theme.spacing(1),
   },
   withoutLabel: {
     marginTop: theme.spacing(3),
-  },
-  textField: {
-    width: '32ch',
-  },
+  }
 }));
 
-const PassWordInput = () => {
+const PassWordInput = props => {
   const classes = useStyles();
   const [values, setValues] = useState({
     password: '',
@@ -46,10 +42,10 @@ const PassWordInput = () => {
   return (
     <div className={classes.root}>
       <div>
-        <FormControl className={(classes.margin, classes.textField)} variant="outlined">
+        <FormControl className={(classes.root)} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
-            id="utlined-adornment-password"
+            id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}
             onChange={handleChange('password')}

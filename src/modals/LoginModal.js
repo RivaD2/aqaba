@@ -36,7 +36,6 @@ const LoginModal = props => {
           <TextField field={{label: 'Username or email'}} className="form-text" />
           <div className="password-container">
             <div className="form-text">
-              {/* <TextField field={{label: 'Password'}} /> */}
               <PasswordInput />
             </div>
             <div className="forgot-password-link">

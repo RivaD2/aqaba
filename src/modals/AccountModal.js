@@ -1,6 +1,7 @@
 import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
+import PasswordInput from '../components/PasswordInput';
 import './AccountModal.css'
 
 const AccountModal = props => {
@@ -24,7 +25,7 @@ const AccountModal = props => {
         </div>
         </div>
         <TextField field={{label: 'Username or email'}} className="form-text" />
-        <TextField field={{label: 'Enter Password'}} className="form-text" />
+        <PasswordInput />
         <div className="create-account-button">
           <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
         </div>
