@@ -3,10 +3,11 @@
   flex-direction:column;
   font-size:12pt;
   font-weight:bold;
-  margin-left: 14pt;
-  max-height: calc(100vh - 300px);
+  max-height:80vh;
   overflow-y: auto;
-  max-width: 350px
+  max-width: 350px;
+  margin: -16px -32px -24px;
+  padding: 16px 32px 24px;
 }
 
 .cart-item-count {
@@ -32,20 +33,23 @@
 }
 
 .product-title {
-  font-size:14pt;
+  font-size:18pt;
 }
 
 .product-price {
   padding-top: 10px;
+  font-size: 14pt;
 }
 
 .product-size-selected {
   padding-top:2px;
+  font-size: 14pt;
 }
 
-.qty {
+.product-qty {
   padding-top:2px;
   padding-bottom:10px;
+  font-size: 14pt;
 }
 
 .edit-and-checkout {
