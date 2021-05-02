@@ -37,7 +37,7 @@ export default class Checkout extends React.Component {
                   </div>
                   <div className="checkout-sign-in">
                     Already have an account? 
-                    <Link className="sign-in-link" onClick={() => this.props.showAccountModal()}>
+                    <Link className="sign-in-link" onClick={this.props.showCreateAccountModal}>
                       Sign In
                     </Link>
                   </div>

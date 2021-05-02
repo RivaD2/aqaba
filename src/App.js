@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
-import AccountModal from './modals/createAccountModal';
+import CreateAccountModal from './modals/CreateAccountModal';
 import Modal from './modals/Modal';
 import LoginModal from './modals/LoginModal';
 import Checkout from './pages/Checkout';
@@ -123,16 +123,17 @@ class App extends React.Component {
     )
   }
 
-  showAccountModal = () => {
+  showCreateAccountModal = () => {
+    console.log('showCreateAccModal')
     this.state.toggleModal(
-      <AccountModal onClose={this.closeModal}/>
+      <CreateAccountModal onClose={this.closeModal}/>
     )
   }
   
   showLoginModal = () => {
     // close Modal is not called yet, but is here for use later!
     this.state.toggleModal(
-      <LoginModal onClose={this.closeModal} />
+      <LoginModal onClose={this.closeModal} showCreateAccountModal={this.showCreateAccountModal} />
     )
   }
   
@@ -155,7 +156,7 @@ class App extends React.Component {
                 exact path="/checkout" 
                 render={() => <Checkout cart={this.state.cart}  
                 onRemoveItemFromCart={this.onRemoveItemFromCart} 
-                showAccountModal={this.showAccountModal} /> } 
+                showCreateAccountModal={this.showCreateAccountModal} /> } 
               />
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />

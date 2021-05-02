@@ -2,9 +2,9 @@ import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
 import PasswordInput from '../components/PasswordInput';
-import './createAccountModal.css'
+import './CreateAccountModal.css'
 
-const AccountModal = props => {
+const CreateAccountModal = props => {
   return (
     <div className="modal-container">
       <div className="modal-content">
@@ -34,4 +34,4 @@ const AccountModal = props => {
   )
 }
 
-export default AccountModal;
+export default CreateAccountModal;

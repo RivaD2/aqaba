@@ -3,11 +3,10 @@ import TextField from '../components/TextField';
 import PasswordInput from '../components/PasswordInput';
 import TextButton from '../components/TextButton';
 import GoogleButton from 'react-google-button';
-import {Link} from 'react-router-dom';
 import './LoginModal.css'
 
 const LoginModal = props => {
-
+console.log('props are',  props)
   const handleSignIn = async e => {
     try {
       const auth = window.gapi.auth2.getAuthInstance();
@@ -38,8 +37,8 @@ const LoginModal = props => {
             <div className="form-text">
               <PasswordInput />
             </div>
-            <div className="forgot-password-link">
-              <Link>Forgot Password</Link>
+            <div className="forgot-password-link-container">
+              <div className="link">Forgot password?</div>
             </div>
           </div>
           <div className="login-button-container">
@@ -52,6 +51,10 @@ const LoginModal = props => {
                 type="dark" 
                 onClick={handleSignIn}
               />
+            </div>
+            <div className="create-account-container">
+              <div>Don't have an account?</div>
+              <div className="link" onClick={props.showCreateAccountModal}> Click here</div>
             </div>
           </div>
         </div>

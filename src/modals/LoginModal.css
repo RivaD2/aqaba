@@ -45,9 +45,18 @@
   flex-direction:column;
 }
 
-.forgot-password-link {
+.forgot-password-link-container {
   text-align:end;
-  padding-bottom: 40px;
+  padding: 10px 0 28px 0
+}
+
+.link {
+ color:rgba(53, 46, 126, 0.852);
+}
+
+.link:hover {
+  color: rgb(56, 35, 77);
+  cursor:pointer;
 }
 
 .login-button-container {
@@ -56,5 +65,11 @@
 }
 
 .google-login-button {
-  padding-left: 10px;
+  padding: 0 0 20px 10px;
+}
+
+.create-account-container {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-evenly;
 }
