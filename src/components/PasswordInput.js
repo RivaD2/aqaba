@@ -43,7 +43,7 @@ const PassWordInput = props => {
     <div className={classes.root}>
       <div>
         <FormControl className={(classes.root)} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
           <OutlinedInput
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
