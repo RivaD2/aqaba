@@ -2,7 +2,7 @@ import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
 import PasswordInput from '../components/PasswordInput';
-import './AccountModal.css'
+import './createAccountModal.css'
 
 const AccountModal = props => {
   return (

@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
-import AccountModal from './modals/AccountModal';
+import AccountModal from './modals/createAccountModal';
 import Modal from './modals/Modal';
 import LoginModal from './modals/LoginModal';
 import Checkout from './pages/Checkout';
