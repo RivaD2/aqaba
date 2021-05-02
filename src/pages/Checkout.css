@@ -40,6 +40,8 @@
 
 .sign-in-link {
   padding-left: 8px;
+  color:rgba(53, 46, 126, 0.852);
+  cursor: pointer;
 }
 
 .shipping-details {

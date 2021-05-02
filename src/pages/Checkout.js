@@ -4,8 +4,6 @@ import IconLabelButtons from '../components/IconLabelButtons';
 import TextButton from '../components/TextButton';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
-import { Link } from '@material-ui/core';
-
 
 export default class Checkout extends React.Component {
   
@@ -37,9 +35,9 @@ export default class Checkout extends React.Component {
                   </div>
                   <div className="checkout-sign-in">
                     Already have an account? 
-                    <Link className="sign-in-link" onClick={this.props.showCreateAccountModal}>
+                    <div className="sign-in-link" onClick={this.props.showCreateAccountModal}>
                       Sign In
-                    </Link>
+                    </div>
                   </div>
                 </div>
                 {this.contactInfo.map(field => (

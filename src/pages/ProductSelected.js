@@ -42,7 +42,7 @@ const ProductSelected = props => {
       <div className="perfume-details-container App-body">
         <div>
         <div className="perfume-card">
-          <img src={`/assets/${product.image}`} className="productSelected-image" alt="product"/>
+          <img src={`/assets/${product.image}`} className="product-selected-image" alt="product"/>
         </div>
         </div>
         <div className="perfume-details">

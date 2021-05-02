@@ -7,6 +7,7 @@
   padding-left:14pt;
   padding-top:50px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .perfume-card {
@@ -15,7 +16,7 @@
   flex-direction:column;
 }
 
-.productSelected-image {
+.product-selected-image {
   flex-grow:0;
 }
 
@@ -28,4 +29,10 @@
   flex-direction:column;
   justify-content: space-evenly;
   margin-left:16pt;
+  max-width:480px;
+}
+
+.product-desc{
+  margin:8px;
+  text-align:justify;
 }
