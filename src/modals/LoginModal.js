@@ -32,6 +32,7 @@ console.log('props are',  props)
               A CELEBRATION OF LOVE
             </div>
           </div>
+          <h3 className="sign-in">Sign In</h3>
           <TextField field={{label: 'Username or email'}} className="form-text" />
           <div className="password-container">
             <div className="form-text">

@@ -16,12 +16,12 @@ const CreateAccountModal = props => {
           <div className="account-modal-image">
             <img 
               src="/assets/aqaba-amour.png" 
-              alt="aqaba-classic"
+              alt="aqaba-classic-perfume"
               className="aqaba-product-image"
             />
           </div>
           <div className="create-account-header">
-            CREATE ACCOUNT
+           <h3>Create Account</h3>
         </div>
         </div>
         <TextField field={{label: 'Username or email'}} className="form-text" />

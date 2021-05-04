@@ -1,4 +1,4 @@
-.perfume-details-container {
+.product-details-container {
   display:flex;
   flex-direction:row;
   max-height:600px;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.perfume-card {
+.product-card {
   padding-bottom: 12px;
   display:flex;
   flex-direction:column;
@@ -24,7 +24,7 @@
   font-size: 22pt;
 }
 
-.perfume-details {
+.product-details {
   display:flex;
   flex-direction:column;
   justify-content: space-evenly;
