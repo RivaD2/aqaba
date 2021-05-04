@@ -32,6 +32,17 @@ Progress so far:
 
 ### Wireframes:
 
+
+![home-responsive](./design/design-mobile/home-reponsive.png)
+
+![hamburger-open](./design/design-mobile/hamburger-open.png)
+![login-modal-responsive](./design/design-mobile/login-modal-responsive.png)
+![create-account-modal-responsive](./design/design-mobile/create-account-modal-responsive.png)
+![products-list-responsive](./design/design-mobile/products-list-responsive.png)
+![cart-modal-responsive](./design/design-mobile/cart-modal-responsive.png)
+![checkout-responsive](./design/checkout.png)
+
+
 ![home](./design/home.png)
 
 ![subscribe](./design/subscribe-modal.png)
