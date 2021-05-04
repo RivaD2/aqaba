@@ -33,7 +33,7 @@ Progress so far:
 ### Wireframes:
 
 
-![home-responsive](./design/design-mobile/home-reponsive.png)
+![home-responsive](./design/design-mobile/home-responsive.png)
 
 ![hamburger-open](./design/design-mobile/hamburger-open.png)
 
