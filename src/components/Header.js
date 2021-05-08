@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
+import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
 import IconButton from "@material-ui/core/IconButton";
 import Login from '../components/Login';
 import './Header.css';
@@ -43,6 +44,11 @@ class Header extends React.Component {
             <Link to="/gifts" className="nav-item">
              GIFTS
             </Link>
+          </div>
+          <div className="hamburger">
+            <IconButton>
+             <MenuOutlinedIcon />
+            </IconButton>
           </div>
           <div className="title-block">
             AQABA

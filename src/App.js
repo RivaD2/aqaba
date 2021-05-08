@@ -18,7 +18,6 @@ import './App.css';
 
 /* TODO's:
 - Create a Cart Class with methods of its own (separate file) 
- - Give pages clear names so user knows where they are!
  - Refactor labels in Checkout
  - Fix user sign out in Login.js
   - If user is already is signed In, and they click on account icon, 
