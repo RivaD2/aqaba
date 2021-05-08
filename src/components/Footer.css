@@ -1,10 +1,19 @@
 .footer-container {
   background-color: #FBF7F4;
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
   justify-content: space-evenly;
   width:100vw;
   height: 80px;
+  align-items:center;
+  font-weight:bold;
+}
+
+.icon-and-link-container{
+  display:flex;
+  flex-direction:row;
+  width: 100vw;
+  justify-content: space-evenly;
   align-items:center;
   font-weight:bold;
 }
@@ -13,10 +22,75 @@
   padding:14px 12px 10px 12px;
 }
 
+.aqaba-summary-container{
+  display:none;
+}
+
 .connect-icons {
   color:black;
 }
 
+.form-container {
+  display:none;
+}
+
 .MuiIconButton-label {
   color:black;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .footer-container{
+    height: auto;
+  }
+
+  .aqaba-summary-container {
+    display:flex;
+    flex-direction:row;
+  }
+
+  .aqaba-summary{
+    font-size: 10pt;
+    padding:12px;
+  }
+  
+  .icon-and-link-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .connect-block{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+  }
+
+  .form-container {
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    width:100vw;
+    padding-left:24px;
+  }
+
+  .form-title{
+    font-size:10pt;
+    display:block;
+  }
+
+  .form-control {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-link{
+    display:none;
+  }
+
+  .home-content{
+    justify-content: center;
+  }
 }
