@@ -72,7 +72,7 @@ export default class Footer extends React.Component {
               <input type="text" placeholder="Enter your email address" className="form-control" />
             </div>
           </form>
-          <button>SUBSCRIBE</button>
+          <button className="subscribe-button">SUBSCRIBE</button>
         </div>
      </div>
     )
