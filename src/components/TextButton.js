@@ -1,6 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,16 +31,21 @@ const useStyles = makeStyles((theme) => ({
 
 const TextButton = props => {
   const {onClick, text, className} = props;
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button 
-        onClick={onClick} 
-        defaultValue="default text"
-        className={className}>
-        {text}
-      </Button>
+      <Hidden smDown>
+        <Button 
+          onClick={onClick} 
+          defaultValue="default text"
+          className={className}>
+          {text}
+          {matches}
+        </Button>
+      </Hidden>
     </div>
   );
 }
