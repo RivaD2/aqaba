@@ -11,7 +11,7 @@ const AqabaHome = props  => {
       <div className="home-content">
         <Link to="/perfumes" style={{ textDecoration: 'inherit'}} className="perfume-link">
           <TextButton text='Discover Aqaba' className="home-button-desktop"/>
-          <button className="home-button-mobile">Discover Aqaba</button>
+          <button className="home-button-mobile">DISCOVER AQABA</button>
         </Link>
       </div>
     </div>

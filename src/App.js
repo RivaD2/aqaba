@@ -23,11 +23,15 @@ import './App.css';
   - If user is already is signed In, and they click on account icon, 
     show them an account modal(with a logout button etc.)
     - If user is sign out, loginModal is currently shown
+
 - Styling:
    - Style Aqaba Masculine/change style for theme
    - Add close icon from material ui to cartModal
    - Change images on Home to have perfume layers added so it is clear what the site is about
    - Change color of text on body/bath products
+   - Responsive: simple select resize for mobile on ProductSelected.js
+     - center Aqaba home button for mobile
+     - Make icons smaller on header mobile
  */
 
 let font =  "font-family: 'Cairo', sans-serif"
