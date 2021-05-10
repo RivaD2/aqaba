@@ -59,3 +59,41 @@ hr {
   margin-bottom:22px;
   cursor:pointer;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ .perfume-container {
+   min-height: 400px;
+ }
+
+ .most-popular {
+   display:none;
+ }
+
+ .carousel-container {
+  display:none;
+ }
+
+ .divider-line{
+   display:none;
+ }
+
+ .perfume-links{
+   font-size: 12pt;
+ }
+
+ .card{
+   height: 120px;
+   width:120px;
+   display:flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-self:center;
+ }
+
+ .card-title {
+   font-size: 10pt;
+ }
+ 
+}

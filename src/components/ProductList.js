@@ -87,7 +87,7 @@ export default class ProductList extends React.Component {
            {list && <PerfumeCarousel products={list} />}
         </div>
         <div>
-          <hr />
+          <hr className="divider-line"/>
         </div>
         <div className="perfumes-links-container">
           {filterSections}
