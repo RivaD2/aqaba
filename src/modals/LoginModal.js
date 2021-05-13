@@ -47,6 +47,9 @@ console.log('props are',  props)
               text='Login' 
               className="login-buttton" 
             />
+            <button className="mobile-login-button">
+              LOGIN
+            </button>
             <div className="google-login-button">
               <GoogleButton 
                 type="dark" 

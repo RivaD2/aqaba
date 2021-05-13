@@ -32,12 +32,12 @@ const useStyles = makeStyles((theme) => ({
 const TextButton = props => {
   const {onClick, text, className} = props;
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const matches = useMediaQuery(theme.breakpoints.down('xs'));
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Hidden smDown>
+      <Hidden xsDown>
         <Button 
           onClick={onClick} 
           defaultValue="default text"
