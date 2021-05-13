@@ -28,6 +28,7 @@ const CreateAccountModal = props => {
         <PasswordInput />
         <div className="create-account-button">
           <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
+          <button className="mobile-create-account-button">CREATE ACCOUNT</button>
         </div>
       </div>
     </div>
