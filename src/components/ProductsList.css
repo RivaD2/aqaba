@@ -83,8 +83,8 @@ hr {
  }
 
  .card{
-   height: 120px;
-   width:120px;
+   height: 160px;
+   width:156px;
    display:flex;
    flex-direction:row;
    flex-wrap: wrap;

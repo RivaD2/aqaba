@@ -81,7 +81,7 @@
   }
   
   .cart-item-count {
-    font-size:14pt;
+    font-size:18pt;
   }
 
   .perfume-card {
@@ -91,19 +91,19 @@
   }
    
   .product-title {
-    font-size:13pt;
+    font-size:16pt;
   }
 
   .product-price {
-    font-size: 12pt;
+    font-size: 14pt;
   }
   
   .product-size-selected {
-    font-size: 12pt;
+    font-size: 14pt;
   }
   
   .product-qty {
-    font-size: 12pt;
+    font-size: 14pt;
   }
 
   .secondary-button {
