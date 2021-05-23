@@ -9,7 +9,9 @@ import Login from '../components/Login';
 import './Header.css';
 
 class Header extends React.Component {
-  state = {showSearchField: false};
+  state = {
+    showSearchField: false,
+  };
   
   toggleSearchField = () => {
     if(this.state.searchTerm) {
@@ -46,7 +48,7 @@ class Header extends React.Component {
             </Link>
           </div>
           <div className="hamburger">
-            <SideBar />
+            <SideBar/>
           </div>
           <div className="title-block">
             AQABA
