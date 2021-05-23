@@ -3,6 +3,7 @@ import history from './history';
 import {Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router-dom';
 import Header from "./components/Header";
+import SideBar from './components/SideBar';
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
 import CartModal from './modals/CartModal';
@@ -48,7 +49,8 @@ class App extends React.Component {
       total:0,
       qty:0,
       items:[]
-    }
+    },
+    sideMenuOpen: false
   }
 
   componentDidMount() {
@@ -144,12 +146,29 @@ class App extends React.Component {
     this.state.toggleModal();
   }
 
+  handleStateForSideMenu = state => {
+    this.setState({
+      sideMenuOpen: state.isOpen
+    })
+  }
+
+  closeSideMenu = () => {
+    this.setState({
+      sideMenuOpen: false
+    })
+  }
+
+  toggleSideMenu () {
+    this.setState(state => ({menuOpen: !state.menuOpen}))
+  }
+
   render() {
     return (
       <ThemeProvider theme={theme}>
       <div className="router-container App">
           <Router history={history}>
           <Header showCart={this.showCart} showLoginModal={this.showLoginModal} />
+          <SideBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
           <Modal toggleModalCallback={this.toggleModalCallback} />
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />} />
