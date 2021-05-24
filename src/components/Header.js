@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import Nav from '../components/Nav';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
@@ -34,18 +34,7 @@ class Header extends React.Component {
       <div className="header">
         <div className="nav-container">
           <div className="link-block" >
-            <Link to="/" className="nav-item" style={{fontWeight: this.state.fontWeight}} onClick={this.onLinkClicked}>
-              HOME/
-            </Link>
-            <Link to="/perfumes" className="nav-item">
-              PERFUMES/
-            </Link>
-            <Link to="/bath_and_body" className="nav-item">
-              BATH/BODY/
-            </Link>
-            <Link to="/gifts" className="nav-item">
-             GIFTS
-            </Link>
+            <Nav />
           </div>
           <div className="hamburger">
             <SideBar/>
