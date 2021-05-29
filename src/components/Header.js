@@ -4,6 +4,7 @@ import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutli
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import SideBar from '../components/SideBar';
+import {NavLink} from 'react-router-dom';
 import IconButton from "@material-ui/core/IconButton";
 import Login from '../components/Login';
 import './Header.css';
@@ -34,13 +35,13 @@ class Header extends React.Component {
       <div className="header">
         <div className="nav-container">
           <div className="link-block" >
-            <Nav />
+            <Nav navLinkClass="nav-item" />
           </div>
           <div className="hamburger">
             <SideBar/>
           </div>
           <div className="title-block">
-            AQABA
+            <NavLink to="/" className="home-title"> AQABA</NavLink>
             <div className="creator-title">by Miriam Mirani</div>
           </div>
           <div className="icon-block">

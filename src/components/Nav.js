@@ -1,11 +1,11 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
 
-const Nav = () => {
-
+const Nav = props => {
+ 
   const styles = {
-    className:'nav-item',
-    activeClassName: 'nav-item',
+    className:props.navLinkClass,
+    activeClassName: props.navLinkClass,
     id:'menu-item'
   }
   const links = [
@@ -13,19 +13,19 @@ const Nav = () => {
         className: styles.className,
         activeClassName: styles.activeClassName,
         to: '/',
-        name: 'HOME/'
+        name: 'HOME'
     },
     {
         className: styles.className,
         activeClassName: styles.activeClassName,
         to: '/perfumes',
-        name: 'PERFUMES/'
+        name: 'PERFUMES'
     },
     {
         className:styles.className,
         activeClassName: styles.activeClassName,
         to: '/bath_and_body',
-        name: 'BATH/BODY/'
+        name: 'BATH/BODY'
     },
     {
       className:styles.className,
@@ -36,15 +36,18 @@ const Nav = () => {
   ]
   return (
     <div>
-      {links.map(link => (
+      {links.map(link =>  [
       <NavLink 
         className={link.className} 
         activeClassName={link.activeClassName} 
         to={link.to}
         id={link.id}
+        key={link.name}
         >
         {link.name}
-      </NavLink> ))}
+      </NavLink>, 
+      props.showSeparators &&  <hr key={link.name + 'hr'}/> 
+    ])}
     </div>
   )
 }

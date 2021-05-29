@@ -48,6 +48,15 @@ a:hover {
   font-size:24pt;
 }
 
+.home-title {
+  text-decoration:none;
+  color:black;
+}
+
+.home-title:hover {
+  color:black;
+}
+
 .title-block .creator-title {
   font-size:12pt;
 }
@@ -80,23 +89,27 @@ a:hover {
     align-items:flex-end;
   }
   
-  .link-block{
+  .link-block {
     display:none;
   }
 
-  .title-block{
+  .title-block {
     text-align:center;
-    font-size:24pt;
+    font-size:16pt;
   }
 
-  .creator-title{
+  .creator-title {
     display:none;
   }
 
-  .hamburger{
+  .hamburger {
     width:100px;
     display:block;
     color:black;
+  }
+
+  .MuiIconButton-root .MuiSvgIcon-root {
+    font-size:20px;
   }
   
 }

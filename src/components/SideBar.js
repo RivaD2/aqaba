@@ -1,18 +1,21 @@
 import React from 'react';
 import {slide as Menu} from 'react-burger-menu';
-import {Link} from 'react-router-dom';
+import Nav from '../components/Nav';
 import './SideBar.css'
 
 export default class SideBar extends React.Component {
   state = {
-    sideMenuOpen: false
+    sideMenuOpen: false,
   }
 
   handleStateChange =  state => {
-    this.setState({sideMenuOpen: state.isOpen})  
+    this.setState({
+      sideMenuOpen: state.isOpen
+    })  
   }
 
-  closeSideMenu = () => {
+  closeSideMenu = e => {
+    e && e.preventDefault();
     this.setState({
       sideMenuOpen: false
     })
@@ -23,7 +26,7 @@ export default class SideBar extends React.Component {
       sideMenuOpen: !this.state.sideMenuOpen
     })
   }
-
+  
   render() {
     return (
       <div>
@@ -34,23 +37,8 @@ export default class SideBar extends React.Component {
           pageWrapId={'page-wrap'} 
           outerContainerId={'outer-container'}
           >
-          <div className="link-block">
-            <Link to="/" className="menu-item" onClick={this.closeSideMenu}>
-              HOME
-            </Link>
-            <hr />
-            <Link to="/perfumes" className="menu-item" onClick={this.closeSideMenu}>
-              PERFUMES
-            </Link>
-            <hr />
-            <Link to="/bath_and_body" className="menu-item" onClick={this.closeSideMenu}>
-              BATH/BODY
-            </Link>
-            <hr />
-            <Link to="/gifts" className="menu-item" onClick={this.closeSideMenu}>
-              GIFTS
-            </Link>
-            <hr />
+          <div className="link-block" onClick={this.closeSideMenu}>
+           <Nav navLinkClass="menu-item" showSeparators={true} />
           </div>
         </Menu>
       </div>
