@@ -3,6 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Hidden } from '@material-ui/core';
+import './TextButton.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,31 +18,40 @@ const useStyles = makeStyles((theme) => ({
       whiteSpace: 'nowrap',
       width: '98%'
     },
-  },
-  underline: {
-    "&&&:before": {
-      borderBottom: "none"
     },
-    "&&:after": {
-      borderBottom: "none"
+    underline: {
+      "&&&:before": {
+        borderBottom: "none"
+      },
+      "&&:after": {
+        borderBottom: "none"
+      }
     }
-  }
 }));
 
 
 const TextButton = props => {
-  const {onClick, text, className} = props;
+  const {onClick, text } = props;
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('xs'));
+  const matches = useMediaQuery(theme.breakpoints.between(300, 780));
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
+      <Hidden smUp>
+        <Button 
+          onClick={onClick} 
+          defaultValue="default text"
+          className={'text-button-small'}>
+          {text}
+          {matches}
+        </Button>
+      </Hidden>
       <Hidden xsDown>
         <Button 
           onClick={onClick} 
           defaultValue="default text"
-          className={className}>
+          className='text-button'>
           {text}
           {matches}
         </Button>

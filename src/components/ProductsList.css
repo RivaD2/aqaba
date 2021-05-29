@@ -21,7 +21,6 @@ hr {
 }
 
 .perfumes-links-container {
-  font-size:14pt;
   padding-top:16px;
   display:flex;
   flex-direction:row;
@@ -35,6 +34,7 @@ hr {
   font-weight: bold;
   cursor:pointer;
   padding-bottom: 15px;
+  white-space:nowrap
 }
 
 .perfume-links:hover {

@@ -70,7 +70,6 @@ const ProductSelected = props => {
             />
           </div>
           <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart} ></TextButton>
-          <button className="add-to-cart-button-mobile" onClick={onAddItemToCart}>ADD TO CART</button>
           <div className="product-desc">
             {product.description}
           </div>
