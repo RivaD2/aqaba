@@ -35,15 +35,6 @@ export default class Login extends React.Component {
     });
   };
   
-  // SignOut() will be used on Profile page 
-  // onSignInClick = () => {
-  //   this.auth.signIn();
-  // }
-  
-  // onSignOutClick = () => {
-  //   this.auth.signOut()
-  // }
-
   toggleSignIn = async () => {
     try {
       if (this.state.isSignedIn) {
