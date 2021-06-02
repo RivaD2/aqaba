@@ -138,6 +138,7 @@
     width:242px;
     height: 54px;
     margin-bottom:10px;
+    cursor:pointer;
   }
 
   .create-account-container {

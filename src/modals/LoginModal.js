@@ -43,10 +43,6 @@ console.log('props are',  props)
             </div>
           </div>
           <div className="login-button-container">
-            <TextButton 
-              text='Login' 
-              className="login-buttton" 
-            />
             <button className="mobile-login-button">
               LOGIN
             </button>
