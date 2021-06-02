@@ -1,7 +1,7 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 const countryToFlag = isoCode => {
   return typeof String.fromCodePoint !== 'undefined'
@@ -11,7 +11,8 @@ const countryToFlag = isoCode => {
     : isoCode;
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme:Theme) => 
+createStyles({
   option: {
     fontSize: 15,
     '& > span': {
@@ -19,39 +20,47 @@ const useStyles = makeStyles({
       fontSize: 18,
     },
   },
-});
+  root:{
+    width:'100%',
+    [theme.breakpoints.between(300, 600)]:{
+      width:'50%'
+    }
+  }
+}));
+
 
 const CountrySelect = () => {
   const classes = useStyles();
 
   return (
-    <Autocomplete
-      id="country-select"
-      style={{width: 432}}
-      options={countries}
-      classes={{
-        option: classes.option,
-      }}
-      autoHighlight
-      getOptionLabel={option => option.label}
-      renderOption={option => (
-        <React.Fragment>
-          <span>{countryToFlag(option.code)}</span>
-          {option.label} ({option.code}) +{option.phone}
-        </React.Fragment>
-      )}
-      renderInput= {params => (
-        <TextField
-          {...params}
-          label="Choose a country"
-          variant="outlined"
-          inputProps={{
-            ...params.inputProps,
-            autoComplete: 'new-password', 
-          }}
-        />
-      )}
-    />
+    <div className={classes.root}>
+      <Autocomplete
+        id="country-select"
+        options={countries}
+        classes={{
+          option: classes.option,
+        }}
+        autoHighlight
+        getOptionLabel={option => option.label}
+        renderOption={option => (
+          <React.Fragment>
+            <span>{countryToFlag(option.code)}</span>
+            {option.label} ({option.code}) +{option.phone}
+          </React.Fragment>
+        )}
+        renderInput= {params => (
+          <TextField
+            {...params}
+            label="Choose a country"
+            variant="outlined"
+            inputProps={{
+              ...params.inputProps,
+              autoComplete: 'new-password', 
+            }}
+          />
+        )}
+      />
+    </div>
   );
 }
 
