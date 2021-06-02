@@ -41,7 +41,7 @@ const TextFieldSizes = props => {
             id="outlined-full-width"
             placeholder={props.field.label}
             htmlFor={props.field.label}
-            style={{width: '50%'}}
+            style={{width: '100%'}}
             variant="outlined"
             type="text"
             margin="normal"

@@ -21,9 +21,8 @@ createStyles({
     },
   },
   root:{
-    width:'100%',
-    [theme.breakpoints.between(300, 600)]:{
-      width:'50%'
+    [theme.breakpoints.between("sm", "md")]:{
+      width:'100px'
     }
   }
 }));
@@ -34,32 +33,32 @@ const CountrySelect = () => {
 
   return (
     <div className={classes.root}>
-      <Autocomplete
-        id="country-select"
-        options={countries}
-        classes={{
-          option: classes.option,
-        }}
-        autoHighlight
-        getOptionLabel={option => option.label}
-        renderOption={option => (
-          <React.Fragment>
-            <span>{countryToFlag(option.code)}</span>
-            {option.label} ({option.code}) +{option.phone}
-          </React.Fragment>
-        )}
-        renderInput= {params => (
-          <TextField
-            {...params}
-            label="Choose a country"
-            variant="outlined"
-            inputProps={{
-              ...params.inputProps,
-              autoComplete: 'new-password', 
-            }}
-          />
-        )}
-      />
+    <Autocomplete
+      id="country-select"
+      options={countries}
+      classes={{
+        option: classes.option,
+      }}
+      autoHighlight
+      getOptionLabel={option => option.label}
+      renderOption={option => (
+        <React.Fragment>
+          <span>{countryToFlag(option.code)}</span>
+          {option.label} ({option.code}) +{option.phone}
+        </React.Fragment>
+      )}
+      renderInput= {params => (
+        <TextField
+          {...params}
+          label="Choose a country"
+          variant="outlined"
+          inputProps={{
+            ...params.inputProps,
+            autoComplete: 'new-password', 
+          }}
+        />
+      )}
+    />
     </div>
   );
 }
