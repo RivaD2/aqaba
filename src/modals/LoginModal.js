@@ -1,7 +1,6 @@
 import React from 'react'
 import TextField from '../components/TextField';
 import PasswordInput from '../components/PasswordInput';
-import TextButton from '../components/TextButton';
 import GoogleButton from 'react-google-button';
 import './LoginModal.css'
 

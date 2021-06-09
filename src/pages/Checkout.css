@@ -82,21 +82,10 @@
   padding: 10px 0px 10px 20px;
 }
 
-.item-title {
+.item-title, .item-price, .item-size, .item-qty {
   padding-bottom:5px;
 }
 
-.item-price {
-  padding-bottom: 5px;
-}
-
-.item-size {
-  padding-bottom: 5px;
-}
-
-.item-qty {
-  padding-bottom: 5px;
-}
 
 .checkout-order-container {
   display:flex;

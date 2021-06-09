@@ -1,4 +1,4 @@
-.modal-container {
+.create-account-modal-container {
   font-weight:bold;
   width: 420px;
   height: 528px;
@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .modal-container {
+  .create-account-modal-container {
     max-height: 80vh;
     max-width:240px;
     overflow-y: auto;

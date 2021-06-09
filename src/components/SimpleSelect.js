@@ -32,8 +32,7 @@ const SimpleSelect = (props) => {
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
   return (
     <div>
-      <Hidden smDown>
-      <FormControl variant="filled" className={classes.formControl}>
+      <FormControl variant="filled" className={classes.formControl} size="small">
         <InputLabel id="demo-simple-select-filled-label">{props.label}</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
@@ -48,7 +47,6 @@ const SimpleSelect = (props) => {
            {matches}
         </Select>
       </FormControl>
-      </Hidden>
     </div>
   )
 }

@@ -52,21 +52,23 @@ const ProductSelected = props => {
           <div className="price">
            PRICE: ${price} USD
           </div>
-          <div className="size">
+          <div className="size" id="size-input">
             <SimpleSelect 
               items={product.size} 
               onChange={onSizeSelected} 
               selected={size}
               label='size'
+              aria-labelledby="size-input"
             />
           </div>
-          <div className="qty">
+          <div className="qty" id="qty-input">
             <SimpleSelect 
               items={[1, 2, 3, 4, 5, 6, 7]} 
               value={quantity}
               onChange={setQuantity} 
               selected={quantity}
               label='qty'
+              aria-labelledby="qty-input"
             />
           </div>
           <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart} ></TextButton>
