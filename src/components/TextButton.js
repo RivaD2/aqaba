@@ -1,7 +1,6 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Hidden } from '@material-ui/core';
 import './TextButton.css';
 
@@ -32,8 +31,6 @@ const useStyles = makeStyles((theme) => ({
 
 const TextButton = props => {
   const {onClick, text } = props;
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.between(300, 780));
   const classes = useStyles();
 
   return (
@@ -44,7 +41,7 @@ const TextButton = props => {
           defaultValue="default text"
           className={'text-button-small'}>
           {text}
-          {matches}
+          {/* {matches} */}
         </Button>
       </Hidden>
       <Hidden xsDown>
@@ -53,7 +50,7 @@ const TextButton = props => {
           defaultValue="default text"
           className='text-button'>
           {text}
-          {matches}
+          {/* {matches} */}
         </Button>
       </Hidden>
     </div>

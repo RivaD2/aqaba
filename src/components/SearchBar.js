@@ -16,9 +16,11 @@ export default class SearchBar extends React.Component {
   
   render() {
     return (
-      <div> 
+      <div className="searchbar"> 
         <TextField
-            label="Search Aqaba"
+            id="outlined-basic"
+            label="Search"
+            variant="outlined"
             className="search-field"
             onChange={this.onInputChange}
             value={this.state.term}

@@ -36,6 +36,7 @@ a:hover {
 
 .icon-block {
   justify-content: flex-end;
+  margin-bottom:10px;
 }
 
 .hamburger {

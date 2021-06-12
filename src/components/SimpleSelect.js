@@ -1,11 +1,9 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -25,11 +23,9 @@ const useStyles = makeStyles((theme) => ({
 
 const SimpleSelect = (props) => {
   const classes = useStyles();
-  const theme = useTheme();
   const onChange = e => {
     props.onChange(e.target.value);
   };
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
   return (
     <div>
       <FormControl variant="filled" className={classes.formControl} size="small">
@@ -44,7 +40,6 @@ const SimpleSelect = (props) => {
            {props.items.map(item => (
              <MenuItem key={item} value={item}>{item}</MenuItem>
            ))}
-           {matches}
         </Select>
       </FormControl>
     </div>

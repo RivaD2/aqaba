@@ -2,11 +2,12 @@ import React from 'react'
 import TextField from '../components/TextField';
 import TextButton from '../components/TextButton';
 import PasswordInput from '../components/PasswordInput';
+import Hidden from '@material-ui/core/Hidden';
 import './CreateAccountModal.css'
 
 const CreateAccountModal = props => {
   return (
-    <div className="modal-container">
+    <div className="create-account-modal-container" id="create-account-modal">
       <div className="modal-content">
         <div className="modal-header">
           Welcome To AQABA
@@ -27,7 +28,9 @@ const CreateAccountModal = props => {
         <TextField field={{label: 'Username or email'}} className="form-text" />
         <PasswordInput />
         <div className="create-account-button">
-          <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
+          <Hidden mdDown>
+            <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
+          </Hidden>
           <button className="mobile-create-account-button">CREATE ACCOUNT</button>
         </div>
       </div>

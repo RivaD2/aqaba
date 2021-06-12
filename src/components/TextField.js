@@ -22,7 +22,7 @@ const TextFieldSizes = props => {
       <Hidden mdDown>
         <form className={classes.root} noValidate autoComplete="off" >
             <TextField
-              id="outlined-full-width"
+              className="outlined-full-width"
               placeholder={props.field.label}
               htmlFor={props.field.label}
               style={{width: '100%'}}
@@ -38,7 +38,7 @@ const TextFieldSizes = props => {
       <Hidden only="lg">
         <form className={classes.root} noValidate autoComplete="off" >
           <TextField
-            id="outlined-full-width"
+            className="outlined-full-width"
             placeholder={props.field.label}
             htmlFor={props.field.label}
             style={{width: '100%'}}
