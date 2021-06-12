@@ -52,7 +52,6 @@
  
  .product-details {
   justify-content: space-evenly;
-  font-size: 10pt;
   margin:10px 20px 0px 0px;
   align-items: center;
  }
@@ -67,7 +66,7 @@
  }
 
  .title {
-   font-size: 12pt;
+   font-size: 16pt;
  }
 
  .product-desc{

@@ -22,7 +22,7 @@ createStyles({
   },
   root:{
     [theme.breakpoints.between("sm", "md")]:{
-      width:'100px'
+      width:'100%'
     }
   }
 }));

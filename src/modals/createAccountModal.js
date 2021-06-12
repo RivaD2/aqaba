@@ -28,7 +28,7 @@ const CreateAccountModal = props => {
         <TextField field={{label: 'Username or email'}} className="form-text" />
         <PasswordInput />
         <div className="create-account-button">
-          <Hidden mdDown>
+          <Hidden xsDown>
             <TextButton text='CREATE ACCOUNT' onClick={props.close}/>
           </Hidden>
           <button className="mobile-create-account-button">CREATE ACCOUNT</button>

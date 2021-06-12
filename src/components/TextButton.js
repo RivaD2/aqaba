@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 'bold',
       backgroundColor: '#DC9B56',
       whiteSpace: 'nowrap',
-      width: '98%'
+      width: '98%',
     },
     },
     underline: {
@@ -39,9 +39,9 @@ const TextButton = props => {
         <Button 
           onClick={onClick} 
           defaultValue="default text"
+          style={{padding:'24px'}}
           className={'text-button-small'}>
           {text}
-          {/* {matches} */}
         </Button>
       </Hidden>
       <Hidden xsDown>
@@ -50,7 +50,6 @@ const TextButton = props => {
           defaultValue="default text"
           className='text-button'>
           {text}
-          {/* {matches} */}
         </Button>
       </Hidden>
     </div>

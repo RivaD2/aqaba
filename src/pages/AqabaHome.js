@@ -1,6 +1,7 @@
 import React from 'react'
 import ImageFade from '../components/ImageFade';
 import TextButton from '../components/TextButton';
+import { Hidden } from '@material-ui/core';
 import {Link} from 'react-router-dom';
 import '../pages/AqabaHome.css';
 
@@ -10,7 +11,10 @@ const AqabaHome = props  => {
         <ImageFade />
       <div className="home-content">
         <Link to="/perfumes" style={{ textDecoration: 'inherit'}} className="perfume-link">
-          <TextButton text='Discover Aqaba' />
+          <Hidden xsDown>
+            <TextButton text='Discover Aqaba' />
+          </Hidden>
+          <button className="home-mobile-button">DISCOVER AQABA</button>
         </Link>
       </div>
     </div>

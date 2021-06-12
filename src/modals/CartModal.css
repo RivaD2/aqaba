@@ -70,6 +70,10 @@
   cursor:pointer;
 }
 
+.secondary-button:hover {
+  background-color:#508585;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .cart-container {
@@ -107,8 +111,7 @@
   }
    
   .secondary-button {
-    font-size:10pt;
-    height: 44px;
+    font-size:14pt;
   }
 }
 
