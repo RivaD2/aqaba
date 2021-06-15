@@ -15,12 +15,12 @@
 - Google Developers Console/GAPI for Google Sign-In
 - My API server for database API and server-side verification
 - Axios
-- Figma (for wireframes)
+- Figma (for wireframes) & FigJam(component hierarchy diagram)
 
 ### How to use Aqaba: 
   You can clone the repo and run `npm i` on the CLI to install all dependencies used. From there, explore the site! Add some items to your cart, switch back and forth between feminine and masculine scents, or check out gifts and bath and body products.
 
-Progress so far: 
+**Progress so far:**
 
 ![home](./screenshots/home.png)
 ![login](./screenshots/loginModal.png)
@@ -29,6 +29,8 @@ Progress so far:
 ![product-selected](./screenshots/productSelected.png)
 ![cart](./screenshots/cartModal.png)
 ![checkout](./screenshots/checkout.png)
+
+**Component Hierarchy:**
 
 ![hierarchy](./design/aqaba-hierarchy.png)
 
