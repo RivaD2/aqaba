@@ -10,22 +10,22 @@ const Nav = props => {
   }
   const links = [
     {
-        className: styles.className,
-        activeClassName: styles.activeClassName,
-        to: '/',
-        name: 'HOME'
+      className: styles.className,
+      activeClassName: styles.activeClassName,
+      to: '/',
+      name: 'HOME'
     },
     {
-        className: styles.className,
-        activeClassName: styles.activeClassName,
-        to: '/perfumes',
-        name: 'PERFUMES'
+      className: styles.className,
+      activeClassName: styles.activeClassName,
+      to: '/perfumes',
+      name: 'PERFUMES'
     },
     {
-        className:styles.className,
-        activeClassName: styles.activeClassName,
-        to: '/bath_and_body',
-        name: 'BATH/BODY'
+      className:styles.className,
+      activeClassName: styles.activeClassName,
+      to: '/bath_and_body',
+      name: 'BATH/BODY'
     },
     {
       className:styles.className,

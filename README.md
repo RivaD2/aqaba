@@ -30,6 +30,8 @@ Progress so far:
 ![cart](./screenshots/cartModal.png)
 ![checkout](./screenshots/checkout.png)
 
+![hierarchy](./design/aqaba-hierarchy.png)
+
 ### Wireframes:
 
 

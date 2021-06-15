@@ -2,7 +2,6 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import './Carousel.css';
-// import history from '../history';
 import {useHistory} from 'react-router-dom';
 
 const PerfumeCarousel = props => {
