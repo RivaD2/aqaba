@@ -60,7 +60,7 @@ export default class Footer extends React.Component {
           <div className="footer-link">
             VIDEO
           </div>
-          <div className="footer-link">
+          <div className="footer-link" onClick={this.props.showSubscribeModal}>
             SUBSCRIBE
           </div>
         </div>
@@ -72,7 +72,7 @@ export default class Footer extends React.Component {
               <input type="text" placeholder="Enter your email address" className="form-control" />
             </div>
           </form>
-          <button className="subscribe-button">SUBSCRIBE</button>
+          <button className="subscribe-button" onClick={this.props.showSubscribeModal}>SUBSCRIBE</button>
         </div>
      </div>
     )
