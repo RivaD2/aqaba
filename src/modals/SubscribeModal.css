@@ -1,0 +1,59 @@
+.subscribe-modal {
+  display:flex;
+  flex-direction:column;
+  width: 420px;
+  height: 528px;
+}
+
+.company-title {
+ font-size:20pt;
+ font-weight:bold;
+ margin-bottom:10px;
+ text-align:center;
+}
+
+.slogan-text {
+  font-weight:bold;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.modal-title {
+  font-size:14pt;
+  font-weight:bold;
+  margin-bottom: 26px;
+}
+
+.text {
+  font-size:20pt;
+  margin-bottom:40px;
+
+}
+
+.signup-button-mobile {
+  display:none;
+}
+
+@media only screen and (max-width: 600px) {
+  .subscribe-modal {
+    max-height: 80vh;
+    max-width:240px;
+    overflow-y: auto;
+    margin: -16px -32px -24px;
+    padding: 16px 32px 24px;
+  }
+
+  .signup-button-mobile {
+    display:block;
+    font-family: 'Amiri', 'serif';
+    border: 2px solid white;
+    color: white;
+    font-size:14pt;
+    font-weight:bold;
+    background-color:#DC9B56;
+    width:242px;
+    height: 54px;
+    margin-bottom:10px;
+    cursor:pointer;
+  }
+}

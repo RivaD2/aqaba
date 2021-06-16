@@ -21,7 +21,6 @@ const SubscribeModal = props => {
               className="aqaba-product-image"
             />
           </div>
-          <div className="modal-title">Sign Up</div>
           <div className="text-container">
            <div className="text">Take 15% off 
              your first order.
@@ -29,11 +28,11 @@ const SubscribeModal = props => {
         </div>
         </div>
         <TextField field={{label: 'Username or email'}} className="form-text" />
-        <div className="subscribe-button">
+        <div className="signup-button-container">
           <Hidden xsDown>
-            <TextButton text='Sign Up' onClick={props.close}/>
+            <TextButton text='Sign Up' onClick={props.onClose}/>
           </Hidden>
-          <button className="mobile-subscribe-button">CREATE ACCOUNT</button>
+          <button className="signup-button-mobile">SIGN UP</button>
         </div>
       </div>
     </div>
