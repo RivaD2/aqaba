@@ -5,10 +5,11 @@ import {Router} from 'react-router-dom';
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
-import CartModal from './modals/CartModal';
-import CreateAccountModal from './modals/CreateAccountModal';
 import Modal from './modals/Modal';
+import CartModal from './modals/CartModal';
 import LoginModal from './modals/LoginModal';
+import SubscribeModal from './modals/SubscribeModal';
+import CreateAccountModal from './modals/CreateAccountModal';
 import Checkout from './pages/Checkout';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -139,6 +140,12 @@ class App extends React.Component {
       <LoginModal onClose={this.closeModal} showCreateAccountModal={this.showCreateAccountModal} />
     )
   }
+
+  showSubscribeModal = () => {
+    this.state.toggleModal(
+      <SubscribeModal onClose={this.closeModal} showSubscribeModal={this.showSubscribeModal} />
+    )
+  }
   
   closeModal = () => {
     this.state.toggleModal();
@@ -164,7 +171,7 @@ class App extends React.Component {
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />
             </Switch>
-            <Footer />
+            <Footer showSubscribeModal={this.showSubscribeModal} />
           </Router>
           </div>
       </ThemeProvider>

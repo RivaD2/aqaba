@@ -8,7 +8,7 @@
   min-height:calc(100vh - 152px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:768px) {
   /* For mobile phones: */
   .App-body{
     min-height:400px;
