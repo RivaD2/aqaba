@@ -2,10 +2,51 @@ import React from 'react'
 import TextField from '../components/TextField';
 import IconLabelButtons from '../components/IconLabelButtons';
 import TextButton from '../components/TextButton';
+import SimpleSelect from '../components/SimpleSelect';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
 
+const calculateYears = () => {
+  const year = (new Date()).getFullYear();
+  let minimumYears = year - 30;
+  const allYears = [];
+  for(let i = year; i >= minimumYears; i--) {
+    allYears.push(i);
+  }
+  return allYears;
+}
+
 export default class Checkout extends React.Component {
+  months = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+  years = calculateYears();
+
+  state = {
+    monthSelected: '',
+    yearSelected: '',
+    cvv: ''
+  }
+
+  onYearSelected = year => {
+    this.setState({
+      yearSelected: year
+    }, () => console.log('what is years',this.state.yearSelected))
+  }
+
+  onMonthSelected = month => {
+    this.setState({
+      monthSelected: month
+    })
+  }
+
+  onCvvSelected = e => {
+    this.setState({ term: e.target.value })
+    this.props.onSearchChanged(e.target.value)
+  };
+
+  onFormSubmit = e => {
+    e.preventDefault();
+    this.props.onCvvSelected(this.state.cvv);
+  }
   
   shippingInfo = [
     {label: 'Address*'},
@@ -21,7 +62,14 @@ export default class Checkout extends React.Component {
     {label: 'Email Address'}
   ]
 
+  paymentInfo = [
+    {label: 'Cardholder Name'},
+    {label: 'Card Number'}
+  ]
+  
   render() {
+    const {yearSelected, monthSelected} = this.state;
+
     return (
       <div className="checkout-container">
           <div className="shipping-container">
@@ -51,6 +99,35 @@ export default class Checkout extends React.Component {
                     <TextField key={field.label} field={field} />
                   ))}
                   <CountrySelect/>
+                </div>
+                <div className="payment-information-container">
+                  <div className="payment-title">
+                    Enter Your Payment Information
+                  </div>
+                  {this.paymentInfo.map(label => (
+                    <TextField key={label.label} field={label} />
+                  ))}
+                 <div className="card-details-container">
+                   <div className="card-details">
+                      <SimpleSelect 
+                        items={this.months} 
+                        value={monthSelected}
+                        onChange={this.onMonthSelected} 
+                        selected={monthSelected}
+                        label='month'
+                        aria-labelledby="select a month for card issue"
+                        />
+                        <SimpleSelect 
+                        items={this.years} 
+                        value={yearSelected}
+                        onChange={this.onYearSelected} 
+                        selected={yearSelected}
+                        label='year'
+                        aria-labelledby="select a year for card issue"
+                      />
+                      <TextField width={'80px'} field={{label:'cvv'}} />
+                    </div>
+                 </div>
                 </div>
             </div>
           </div>

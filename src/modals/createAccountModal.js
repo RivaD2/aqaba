@@ -31,7 +31,7 @@ const CreateAccountModal = props => {
           <Hidden xsDown>
             <TextButton text='CREATE ACCOUNT' onClick={props.onClose}/>
           </Hidden>
-          <button className="mobile-create-account-button">CREATE ACCOUNT</button>
+          <button className="mobile-create-account-button"onClick={props.onClose}>CREATE ACCOUNT</button>
         </div>
       </div>
     </div>

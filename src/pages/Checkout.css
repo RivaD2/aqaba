@@ -57,6 +57,13 @@
   font-weight: bold;
 }
 
+.card-details{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .checkout-items-container {
   display:flex;
   background-color: rgb(235, 232, 227);
