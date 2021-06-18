@@ -1,20 +1,25 @@
 import React from 'react'
+import Footer from '../components/Footer';
+import './ConfirmationModal.css';
+
 
 const ConfirmationModal = props => {
   return (
     <div className="order-confirmation-container">
-      <div className="company-title">
-        AQABA
-      </div>
-      <hr/>
-      <div className="confirmation-header">
-        YOUR ORDER IS ON IT'S WAY
-      </div>
-      <div className="tracking-text"> We'll send you tracking information when the order ships.</div>
-      <div className="cart-item-count">
+        <div className="title">
+          AQABA
+        </div>
+        <hr />
+        <div className="confirmation-header">
+          Thank you for your order!
+        </div>
+        <div className="order-number">
+         Order Number:  #C442879
+        </div>
+        <div className="tracking-text"> We'll send you tracking information when the order ships.</div>
+      <div className="cart-count">
           Your Items: ({props.cart.qty})
       </div>
-      <hr/>
       <div className="items-from-cart">
         {props.cart.items && props.cart.items.map((item, index) => (
           <div className="perfume-card" key={index}>
@@ -41,11 +46,15 @@ const ConfirmationModal = props => {
             </div>
           </div>
         ))}
-         <div className="order-total">
-            <div className="shipping-total">
+        <hr />
+         <div className="totals">
+           <div className="payment-method">
+             Payment Method: Credit Card
+           </div>
+            <div className="total-shipping">
               Shipping: FREE
             </div>
-            <div className="total">
+            <div className="order-total">
               Total: ${props.cart.price}
             </div>  
           </div>
