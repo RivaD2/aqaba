@@ -10,6 +10,7 @@ import CartModal from './modals/CartModal';
 import LoginModal from './modals/LoginModal';
 import SubscribeModal from './modals/SubscribeModal';
 import CreateAccountModal from './modals/CreateAccountModal';
+import ConfirmationModal from './modals/ConfirmationModal';
 import Checkout from './pages/Checkout';
 import AqabaHome from './pages/AqabaHome';
 import Footer from './components/Footer';
@@ -129,6 +130,15 @@ class App extends React.Component {
     )
   }
   
+  showOrderConfirmationModal = () => {
+    this.state.toggleModal(
+      <ConfirmationModal 
+      onClose={this.closeModal} 
+      showOrderConfirmationModal={this.showOrderConfirmationModal} 
+      cart={this.state.cart} />
+    )
+  }
+
   closeModal = () => {
     this.state.toggleModal();
   }
@@ -148,7 +158,8 @@ class App extends React.Component {
                 exact path="/checkout" 
                 render={() => <Checkout cart={this.state.cart}  
                 onRemoveItemFromCart={this.onRemoveItemFromCart} 
-                showCreateAccountModal={this.showCreateAccountModal} /> } 
+                showCreateAccountModal={this.showCreateAccountModal} 
+                showOrderConfirmationModal={this.showOrderConfirmationModal}/> } 
               />
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />

@@ -8,38 +8,41 @@
   display:flex;
   flex-direction:column;
   background-color: rgb(235, 232, 227);
-  padding: 22px;
+  width: 300px;
+  padding: 42px;
 }
 
 .checkout-header {
   font-size: 18pt;
-  padding-bottom:22px;
+  margin-bottom:22px;
 }
 
 .contact-details-container {
   display:flex;
   flex-direction:column;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .contact-info-container {
   display:flex;
-  flex-direction:row;
-  justify-content: space-between;
+  flex-direction:column;
 }
 
 .name-and-email-text {
- font-size: 12pt;
+ font-size: 14pt;
+ margin-right: 10px;
+ font-weight: bold;
+ margin-bottom:20px;
 }
 
 .checkout-sign-in {
   font-size: 12pt;
-  display: flex;
-  flex-direction:row;
+  display:flex;
+  flex-direction: row;
 }
 
 .sign-in-link {
-  padding-left: 8px;
+  margin-left: 8px;
   color:rgba(53, 46, 126, 0.852);
   cursor: pointer;
 }
@@ -48,13 +51,18 @@
   padding-top: 22px;
   display:flex;
   flex-direction: column;
-  padding-bottom: 100px;
+  margin-bottom:40px;
 }
 
 .shipping-header {
-  padding-bottom:20px;
+  margin-bottom:20px;
   font-size:14pt;
   font-weight: bold;
+}
+
+.payment-title {
+  font-size:14pt;
+  font-weight:bold;
 }
 
 .card-details{

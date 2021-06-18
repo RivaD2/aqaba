@@ -66,10 +66,8 @@ export default class Checkout extends React.Component {
     {label: 'Cardholder Name'},
     {label: 'Card Number'}
   ]
-  
   render() {
     const {yearSelected, monthSelected} = this.state;
-
     return (
       <div className="checkout-container">
           <div className="shipping-container">
@@ -102,7 +100,7 @@ export default class Checkout extends React.Component {
                 </div>
                 <div className="payment-information-container">
                   <div className="payment-title">
-                    Enter Your Payment Information
+                    Payment Information
                   </div>
                   {this.paymentInfo.map(label => (
                     <TextField key={label.label} field={label} />
@@ -170,7 +168,7 @@ export default class Checkout extends React.Component {
                     Total: ${this.props.cart.price}
                   </div>  
                   <div className="placeorder-button">
-                    <TextButton text='Place order' />
+                    <TextButton text='Place order' onClick={this.props.showOrderConfirmationModal} />
                  </div>
               </div>
           </div>
