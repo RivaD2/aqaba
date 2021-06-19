@@ -1,5 +1,5 @@
 .bm-burger-button {
-  position:fixed;
+  position:absolute;
   width:20px;
   height:14px;
   left:14px;
@@ -26,7 +26,6 @@
   height:24px;
   width:24px;
 }
-
 
 .bm-cross {
   background: #2f2f30;
@@ -57,4 +56,5 @@
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+  position:absolute;
 }

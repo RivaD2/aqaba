@@ -36,6 +36,7 @@ export default class SideBar extends React.Component {
           onStateChange={(state) => this.handleStateChange(state)}
           pageWrapId={'page-wrap'} 
           outerContainerId={'outer-container'}
+          disableAutoFocus={true}
           >
           <div className="link-block" onClick={this.closeSideMenu}>
            <Nav navLinkClass="menu-item" showSeparators={true} />
