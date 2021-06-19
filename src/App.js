@@ -1,7 +1,6 @@
 import React from 'react'
 import history from './history';
-import {Route, Switch} from 'react-router-dom';
-import {Router} from 'react-router-dom';
+import {Route, Switch, Router} from 'react-router-dom';
 import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import ProductSelected from './pages/ProductSelected';
@@ -17,6 +16,7 @@ import Footer from './components/Footer';
 import {createMuiTheme} from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/styles';
 import './App.css';
+
 
 let font =  "font-family: 'Cairo', sans-serif"
 let theme = createMuiTheme({
@@ -50,53 +50,62 @@ class App extends React.Component {
     });
   }
 
-    //Given an array of objects(products), each obj has id, size, and quantity,
-    // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
-    // If not, add that obj to arr.
+  //Given an array of objects(products), each obj has id, size, and quantity,
+  // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
+  // If not, add that obj to arr.
   onAddItemToCart = async (product, qty) => {
-    // If product is undefined, then cart is unchanged and loop is skipped
-    // Cart total is still calculated
-    const alreadyInCart = product === undefined || this.state.cart.items.some(obj => {
-      if(product._id + product.size  === obj._id + obj.size){
-        obj.qty = qty;
-        return true;
-      } else {
-        return false;
+    try {
+      // If product is undefined, then cart is unchanged and loop is skipped
+      // Cart total is still calculated
+      const alreadyInCart = product === undefined || this.state.cart.items.some(obj => {
+        if(product._id + product.size  === obj._id + obj.size){
+          obj.qty = qty;
+          return true;
+        } else {
+          return false;
+        }
+      })
+      if(!alreadyInCart){
+        product.qty = qty;
+        this.state.cart.items.push(product)
       }
-    })
-    if(!alreadyInCart){
-      product.qty = qty;
-      this.state.cart.items.push(product)
+      await this.calculateCartTotals();
+      this.showCart();
+      localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
+    } catch (err) {
+      console.log(err);
     }
-    await this.calculateCartTotals();
-    this.showCart();
-    localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
   }
   
   onRemoveItemFromCart = async indexOfItem => {
-   this.state.cart.items.splice(indexOfItem, 1);
-   await this.calculateCartTotals();
-   this.showCart();
-   localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
+   try {
+    this.state.cart.items.splice(indexOfItem, 1);
+    await this.calculateCartTotals();
+    this.showCart();
+    localStorage.setItem('cartItems', JSON.stringify(this.state.cart));
+   } catch (err) {
+     console.log(err);
+   }
+
   }
   
-  calculateCartTotals = async () => {
+  calculateCartTotals = () => {
     let totalQty = 0;
     let totalPrice = 0;
     this.state.cart.items.forEach(item => {
       totalPrice += item.price * item.qty;
       totalQty += item.qty;
     });
-    // Creating a promise to resolve once the new Cart is safely in state
+    // Promise to resolve once the new Cart is safely in state
     return new Promise(resolve => {
-    this.setState({
-      cart: {
-        qty: totalQty,
-        price: totalPrice,
-        items: this.state.cart.items
-      }
-    }, resolve)
-   });
+      this.setState({
+        cart: {
+          qty: totalQty,
+          price: totalPrice,
+          items: this.state.cart.items
+        }
+      }, resolve);
+    });
   }
   
   showCart = () => {
