@@ -82,6 +82,14 @@ hr {
    font-size: 12pt;
  }
 
+ .product-list-card-container {
+  justify-content: center;
+}
+
+ .product-list-card {
+   padding:13px;
+ }
+
  .card{
    height: 120px;
    width:120px;

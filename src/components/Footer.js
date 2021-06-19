@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
       <div className="footer-container"> 
         <div className="aqaba-summary-container">
           <div className="aqaba-summary">
-            <p>ABOUT AQABA:</p>
+            <p className="mobile-summary-title">ABOUT AQABA:</p>
             <p>The Aqaba perfume line was founded in New York and brings
               to you inspired scents from this small city by the Red Sea in Jordan.</p>
           </div>

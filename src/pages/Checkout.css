@@ -14,18 +14,7 @@
 
 .checkout-header {
   font-size: 18pt;
-  margin-bottom:22px;
-}
-
-.contact-details-container {
-  display:flex;
-  flex-direction:column;
-  max-width: 100%;
-}
-
-.contact-info-container {
-  display:flex;
-  flex-direction:column;
+  margin: 20px 0px 22px 0px;
 }
 
 .name-and-email-text {
@@ -76,7 +65,7 @@
   display:flex;
   background-color: rgb(235, 232, 227);
   width: 300px;
-  padding: 42px;
+  padding:28px;
 }
 
 .items-header {
@@ -101,12 +90,8 @@
   padding-bottom:5px;
 }
 
-
 .checkout-order-container {
-  display:flex;
-  flex-direction:column;
   background-color: rgb(235, 232, 227);
-  padding: 22px;
   margin-left: 100px;
 }
 
@@ -121,49 +106,37 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* For mobile phones: */
+  /* Mobile phones and tablet */
   .checkout-container {
     display:flex;
     flex-direction:column;
     overflow: auto;
+    align-items:center;
     background-color: rgb(235, 232, 227);
-    padding-left:20px;
-    -webkit-overflow-scrolling: touch;
+    padding: 42px 0px;
+    box-sizing: border-box;
   }
 
   .shipping-container {
-    padding: none;
-  }
-
-  .contact-details-container {
-    display:flex;
-    flex-direction:column;
-    width:100%;
-  }
-  
-  .contact-info-container {
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
+    padding: 0px;
   }
 
   .shipping-details {
     padding-top: 22px;
-    display:flex;
-    flex-direction: column;
     padding-bottom: 10px;
   }
 
   .checkout-items-container {
-    display:flex;
-    width:100%;
+    justify-content:center;
+  }
+
+  .items-header {
+    text-align:center;
   }
 
   .checkout-order-container {
-    display:flex;
-    flex-direction:column;
     padding: 0px;
-    margin-left:none;
+    margin:0px;
   }
   
   .total {

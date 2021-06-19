@@ -83,7 +83,7 @@ a:hover {
   }
 
   .icon-block {
-    flex-grow:none;
+    flex-grow:0;
     display:flex;
     flex-basis: auto;
     flex-direction:row;
