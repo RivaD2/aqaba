@@ -24,7 +24,7 @@ export default class ProductList extends React.Component {
       const listOfProducts = await getPerfumes(category);
       this.setState({
         list: listOfProducts, 
-      })
+      });
     } catch (err) {
       console.log(err);
     }

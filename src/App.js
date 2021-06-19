@@ -40,14 +40,14 @@ class App extends React.Component {
     if(savedCartItems !== null) {
       this.setState({
         cart: JSON.parse(savedCartItems)
-      })
+      });
     }
   }
 
   toggleModalCallback = toggleFunction => {
     this.setState({
       toggleModal: toggleFunction
-    })
+    });
   }
 
     //Given an array of objects(products), each obj has id, size, and quantity,
@@ -96,7 +96,7 @@ class App extends React.Component {
         items: this.state.cart.items
       }
     }, resolve)
-   })
+   });
   }
   
   showCart = () => {

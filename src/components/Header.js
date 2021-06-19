@@ -21,13 +21,13 @@ class Header extends React.Component {
     }
     this.setState({
       showSearchField: !this.state.showSearchField
-    })
+    });
   }
   
   onSearchChanged = searchTerm => {
     this.setState({
      searchTerm
-    })
+    });
   }
 
   render() {

@@ -16,9 +16,10 @@ export default class Login extends React.Component {
           scope:'email'
         });
         this.auth = window.gapi.auth2.getAuthInstance();
+
         this.setState({
          isSignedIn: this.auth.isSignedIn.get()
-        })
+        });
         this.auth.isSignedIn.listen(this.handleAuthChange);
       });
     } catch (err) {
@@ -42,7 +43,7 @@ export default class Login extends React.Component {
         this.setState({
           name: null,
           isSignedIn: false
-        })
+        });
       }
       this.props.showLoginModal();
     } catch (err) {
