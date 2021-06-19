@@ -8,9 +8,9 @@ import '../pages/Checkout.css'
 
 const calculateYears = () => {
   const year = (new Date()).getFullYear();
-  let minimumYears = year - 30;
+  let minimumYears = year + 10;
   const allYears = [];
-  for(let i = year; i >= minimumYears; i--) {
+  for(let i = year; i <= minimumYears; i++) {
     allYears.push(i);
   }
   return allYears;
@@ -29,17 +29,19 @@ export default class Checkout extends React.Component {
   onYearSelected = year => {
     this.setState({
       yearSelected: year
-    }, () => console.log('what is years',this.state.yearSelected))
+    });
   }
 
   onMonthSelected = month => {
     this.setState({
       monthSelected: month
-    })
+    });
   }
 
   onCvvSelected = e => {
-    this.setState({ term: e.target.value })
+    this.setState({
+       term: e.target.value 
+      });
     this.props.onSearchChanged(e.target.value)
   };
 

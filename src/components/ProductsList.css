@@ -60,7 +60,7 @@ hr {
   cursor:pointer;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* For mobile phones: */
  .perfume-container {
    min-height: 400px;

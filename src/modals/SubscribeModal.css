@@ -34,7 +34,7 @@
   display:none;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .subscribe-modal {
     max-height: 80vh;
     max-width:240px;

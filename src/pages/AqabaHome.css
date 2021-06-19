@@ -24,8 +24,8 @@
   color:rgb(240, 96, 29);
 }
 
-@media only screen and (max-width: 600px) {
-  /* For mobile phones: */
+@media screen and (max-width: 600px) {
+  /* For mobile phones */
  .home-content{
     justify-content: center;
     padding-right:0;

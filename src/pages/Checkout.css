@@ -9,7 +9,7 @@
   flex-direction:column;
   background-color: rgb(235, 232, 227);
   width: 300px;
-  padding: 42px;
+  padding: 28px;
 }
 
 .checkout-header {
@@ -120,7 +120,7 @@
   font-size: 14pt;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /* For mobile phones: */
   .checkout-container {
     display:flex;
@@ -156,7 +156,6 @@
 
   .checkout-items-container {
     display:flex;
-    padding:0px;
     width:100%;
   }
 

@@ -61,7 +61,7 @@ hr {
   margin: 12px 0px 12px 0px;
 }
 
-@media only screen and (max-width: 765px) {
+@media screen and (max-width: 765px) {
   /* For mobile phones: */
   .order-confirmation-container {
     max-height: 80vh;
