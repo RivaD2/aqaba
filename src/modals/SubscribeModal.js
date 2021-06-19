@@ -32,7 +32,7 @@ const SubscribeModal = props => {
           <Hidden xsDown>
             <TextButton text='Sign Up' onClick={props.onClose}/>
           </Hidden>
-          <button className="signup-button-mobile">SIGN UP</button>
+          <button className="signup-button-mobile" onClick={props.onClose}>SIGN UP</button>
         </div>
       </div>
     </div>
