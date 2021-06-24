@@ -5,7 +5,12 @@ import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
-
+/**
+ * @param  {} =>{constyear=(newDate(
+ * @param  {} .getFullYear(
+ * @param  {} ;letminimumYears=year+10;constallYears=[];for(leti=year;i<=minimumYears;i++
+ * @param  {} {allYears.push(i
+ */
 const calculateYears = () => {
   const year = (new Date()).getFullYear();
   let minimumYears = year + 10;
@@ -26,18 +31,27 @@ export default class Checkout extends React.Component {
     cvv: ''
   }
 
+/**
+ * @param  {year}} {yearSelected
+ */
   onYearSelected = year => {
     this.setState({
       yearSelected: year
     });
   }
 
+  /**
+   * @param  {month}} {monthSelected
+   */
   onMonthSelected = month => {
     this.setState({
       monthSelected: month
     });
   }
 
+  /**
+   * @param  {e.target.value}} {term
+   */
   onCvvSelected = e => {
     this.setState({
        term: e.target.value 
@@ -45,6 +59,9 @@ export default class Checkout extends React.Component {
     this.props.onSearchChanged(e.target.value)
   };
 
+  /**
+   * @param  {} ;this.props.onCvvSelected(this.state.cvv
+   */
   onFormSubmit = e => {
     e.preventDefault();
     this.props.onCvvSelected(this.state.cvv);
@@ -125,7 +142,7 @@ export default class Checkout extends React.Component {
                         label='year'
                         aria-labelledby="select a year for card issue"
                       />
-                      <TextField width={'80px'} field={{label:'cvv'}} />
+                      <TextField field={{label:'cvv'}} width={'70px'} id="cvv"/>
                     </div>
                  </div>
                 </div>

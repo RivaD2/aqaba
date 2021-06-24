@@ -105,6 +105,10 @@
   font-size: 14pt;
 }
 
+#cvv > .MuiInputBase-root, .MuiOutlinedInput-root, .MuiInputBase-formControl{
+  height: 50px;
+}
+
 @media screen and (max-width: 768px) {
   /* Mobile phones and tablet */
   .checkout-container {
