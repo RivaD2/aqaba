@@ -5,6 +5,9 @@ import PasswordInput from '../components/PasswordInput';
 import Hidden from '@material-ui/core/Hidden';
 import './CreateAccountModal.css'
 
+/**
+ * Function that renders CreateAccountModal
+ */
 const CreateAccountModal = props => {
   return (
     <div className="create-account-modal-container" id="create-account-modal">
@@ -37,5 +40,4 @@ const CreateAccountModal = props => {
     </div>
   )
 }
-
 export default CreateAccountModal;

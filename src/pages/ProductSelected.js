@@ -12,15 +12,20 @@ const ProductSelected = props => {
   const [price, setPrice] = useState();
   const [quantity, setQuantity] = useState(1);
 
+  /**
+   * Adds selected product to cart
+   */
   const onAddItemToCart = () => {
     // Making copy of product and adding copy to cart
     // So I can change array of possible values to one selected value
     // Left to right I copy properties from one object to the next
     const copyOfProduct =  Object.assign({}, product, {size, price});
     props.onAddItemToCart(copyOfProduct, quantity, price);
-    console.log('what is copy of product', copyOfProduct);
   }
 
+  /**
+   * @param  {number} size size of product selected
+   */
   const onSizeSelected = size => {
     const indexSelected = product.size.indexOf(size);
     setPrice(product.price[indexSelected]);

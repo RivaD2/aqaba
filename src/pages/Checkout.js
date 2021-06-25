@@ -5,11 +5,10 @@ import TextButton from '../components/TextButton';
 import SimpleSelect from '../components/SimpleSelect';
 import CountrySelect from '../components/CountrySelect';
 import '../pages/Checkout.css'
+
 /**
- * @param  {} =>{constyear=(newDate(
- * @param  {} .getFullYear(
- * @param  {} ;letminimumYears=year+10;constallYears=[];for(leti=year;i<=minimumYears;i++
- * @param  {} {allYears.push(i
+ * Generates an array of years for SimpleSelect dropdown on Checkout
+ * @returns {Array} list of all years
  */
 const calculateYears = () => {
   const year = (new Date()).getFullYear();
@@ -32,7 +31,7 @@ export default class Checkout extends React.Component {
   }
 
 /**
- * @param  {year}} {yearSelected
+ * @param  {Number} year year the user selects
  */
   onYearSelected = year => {
     this.setState({
@@ -41,7 +40,7 @@ export default class Checkout extends React.Component {
   }
 
   /**
-   * @param  {month}} {monthSelected
+   * @param  {Number} month the month the user selects
    */
   onMonthSelected = month => {
     this.setState({
@@ -50,7 +49,7 @@ export default class Checkout extends React.Component {
   }
 
   /**
-   * @param  {e.target.value}} {term
+   * @param {event} e click event for cvv input selected
    */
   onCvvSelected = e => {
     this.setState({
@@ -60,7 +59,7 @@ export default class Checkout extends React.Component {
   };
 
   /**
-   * @param  {} ;this.props.onCvvSelected(this.state.cvv
+   * @param  {event} e click event for form submit
    */
   onFormSubmit = e => {
     e.preventDefault();

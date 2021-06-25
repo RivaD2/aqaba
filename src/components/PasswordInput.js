@@ -19,17 +19,31 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+/**
+ * Renders the PassWordInput component
+ */
 const PassWordInput = props => {
   const classes = useStyles();
+
   const [values, setValues] = useState({
     password: '',
     showPassword: false,
   });
 
+  /**
+   * Sets new state for the input
+   * @param {string} prop password
+   * @param {event} event event for when value of input changes
+   */
   const handleChange = (prop) => (event) => {
+    console.log(event, event)
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  /**
+   * Shows password entered into input when clicked
+   */
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
   };

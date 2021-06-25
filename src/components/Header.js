@@ -14,9 +14,11 @@ class Header extends React.Component {
     showSearchField: false,
   };
   
+  /**
+   * Toggles state of SearchField component
+   */
   toggleSearchField = () => {
     if(this.state.searchTerm) {
-      console.log('searching for something', this.state.searchTerm);
       return;
     }
     this.setState({
@@ -24,6 +26,10 @@ class Header extends React.Component {
     });
   }
   
+  /**
+   * Sets new searchterm entered into input into state
+   * @param {string} searchTerm
+   */
   onSearchChanged = searchTerm => {
     this.setState({
      searchTerm

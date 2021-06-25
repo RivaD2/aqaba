@@ -5,6 +5,9 @@ import SimpleSelect from '../components/SimpleSelect';
 import IconLabelButtons from '../components/IconLabelButtons';
 import '../modals/CartModal.css';
 
+/**
+ Function that renders the CartModal
+ */
 const CartModal = props => {
   return (
     <div className="cart-container">

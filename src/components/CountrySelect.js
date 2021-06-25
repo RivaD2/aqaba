@@ -3,6 +3,11 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
+/**
+ * Function that generates two countries for CountrySelect
+ * @param  {string} isoCode country for input
+ * @returns {string} isoCode country selected
+ */
 const countryToFlag = isoCode => {
   return typeof String.fromCodePoint !== 'undefined'
     ? isoCode

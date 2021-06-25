@@ -21,11 +21,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * Renders SimpleSelect component
+ * @param {Object} props props set for SimpleSelect
+ */
 const SimpleSelect = (props) => {
   const classes = useStyles();
+
   const onChange = e => {
     props.onChange(e.target.value);
   };
+
   return (
     <div>
       <FormControl variant="filled" className={classes.formControl} size="small">

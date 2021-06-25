@@ -55,12 +55,19 @@ const SpringModal = ({toggleModalCallback}) => {
     toggleModalCallback(toggleModalContent);
   },[toggleModalCallback]);
   
+  /**
+   *  * Sets the content of whateverm modal has been selected. Calling the modal with
+   * an arg will open the modal.
+   * @param  newContent - React.Element
+   */
   const toggleModalContent = newContent => {
    setContent(newContent);
-  //  call Modal with arg will open modal
    setOpen(!!newContent);
   }
 
+  /**
+   * Closes the modal by setting state to false
+   */
   const handleClose = () => {
     setOpen(false);
   };

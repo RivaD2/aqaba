@@ -7,8 +7,10 @@ import {useHistory} from 'react-router-dom';
 const PerfumeCarousel = props => {
 const history = useHistory();
 
+  /**
+   * @param  {event} event event for when product is clicked
+   */
   const onProductClick = e => {
-    console.log('what is the event', e.target);
     history.push(`/perfume/${e.target.id}`);
   }
 

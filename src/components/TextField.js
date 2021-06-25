@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 const TextFieldSizes = props => {
   const classes = useStyles();
   const width = props.width ? props.width : '100%';
+  const height = props.height;
   return (
     <div>
       <Hidden mdDown>
@@ -41,7 +42,7 @@ const TextFieldSizes = props => {
             className="outlined-full-width"
             placeholder={props.field.label}
             htmlFor={props.field.label}
-            style={{width: width}}
+            style={{width: width, height:height}}
             variant="outlined"
             type="text"
             margin="normal"

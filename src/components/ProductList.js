@@ -14,10 +14,15 @@ export default class ProductList extends React.Component {
     this.onListFilter();
   }
  
+  /**
+   * Filters the list of products based of category and sets the new products
+   * of that category in state.
+   * If method is called without category, category is picked based off page name
+   * @param {string} category the category of product
+   */
   onListFilter = async category => {
     try {
       if(category === undefined) {
-        // If onListFilter is called without category, category is picked based off page name
         category = this.props.page === 'perfumes' ? 'feminine' : 
          (this.props.page === 'bath_and_body' ? 'body' : 'gift');
       }

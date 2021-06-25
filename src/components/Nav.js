@@ -1,8 +1,10 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
 
+/**
+ * Renders Nav component for navigation
+ */
 const Nav = props => {
- 
   const styles = {
     className:props.navLinkClass,
     activeClassName: props.navLinkClass,

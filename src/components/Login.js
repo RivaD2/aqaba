@@ -27,6 +27,9 @@ export default class Login extends React.Component {
     }
   }
   
+  /**
+   * Gets basicProfile from gapi and signs user in
+   */
   handleAuthChange = () => {
     const user = this.auth.currentUser.get().getBasicProfile();
     const name = user.getGivenName();
@@ -36,6 +39,9 @@ export default class Login extends React.Component {
     });
   };
   
+  /**
+   * Toggles state of isSignedIn, signs user out if signed in
+   */
   toggleSignIn = async () => {
     try {
       if (this.state.isSignedIn) {

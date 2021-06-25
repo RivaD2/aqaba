@@ -5,6 +5,10 @@ const instance = axios.create({
   timeout: 1000,
 });
 
+/**
+ * Function that fetches all perfumes by category
+ * @param  {string} category query param
+ */
 export const getPerfumes = async category => {
   try {
     const queryParam = category ? `?category=${category}`: ''
@@ -15,7 +19,12 @@ export const getPerfumes = async category => {
   }
 };
 
+/**
+ * Gets a particular product selected
+ * @param  {Number} id of product in collection
+ */
 export const getProduct = async id => {
+  console.log('id', id)
   try {
     const product = await instance.get(`/perfumes/${id}`);
     return product.data;
@@ -24,6 +33,7 @@ export const getProduct = async id => {
   }
 };
 
+// For possible future use
 export const signIn = async token => {
   try {
     const requestOptions = {

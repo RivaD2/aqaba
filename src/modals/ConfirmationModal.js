@@ -1,8 +1,9 @@
 import React from 'react'
-import Footer from '../components/Footer';
 import './ConfirmationModal.css';
 
-
+/**
+ * Function that renders Confirmation Modal
+ */
 const ConfirmationModal = props => {
   return (
     <div className="order-confirmation-container">

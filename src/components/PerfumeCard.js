@@ -3,9 +3,15 @@ import { useSpring, animated } from 'react-spring';
 import {useHistory, withRouter} from 'react-router-dom';
 import './PerfumeCard.css';
 
+/**
+ * Renders perfume card
+ */
 const PerfumeCard = props => {
 const history = useHistory();
 
+/**
+ * Takes user to product they clicked on, uses history object to push new route onto the history stack
+ */
 const onCardClick = () => {
   history.push(`/perfume/${props.product._id}`);
 }

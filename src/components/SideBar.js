@@ -8,12 +8,20 @@ export default class SideBar extends React.Component {
     sideMenuOpen: false,
   }
 
+  /**
+   * Sets the state of side menu to open
+   * @param {object}state the state of the sideMenu
+   */
   handleStateChange =  state => {
     this.setState({
       sideMenuOpen: state.isOpen
     });  
   }
 
+  /**
+   * Sets the state to false (closes sidemenu) and handles any default action of selected element
+   * @param {event} e click event for Side Menu
+   */
   closeSideMenu = e => {
     e && e.preventDefault();
     this.setState({
@@ -21,6 +29,9 @@ export default class SideBar extends React.Component {
     });
   }
 
+  /**
+   * Toggles the SideMenu
+   */
   toggleSideMenu = () => {
     this.setState({
       sideMenuOpen: !this.state.sideMenuOpen

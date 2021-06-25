@@ -4,8 +4,10 @@ import PasswordInput from '../components/PasswordInput';
 import GoogleButton from 'react-google-button';
 import './LoginModal.css'
 
+/**
+ * Renders Login Modal and holds logic for signing user in using gapi.
+ */
 const LoginModal = props => {
-console.log('props are',  props)
   const handleSignIn = async e => {
     try {
       const auth = window.gapi.auth2.getAuthInstance();

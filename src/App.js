@@ -44,13 +44,23 @@ class App extends React.Component {
     }
   }
 
+  /**
+   * Method -toggle method to toggle state of modal selected}
+   * @param {Function} toggleFunction the component to display as a model
+   */
   toggleModalCallback = toggleFunction => {
     this.setState({
       toggleModal: toggleFunction
     });
   }
 
-  //Given an array of objects(products), each obj has id, size, and quantity,
+
+  /**
+   * Method - updates the cart state based off new items added
+   * @param  {Object} product the product to add to cart
+   * @param  {Number} qty the qty to add to cart
+   */
+   //Given an array of objects(products), each obj has id, size, and quantity,
   // If the arr (this.state.cartItems) has an obj with same id and size, add qty to that object's qty.
   // If not, add that obj to arr.
   onAddItemToCart = async (product, qty) => {
@@ -77,6 +87,10 @@ class App extends React.Component {
     }
   }
   
+  /**
+   * Removes items from cart and sets the new cart state, recalculates cart totals, and sets new Cart in local storage
+   * @param {Number} indexOfItem index of item to be removed
+   */
   onRemoveItemFromCart = async indexOfItem => {
    try {
     this.state.cart.items.splice(indexOfItem, 1);
@@ -89,6 +103,10 @@ class App extends React.Component {
 
   }
   
+  /**
+   *  Calculates cart totals using price and qty of items added and sets new cart in state
+   * @returns {Promise} Promise to resolve once the new Cart is safely in state
+   */
   calculateCartTotals = () => {
     let totalQty = 0;
     let totalPrice = 0;
@@ -96,7 +114,6 @@ class App extends React.Component {
       totalPrice += item.price * item.qty;
       totalQty += item.qty;
     });
-    // Promise to resolve once the new Cart is safely in state
     return new Promise(resolve => {
       this.setState({
         cart: {
@@ -108,6 +125,9 @@ class App extends React.Component {
     });
   }
   
+  /**
+   * Consumes the Cart component and shows the Cart when toggleModal callback runs
+  */
   showCart = () => {
     this.state.toggleModal(
       <CartModal 
@@ -119,13 +139,18 @@ class App extends React.Component {
     )
   }
 
+  /**
+   * Consumes the CreateAccountModal and tells state to update the modal shown
+   */
   showCreateAccountModal = () => {
-    console.log('showCreateAccModal')
     this.state.toggleModal(
       <CreateAccountModal onClose={this.closeModal}/>
     )
   }
   
+  /**
+   * Consumes LoginModal component and tells state to update modal shown
+   */
   showLoginModal = () => {
     // close Modal is not called yet, but is here for use later!
     this.state.toggleModal(
@@ -133,12 +158,18 @@ class App extends React.Component {
     )
   }
 
+  /**
+   * @ Consumes SubScribeModal component and tells state to update modal shown
+   */
   showSubscribeModal = () => {
     this.state.toggleModal(
       <SubscribeModal onClose={this.closeModal} showSubscribeModal={this.showSubscribeModal} />
     )
   }
   
+  /**
+   * Consumes ConfirmationModal and tells state to toggle modal shown
+   */
   showOrderConfirmationModal = () => {
     this.state.toggleModal(
       <ConfirmationModal 
@@ -148,6 +179,9 @@ class App extends React.Component {
     )
   }
 
+  /**
+   * Closes modal by toggling the state
+   */
   closeModal = () => {
     this.state.toggleModal();
   }
@@ -182,5 +216,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
