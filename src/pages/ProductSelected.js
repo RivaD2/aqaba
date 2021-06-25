@@ -76,7 +76,9 @@ const ProductSelected = props => {
               aria-labelledby="qty-input"
             />
           </div>
-          <TextButton className="add-to-cart" text='ADD TO CART' onClick={onAddItemToCart} ></TextButton>
+          <div className="add-to-cart-button-container">
+            <TextButton id="add-to-cart-button" text='ADD TO CART' onClick={onAddItemToCart} ></TextButton>
+          </div>
           <div className="product-desc">
             {product.description}
           </div>
