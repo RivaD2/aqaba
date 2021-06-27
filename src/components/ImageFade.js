@@ -3,7 +3,7 @@ import { useTransition, animated, config } from 'react-spring'
 import './ImageFade.css';
 
 const slides = [
-  { id: 2, url: '/assets/aqaba-arch.png' },
+  { id: 2, url: '/assets/aqaba-jordan.jpg' },
   { id: 4, url: '/assets/image-fade2.jpg'},
 ]
 

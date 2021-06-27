@@ -40,15 +40,16 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="nav-container">
-          <div className="link-block" >
-            <Nav navLinkClass="nav-item" />
-          </div>
           <div className="hamburger">
             <SideBar/>
           </div>
+          <div className="title-offset"></div>
           <div className="title-block">
             <NavLink to="/" className="home-title"> AQABA</NavLink>
             <div className="creator-title">by Miriam Mirani</div>
+            <div className="link-block" >
+              <Nav navLinkClass="nav-item" />
+            </div>
           </div>
           <div className="icon-block">
             {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
@@ -68,6 +69,7 @@ class Header extends React.Component {
                 </div>
               </div>
           </div>
+
         </div>
       </div>
     )

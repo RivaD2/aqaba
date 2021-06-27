@@ -1,15 +1,16 @@
 .header {
   z-index: 100;
   width:100vw;
-  height: 72px;
   background-color: #FBF7F4;
 }
 
 .nav-item {
-  color:#A44200;
+  color: #A44200;
   font-size:12pt;
+  margin-right: 10px;
   padding-left:8px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .MuiIconButton-label {
@@ -26,17 +27,20 @@ a:hover {
   color: #2B9EB3;
 }
 
-.link-block, .icon-block {
-  flex-grow:0;
-  flex-basis:280px; 
-  display:flex;
-  flex-direction:row;
-  align-items:flex-end;
+.link-block {
+ display:flex;
+ flex-direction:row;
+ justify-content: center;
+}
+
+.title-offset, .icon-block, .hamburger {
+  width:156px;
 }
 
 .icon-block {
-  justify-content: flex-end;
-  margin-bottom:10px;
+  align-items:center;
+  display:flex;
+  flex-direction:row;
 }
 
 .hamburger {
@@ -89,6 +93,10 @@ a:hover {
     flex-direction:row;
     align-items:flex-end;
   }
+
+  .title-offset {
+    display:none;
+  }
   
   .link-block {
     display:none;
@@ -104,7 +112,6 @@ a:hover {
   }
 
   .hamburger {
-    width:100px;
     display:block;
     color:black;
   }

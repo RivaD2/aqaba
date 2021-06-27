@@ -16,6 +16,11 @@
   flex-direction:column;
 }
 
+.card-title {
+  font-size:16pt;
+  margin-top: 12px;
+}
+
 .product-selected-image {
   flex-grow:0;
 }
