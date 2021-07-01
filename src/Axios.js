@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://api-server-rd.herokuapp.com/perfumes',
+  baseURL: 'https://api-server-rd.herokuapp.com',
   mode: 'cors',
   cache: 'no-cache',
   headers: { 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': '*'}

@@ -1,10 +1,10 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom';
 import Nav from '../components/Nav';
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchBar from '../components/SearchBar';
 import SearchOutinedIcon from "@material-ui/icons/SearchOutlined";
 import SideBar from '../components/SideBar';
-import {NavLink} from 'react-router-dom';
 import IconButton from "@material-ui/core/IconButton";
 import Login from '../components/Login';
 import './Header.css';

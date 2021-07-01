@@ -1,7 +1,7 @@
 import React from 'react'
+import { Hidden } from '@material-ui/core';
 import TextButton from '../components/TextButton';
 import TextField from '../components/TextField';
-import { Hidden } from '@material-ui/core';
 import './SubscribeModal.css';
 
 const SubscribeModal = props => {

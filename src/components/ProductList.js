@@ -1,7 +1,7 @@
 import React from 'react'
+import {getPerfumes} from '../Axios';
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
-import {getPerfumes} from '../Axios';
 import './ProductsList.css';
 
 export default class ProductList extends React.Component {

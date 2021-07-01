@@ -1,8 +1,8 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import './Carousel.css';
 import {useHistory} from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import './Carousel.css';
 
 const PerfumeCarousel = props => {
 const history = useHistory();

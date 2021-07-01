@@ -1,8 +1,8 @@
 import React from 'react'
-import ImageFade from '../components/ImageFade';
-import TextButton from '../components/TextButton';
 import { Hidden } from '@material-ui/core';
 import {Link} from 'react-router-dom';
+import ImageFade from '../components/ImageFade';
+import TextButton from '../components/TextButton';
 import '../pages/AqabaHome.css';
 
 const AqabaHome = props  => {

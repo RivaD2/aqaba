@@ -1,10 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import IconButton from "@material-ui/core/IconButton";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PinterestIcon from '@material-ui/icons/Pinterest';
-import {Link} from 'react-router-dom';
 import '../components/Footer.css';
 
 export default class Footer extends React.Component {

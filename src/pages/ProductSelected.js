@@ -1,9 +1,9 @@
 import React from 'react';
-import TextButton from '../components/TextButton';
-import SimpleSelect from '../components/SimpleSelect';
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {getProduct} from '../Axios';
+import TextButton from '../components/TextButton';
+import SimpleSelect from '../components/SimpleSelect';
 import './ProductSelected.css';
 
 const ProductSelected = props => {
