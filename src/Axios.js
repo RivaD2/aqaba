@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://10.0.0.102:3001',
+  baseURL: 'https://api-server-rd.herokuapp.com/perfumes',
   timeout: 1000,
 });
 

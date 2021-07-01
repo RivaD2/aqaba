@@ -21,14 +21,14 @@ export default class Footer extends React.Component {
         <div className="icon-and-link-container">
           <div className="connect-block">
             <div className="connect-icons">
-            <Link 
+            <Link
               to={{pathname:"https://www.instagram.com/?hl=en"}}
               target="#">
                 <IconButton>
                   <InstagramIcon/>
                 </IconButton>
             </Link>
-            <Link 
+            <Link
               to={{pathname:"https://www.facebook.com/"}}
               target="#">
                 <IconButton>

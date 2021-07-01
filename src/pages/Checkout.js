@@ -131,7 +131,7 @@ export default class Checkout extends React.Component {
                         onChange={this.onMonthSelected} 
                         selected={monthSelected}
                         label='month'
-                        aria-labelledby="select a month for card issue"
+                        aria-label="select a month for card issue"
                         />
                         <SimpleSelect 
                         items={this.years} 
@@ -139,7 +139,7 @@ export default class Checkout extends React.Component {
                         onChange={this.onYearSelected} 
                         selected={yearSelected}
                         label='year'
-                        aria-labelledby="select a year for card issue"
+                        aria-label="select a year for card issue"
                       />
                       <TextField field={{label:'cvv'}} width={'70px'} id="cvv"/>
                     </div>
