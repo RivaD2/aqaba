@@ -52,7 +52,6 @@ class Header extends React.Component {
             </div>
           </div>
           <div className="icon-block">
-            {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
             <div className="search-icon">
                 <IconButton onClick={this.toggleSearchField}> 
                   <SearchOutinedIcon />
@@ -69,7 +68,9 @@ class Header extends React.Component {
                 </div>
               </div>
           </div>
-
+        </div>
+        <div className="search-container">
+          {this.state.showSearchField && <SearchBar onSearchChanged={this.onSearchChanged}/>}
         </div>
       </div>
     )

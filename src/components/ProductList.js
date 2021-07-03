@@ -1,19 +1,27 @@
 import React from 'react'
-import {getPerfumes} from '../Axios';
+import {getPerfumes, getSearch} from '../Axios';
+import { withRouter } from 'react-router';
 import PerfumeCarousel from './Carousel';
 import PerfumeCard from './PerfumeCard';
 import './ProductsList.css';
 
-export default class ProductList extends React.Component {
+class ProductList extends React.Component {
   state = {
     list: [],
     price: undefined
   }
 
   componentDidMount() {
-    this.onListFilter();
+    this.props.page === 'search'? this.onSearch() : this.onListFilter();
   }
  
+  onSearch = async () => {
+   const term = this.props.match.params.term;
+   const listOfProducts = await getSearch(term);
+   this.setState({
+     list:listOfProducts
+   })
+  }
   /**
    * Filters the list of products based of category and sets the new products
    * of that category in state.
@@ -78,8 +86,11 @@ export default class ProductList extends React.Component {
             </div>
           );
         break;
+      case 'search':
+        filterSections = undefined;
+        break;
       default: 
-      return (<div></div> );
+        return (<div></div> );
     }
 
     return (
@@ -108,3 +119,5 @@ export default class ProductList extends React.Component {
     )
   }
 }
+
+export default withRouter(ProductList);

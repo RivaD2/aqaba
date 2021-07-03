@@ -196,6 +196,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" render={() => <AqabaHome />} />
               <Route exact path="/perfumes" render={() => <ProductList page="perfumes" /> } />
+              <Route exact path="/search/:term" render={()=> <ProductList page="search"/>} />
               <Route exact path="/perfume/:id" render={() => <ProductSelected onAddItemToCart={this.onAddItemToCart}/> } />
               <Route 
                 exact path="/checkout" 

@@ -1,7 +1,6 @@
 .product-details-container {
   display:flex;
   flex-direction:row;
-  max-height:600px;
   font-size:16pt;
   font-weight:bold;
   padding-left:14pt;

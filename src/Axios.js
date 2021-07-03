@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
+  // baseURL: 'http://localhost:3001',
   baseURL: 'https://api-server-rd.herokuapp.com',
   mode: 'cors',
   cache: 'no-cache',
@@ -34,6 +35,15 @@ export const getProduct = async id => {
     console.error(err);
   }
 };
+
+export const getSearch = async term => {
+  try {
+    const searchResults = await instance.get(`/perfumes/search/${term}`);
+    return searchResults.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 // For possible future use
 export const signIn = async token => {
