@@ -58,32 +58,22 @@ class ProductList extends React.Component {
         // Making a single JSX element
         filterSections = (
          <>
-          <div className="perfume-links" onClick={() => this.onListFilter('feminine')}>
-            AQABA FEMININE /
-          </div>
-          <div className="perfume-links" onClick={() => this.onListFilter('masculine')}>
-            AQABA MASCULINE
-          </div>
+          <FilterSection filter="feminine" label="AQABA FEMININE" onListFilter={this.onListFilter}/>
+          <FilterSection filter="masculine" label="AQABA MASCULINE" onListFilter={this.onListFilter}/>
          </>
         );
         break;
       case 'bath_and_body':
         filterSections = (
           <>
-            <div className="perfume-links" onClick={() => this.onListFilter('bath')}>
-              BATH /
-            </div>
-            <div className="perfume-links" onClick={() => this.onListFilter('body')}>
-              BODY
-            </div>
+           <FilterSection filter="bath" label="BATH" onListFilter={this.onListFilter}/>
+           <FilterSection filter="body" label="BODY" onListFilter={this.onListFilter}/>
           </>
         );
         break;
       case 'gifts':
           filterSections = (
-            <div className="perfume-links" onClick={() => this.onListFilter('gift')}>
-              GIFTS
-            </div>
+            <FilterSection filter="gift" label="GIFTS" onListFilter={this.onListFilter}/>
           );
         break;
       case 'search':
@@ -119,5 +109,11 @@ class ProductList extends React.Component {
     )
   }
 }
+
+const FilterSection = ({ filter, label, onListFilter }) => (
+  <div className="perfume-links" onClick={() => onListFilter(filter)}>
+    {label}
+  </div>
+)
 
 export default withRouter(ProductList);

@@ -1,107 +1,115 @@
 .perfume-container {
-  display:flex;
-  flex-direction:column;
-  min-height:600px;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
   justify-content: center;
 }
 
 .most-popular {
-  text-align:center;
-  font-size:15pt;
-  padding-top:50px;
-  color:black;
+  text-align: center;
+  font-size: 15pt;
+  padding-top: 50px;
+  color: black;
 }
 
 .perfume-cards {
-  align-items:center;
+  align-items: center;
 }
 
 hr {
-  color:black;
+  color: black;
 }
 
 .perfumes-links-container {
-  padding-top:16px;
-  display:flex;
-  flex-direction:row;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
+.card-title {
+  color: #a44200;
+}
+
 .perfume-links {
-  color: #A44200;
+  color: #a44200;
   font-size: 15pt;
   padding-left: 10px;
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
   padding-bottom: 15px;
-  white-space:nowrap
+  white-space: nowrap;
+}
+
+.perfume-links:not(:last-child)::after {
+  content: " /";
+  padding-left: 10px;
 }
 
 .perfume-links:hover {
-  color: #2B9EB3;
+  color: #2b9eb3;
 }
 
 .product-list-card-container {
-  padding-bottom:16px;
-  flex-direction:row;
-  display:flex;
+  padding-bottom: 16px;
+  flex-direction: row;
+  display: flex;
   flex-wrap: wrap;
-  max-height:125ch;
+  max-height: 125ch;
   max-width: 125ch;
-  width:100%;
+  width: 100%;
   justify-content: space-around;
-  align-self:center;
+  align-self: center;
 }
 
 .product-list-card {
-  padding-bottom:26px;
+  padding-bottom: 26px;
   text-align: center;
-  margin-bottom:22px;
-  cursor:pointer;
+  margin-bottom: 22px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
   /* For mobile phones: */
- .perfume-container {
-   min-height: 400px;
- }
+  .perfume-container {
+    min-height: 400px;
+  }
 
- .most-popular {
-   display:none;
- }
+  .most-popular {
+    display: none;
+  }
 
- .carousel-container {
-  display:none;
- }
+  .carousel-container {
+    display: none;
+  }
 
- .divider-line{
-   display:none;
- }
+  .divider-line {
+    display: none;
+  }
 
- .perfume-links{
-   font-size: 12pt;
- }
+  .perfume-links {
+    font-size: 12pt;
+  }
 
- .product-list-card-container {
-  justify-content: center;
+  .product-list-card-container {
+    justify-content: center;
+  }
+
+  .product-list-card {
+    padding: 13px;
+  }
+
+  .card {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+  }
+
+  .card-title {
+    font-size: 12pt;
+  }
 }
-
- .product-list-card {
-   padding:13px;
- }
-
- .card{
-   height: 120px;
-   width:120px;
-   display:flex;
-   flex-direction:row;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   align-self:center;
- }
-
- .card-title {
-   font-size: 12pt;
- }
-}
- 

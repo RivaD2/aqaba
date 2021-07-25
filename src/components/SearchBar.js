@@ -1,8 +1,11 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
+import { withRouter } from 'react-router-dom';
 
-export default class SearchBar extends React.Component {
-  state = { term: ''};
+ class SearchBar extends React.Component {
+  state = {
+    term: '',
+  };
   
   /**
    * Sets the text entered into controlled input into state
@@ -18,22 +21,23 @@ export default class SearchBar extends React.Component {
    */
   onFormSubmit = e => {
     e.preventDefault();
-    this.props.onTermSubmit(this.state.term);
+    this.props.history.push(`/search/${this.state.term}`);
   }
-  
+
   render() {
     return (
-      <div className="searchbar"> 
+      <form className="searchbar" onSubmit={this.onFormSubmit}>
         <TextField
-            id="outlined-basic"
-            label="Search"
-            variant="outlined"
-            className="search-field"
-            onChange={this.onInputChange}
-            value={this.state.term}
+          id="outlined-basic"
+          label="Search"
+          variant="outlined"
+          className="search-field"
+          onChange={this.onInputChange}
+          value={this.state.term}
         />
-      </div>
+      </form>
     )
   }
 }
 
+export default withRouter(SearchBar);
