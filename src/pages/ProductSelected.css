@@ -1,27 +1,28 @@
 .product-details-container {
-  display:flex;
-  flex-direction:row;
-  font-size:16pt;
-  font-weight:bold;
-  padding-left:14pt;
-  padding-top:50px;
+  background-color: rgb(236 208 103);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  font-size: 16pt;
+  font-weight: bold;
   justify-content: center;
+  padding-left: 14pt;
+  padding-top: 50px;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 12px;
-  display:flex;
-  flex-direction:column;
 }
 
 .card-title {
-  font-size:16pt;
+  font-size: 16pt;
   margin-top: 12px;
 }
 
 .product-selected-image {
-  flex-grow:0;
+  flex-grow: 0;
 }
 
 .title {
@@ -29,24 +30,24 @@
 }
 
 .qty {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .product-details {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  margin-left:16pt;
-  max-width:480px;
+  margin-left: 16pt;
+  max-width: 480px;
 }
 
 .product-desc {
-  margin:8px;
-  text-align:center;
+  margin: 8px;
+  text-align: center;
 }
 
 .add-to-cart-button-container {
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .add-to-cart-button-mobile {
@@ -55,50 +56,49 @@ margin-bottom: 20px;
 
 @media screen and (max-width: 600px) {
   /* For mobile phones and small portrait tablet: */
- .product-details-container {
-   max-height: 410vh; 
-   display:flex;
-   flex-direction:column;
-   font-size:14pt;
-   align-items: center;
- }
- 
- .product-details {
-  justify-content: space-evenly;
-  margin:10px 20px 0px 0px;
-  align-items: center;
- }
+  .product-details-container {
+    max-height: 410vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+    align-items: center;
+  }
 
- .product-card{
-   width:160px;
-   display: block;
- }
+  .product-details {
+    justify-content: space-evenly;
+    margin: 10px 20px 0px 0px;
+    align-items: center;
+  }
 
- .product-selected-image  {
-   width:100%;
- }
+  .product-card {
+    width: 160px;
+    display: block;
+  }
 
- .product-desc{
-  margin:0px;
-  text-align:center;
- }
+  .product-selected-image {
+    width: 100%;
+  }
 
+  .product-desc {
+    margin: 0px;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 620px) and (max-width: 860px) {
-/* portrait tablets and iPad */
+  /* portrait tablets and iPad */
   .product-details-container {
     max-height: 410vh;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   .product-details {
     align-items: center;
-   }
+  }
 
-   .product-card{
-    width:260px;
+  .product-card {
+    width: 260px;
   }
 }
