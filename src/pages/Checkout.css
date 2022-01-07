@@ -1,82 +1,82 @@
 .checkout-container {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
 .shipping-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   background-color: rgb(235, 232, 227);
   width: 300px;
   padding: 28px;
 }
 
 .checkout-header {
-  font-size: 18pt;
   margin: 20px 0px 22px 0px;
 }
 
 .name-and-email-text {
- font-size: 14pt;
- margin-right: 10px;
- font-weight: bold;
- margin-bottom:20px;
+  font-size: 14pt;
+  margin-right: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .checkout-sign-in {
+  align-items: baseline;
   font-size: 12pt;
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
 .sign-in-link {
   margin-left: 8px;
-  color:rgba(53, 46, 126, 0.852);
+  color: rgba(53, 46, 126, 0.852);
   cursor: pointer;
 }
 
 .shipping-details {
   padding-top: 22px;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
 .shipping-header {
-  margin-bottom:20px;
-  font-size:14pt;
+  margin-bottom: 20px;
+  font-size: 14pt;
   font-weight: bold;
 }
 
 .payment-title {
-  font-size:14pt;
-  font-weight:bold;
+  font-size: 14pt;
+  font-weight: bold;
 }
 
-.card-details{
+.card-details {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .checkout-items-container {
-  display:flex;
+  display: flex;
   background-color: rgb(235, 232, 227);
   width: 300px;
-  padding:28px;
+  padding: 28px;
 }
 
 .items-header {
-  font-size:18pt;
+  font-size: 18pt;
   padding-bottom: 20px;
 }
 
 .item-container {
-  display:flex;
-  flex-direction:row;
-  margin-bottom:20px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .aqaba-image {
@@ -87,16 +87,19 @@
   padding: 10px 0px 10px 20px;
 }
 
-.item-title, .item-price, .item-size, .item-qty {
-  padding-bottom:5px;
+.item-title,
+.item-price,
+.item-size,
+.item-qty {
+  padding-bottom: 5px;
 }
 
 .checkout-order-container {
   background-color: rgb(235, 232, 227);
-  display:flex;
-  flex-direction:column;
-  align-items:inherit;
-  margin-top:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  margin-top: 20px;
 }
 
 .total {
@@ -109,17 +112,19 @@
   font-size: 14pt;
 }
 
-#cvv > .MuiInputBase-root, .MuiOutlinedInput-root, .MuiInputBase-formControl{
+#cvv > .MuiInputBase-root,
+.MuiOutlinedInput-root,
+.MuiInputBase-formControl {
   height: 50px;
 }
 
 @media screen and (max-width: 768px) {
   /* Mobile phones and tablet */
   .checkout-container {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     overflow: auto;
-    align-items:center;
+    align-items: center;
     background-color: rgb(235, 232, 227);
     padding: 42px 0px;
     box-sizing: border-box;
@@ -135,22 +140,20 @@
   }
 
   .checkout-items-container {
-    justify-content:center;
+    justify-content: center;
   }
 
   .items-header {
-    text-align:center;
+    text-align: center;
   }
 
   .checkout-order-container {
     padding: 0px;
-    margin:0px;
+    margin: 0px;
   }
-  
+
   .total {
     padding-top: 10px;
     font-size: 14pt;
   }
-
 }
-
