@@ -1,75 +1,74 @@
 .login-modal-container {
-  font-weight:bold;
+  font-weight: bold;
   padding-right: 28px;
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
 
 .login-modal-content {
-  display:flex;
-  flex-direction:column;
-  font-size:12pt;
-  font-weight:bold;
+  display: flex;
+  flex-direction: column;
+  font-size: 12pt;
+  font-weight: bold;
   justify-content: right;
   margin-left: 20px;
 }
 
 .login-modal-image-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
-.login-modal-image{
-  background-image: url('https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg');
+.login-modal-image {
+  background-image: url("https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg");
   height: 100%;
-  width:320px;
-  background-size:contain;
+  width: 320px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .login-modal-header {
-  font-size: 20pt;
-  color:black;
-  font-family: 'El Messiri', sans-serif;
-  text-align:center;
+  color: black;
+  font-family: "El Messiri", sans-serif;
+  text-align: center;
   font-weight: bold;
 }
 
 .login-header-slogan-text {
- padding-bottom:20px;
- text-align:center; 
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .sign-in {
- text-align:center;
+  text-align: center;
 }
 
 .password-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .forgot-password-link-container {
-  text-align:end;
-  padding: 10px 0 28px 0
+  text-align: end;
+  padding: 10px 0 28px 0;
 }
 
 .link {
- color:rgba(53, 46, 126, 0.852);
+  color: rgba(53, 46, 126, 0.852);
 }
 
 .link:hover {
   color: rgb(56, 35, 77);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .login-button-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-login-button {
-  display:none;
+  display: none;
 }
 
 .google-login-button {
@@ -77,50 +76,51 @@
 }
 
 .create-account-container {
-  display:flex;
-  flex-direction:row;
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .login-modal-container {
-    text-align:center;
+    text-align: center;
     max-height: 80vh;
-    max-width:240px;
-    flex-direction:column;
+    max-width: 240px;
+    flex-direction: column;
     overflow-y: auto;
     margin: -16px -32px -24px;
     padding: 16px 32px 24px;
   }
 
   .login-modal-image-container {
-    flex-direction:row;
+    flex-direction: row;
     justify-content: center;
   }
 
   .login-modal-image {
     height: 160px;
-    width:120px;
+    width: 120px;
   }
 
   .login-modal-content {
-    font-size:12pt;
-    margin:0px;
+    font-size: 12pt;
+    margin: 0px;
   }
 
   .login-modal-header {
     font-size: 16pt;
     padding-top: 20px;
-    color:black;
-    font-family: 'El Messiri', sans-serif;
-    text-align:center;
+    color: black;
+    font-family: "El Messiri", sans-serif;
+    text-align: center;
     font-weight: bold;
   }
 
   .login-header-slogan-text {
-    padding-bottom:14px;
-    text-align:center; 
+    padding-bottom: 14px;
+    text-align: center;
   }
 
   .login-button-container {
@@ -128,25 +128,24 @@
   }
 
   .mobile-login-button {
-    display:block;
-    font-family: 'Amiri', 'serif';
+    display: block;
+    font-family: "Amiri", "serif";
     border: 2px solid white;
     color: white;
-    font-size:14pt;
-    font-weight:bold;
-    background-color:#DC9B56;
-    width:242px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #dc9b56;
+    width: 242px;
     height: 54px;
-    margin-bottom:10px;
-    cursor:pointer;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 
   .create-account-container {
-    font-size:12pt;
+    font-size: 12pt;
   }
 
   .link {
-    padding-left:5px;
+    padding-left: 5px;
   }
-
 }
