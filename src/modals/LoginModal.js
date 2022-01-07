@@ -1,14 +1,14 @@
-import React from 'react'
-import TextField from '../components/TextField';
-import PasswordInput from '../components/PasswordInput';
-import GoogleButton from 'react-google-button';
-import './LoginModal.css'
+import React from "react";
+import TextField from "../components/TextField";
+import PasswordInput from "../components/PasswordInput";
+import GoogleButton from "react-google-button";
+import "./LoginModal.css";
 
 /**
  * Renders Login Modal and holds logic for signing user in using gapi.
  */
-const LoginModal = props => {
-  const handleSignIn = async e => {
+const LoginModal = (props) => {
+  const handleSignIn = async (e) => {
     try {
       const auth = window.gapi.auth2.getAuthInstance();
       await auth.signIn();
@@ -16,8 +16,8 @@ const LoginModal = props => {
     } catch (err) {
       console.error(err);
     }
-  }
-  
+  };
+
   return (
     <div>
       <div className="login-modal-container">
@@ -26,41 +26,38 @@ const LoginModal = props => {
         </div>
         <div className="login-modal-content">
           <div>
-            <div className="login-modal-header">
-              Welcome To AQABA
-            </div>
-            <div className="login-header-slogan-text">
-              A CELEBRATION OF LOVE
-            </div>
+            <h1 className="login-modal-header">Welcome To AQABA</h1>
+            <p className="login-header-slogan-text">A CELEBRATION OF LOVE</p>
           </div>
           <h3 className="sign-in">Sign In</h3>
-          <TextField field={{label: 'Username or email'}} className="form-text" />
+          <TextField
+            field={{ label: "Username or email" }}
+            className="form-text"
+          />
           <div className="password-container">
             <div className="form-text">
               <PasswordInput />
             </div>
             <div className="forgot-password-link-container">
-              <div className="link">Forgot password?</div>
+              <p className="link">Forgot password?</p>
             </div>
           </div>
           <div className="login-button-container">
-            <button className="mobile-login-button">
-              LOGIN
-            </button>
+            <button className="mobile-login-button">LOGIN</button>
             <div className="google-login-button">
-              <GoogleButton 
-                type="dark" 
-                onClick={handleSignIn}
-              />
+              <GoogleButton type="dark" onClick={handleSignIn} />
             </div>
             <div className="create-account-container">
-              <div>Don't have an account?</div>
-              <div className="link" onClick={props.showCreateAccountModal}> Click here</div>
+              <p>Don't have an account?</p>
+              <p className="link" onClick={props.showCreateAccountModal}>
+                {" "}
+                Click here
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 export default LoginModal;

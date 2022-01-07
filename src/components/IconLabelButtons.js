@@ -1,17 +1,17 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import DeleteIcon from '@material-ui/icons/Delete';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1),
-    fontFamily:['Amiri', 'serif'],
-    width:'100px'
+    // margin: theme.spacing(1),
+    fontFamily: ["Amiri", "serif"],
+    width: "100px",
   },
 }));
 
-const IconLabelButtons = props => {
+const IconLabelButtons = (props) => {
   const classes = useStyles();
 
   return (
@@ -23,9 +23,9 @@ const IconLabelButtons = props => {
         className={classes.button}
         startIcon={<DeleteIcon />}
       >
-        REMOVE 
+        REMOVE
       </Button>
     </div>
-  )
-}
+  );
+};
 export default IconLabelButtons;

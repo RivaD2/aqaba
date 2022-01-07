@@ -1,24 +1,22 @@
 .create-account-modal-container {
-  font-weight:bold;
-  width: 420px;
-  height: 528px;
-  padding-right: 28px;
+  font-weight: bold;
+  width: 30rem;
+  height: 40rem;
 }
 
 .modal-content {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-header {
-  font-size: 20pt;
-  font-family: 'El Messiri', sans-serif;
-  text-align:center;
+  font-family: "El Messiri", sans-serif;
+  text-align: center;
 }
 
 .header-slogan-text {
   font-size: 12pt;
-  text-align:center;
+  text-align: center;
   padding-bottom: 10px;
 }
 
@@ -28,30 +26,28 @@
 }
 
 .modal-image-container {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top:20px;
 }
 
 .aqaba-product-image {
   width: 126px;
-  padding-bottom: 14px;
 }
 
 .create-account-button {
- padding-top: 26px;
+  padding-top: 26px;
 }
 
 .mobile-create-account-button {
-  display:none;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
   /* For mobile phones: */
   .create-account-modal-container {
     max-height: 80vh;
-    max-width:240px;
+    max-width: 240px;
     overflow-y: auto;
     margin: -16px -32px -24px;
     padding: 16px 32px 24px;
@@ -61,17 +57,17 @@
     font-size: 16pt;
   }
 
-  .mobile-create-account-button{
-    display:block;
-    font-family: 'Amiri', 'serif';
+  .mobile-create-account-button {
+    display: block;
+    font-family: "Amiri", "serif";
     border: 2px solid white;
     color: white;
-    font-size:14pt;
-    font-weight:bold;
-    background-color:#DC9B56;
-    width:242px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: #dc9b56;
+    width: 242px;
     height: 54px;
-    margin-bottom:10px;
-    cursor:pointer;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 }
