@@ -45,8 +45,7 @@ class Header extends React.Component {
           </div>
           <div className="title-offset"></div>
           <div className="title-block">
-            <NavLink to="/" className="home-title"> AQABA</NavLink>
-            <div className="creator-title">by Miriam Mirani</div>
+            <NavLink to="/" className="home-title"> HOUSE OF APPA</NavLink>
             <div className="link-block" >
               <Nav navLinkClass="nav-item" />
             </div>

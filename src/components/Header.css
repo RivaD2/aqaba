@@ -1,74 +1,76 @@
 .header {
   z-index: 100;
-  width:100vw;
-  background-color: #FBF7F4;
+  width: 100vw;
+  background-color: #fbf7f4;
 }
 
 .nav-item {
-  color: #A44200;
-  font-size:12pt;
+  color: #a44200;
+  font-size: 14pt;
   margin-right: 10px;
-  padding-left:8px;
+  padding-left: 8px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .MuiIconButton-label {
-  color:black;
+  color: black;
 }
 
 .nav-container {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
 }
 
 a:hover {
-  font-weight:bold;
-  color: #2B9EB3;
+  font-weight: bold;
+  color: rgb(21, 173, 238);
 }
 
 .link-block {
- display:flex;
- flex-direction:row;
- justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.title-offset, .icon-block, .hamburger {
-  width:156px;
+.title-offset,
+.icon-block,
+.hamburger {
+  width: 156px;
 }
 
 .icon-block {
-  align-items:flex-end;
-  display:flex;
-  flex-direction:row;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
 }
 
 .hamburger {
-  display:none;
+  display: none;
 }
 
 .title-block {
   flex-grow: 1;
-  text-align:center;
-  font-size:24pt;
+  text-align: center;
+  font-size: 24pt;
 }
 
 .home-title {
-  text-decoration:none;
-  color:black;
+  text-decoration: none;
+  color: rgb(172, 108, 68);
 }
 
 .home-title:hover {
-  color:black;
+  color: rgb(21, 173, 238);
 }
 
-.title-block .creator-title {
-  font-size:12pt;
+.title-block {
+  font-size: 28pt;
 }
 
 .search-container {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   padding: 0px 20px 8px 0px;
 }
@@ -81,46 +83,42 @@ a:hover {
   /* For mobile phones: */
   .header {
     z-index: 100;
-    width:100vw;
+    width: 100vw;
     height: 60px;
-    background-color: #FBF7F4;
+    background-color: #fbf7f4;
   }
 
   .icon-block {
-    flex-grow:0;
-    display:flex;
+    flex-grow: 0;
+    display: flex;
     flex-basis: auto;
-    flex-direction:row;
-    align-items:flex-end;
+    flex-direction: row;
+    align-items: flex-end;
   }
 
   .title-offset {
-    display:none;
+    display: none;
   }
-  
+
   .link-block {
-    display:none;
+    display: none;
   }
 
   .title-block {
-    text-align:center;
-    font-size:16pt;
+    text-align: center;
+    font-size: 16pt;
   }
 
   .creator-title {
-    display:none;
+    display: none;
   }
 
   .hamburger {
-    display:block;
-    color:black;
+    display: block;
+    color: black;
   }
 
   .MuiIconButton-root .MuiSvgIcon-root {
-    font-size:20px;
+    font-size: 20px;
   }
-  
 }
-
-
-
