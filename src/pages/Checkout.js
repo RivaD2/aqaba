@@ -36,7 +36,8 @@ export default class Checkout extends React.Component {
     "12",
   ];
   years = calculateYears();
-
+  // create state for user details
+  // pass the details as a callback to the orderConfirmation model (() =>)
   state = {
     monthSelected: "",
     yearSelected: "",
@@ -105,8 +106,10 @@ export default class Checkout extends React.Component {
               <p className="name-and-email-text">Contact information</p>
               <div className="checkout-sign-in">
                 <p>Already have an account?</p>
-                <p className="sign-in-link">
+                <p
+                  className="sign-in-link"
                   onClick={this.props.showCreateAccountModal}
+                >
                   Sign In
                 </p>
               </div>
@@ -183,7 +186,7 @@ export default class Checkout extends React.Component {
               <div className="placeorder-button">
                 <TextButton
                   text="Place order"
-                  onClick={this.props.showOrderConfirmationModal}
+                  onClick={this.props.showOrderConfirmationModal()}
                 />
               </div>
             </div>

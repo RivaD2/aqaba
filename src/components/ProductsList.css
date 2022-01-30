@@ -3,21 +3,25 @@
   flex-direction: column;
   min-height: 600px;
   justify-content: center;
+  background-color: rgb(236 208 103);
 }
 
 .most-popular {
   text-align: center;
   font-size: 15pt;
   padding-top: 50px;
-  color: black;
+  color: #a44200;
 }
 
 .perfume-cards {
   align-items: center;
 }
 
-hr {
-  color: black;
+.divider-line {
+  border-top: 10px solid rgb(102, 198, 239);
+  border-bottom: 10px solid rgb(102, 198, 239);
+  margin-top: 40px;
+  padding-top: 20px;
 }
 
 .perfumes-links-container {
@@ -47,7 +51,7 @@ hr {
 }
 
 .perfume-links:hover {
-  color: #2b9eb3;
+  color: rgb(21, 173, 238);
 }
 
 .product-list-card-container {

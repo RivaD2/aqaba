@@ -1,7 +1,7 @@
 .header {
   z-index: 100;
   width: 100vw;
-  background-color: #fbf7f4;
+  background-color: rgb(251 249 244);
 }
 
 .nav-item {

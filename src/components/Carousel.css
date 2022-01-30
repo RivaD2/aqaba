@@ -5,11 +5,11 @@
 }
 
 .carousel-item {
-  width:260px;
-  height:340px;
-  background-size:cover;
+  width: 260px;
+  height: 340px;
+  background-size: cover;
   background-position: center center;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .slider {
@@ -17,28 +17,35 @@
 }
 
 .carousel .slide {
-  background-color:white;
+  background-color: rgb(252, 249, 249);
+}
+
+.carousel .carousel-slider {
+  border: 2px solid brown;
+  border-radius: 5px;
 }
 
 .slide {
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   background-color: white;
 }
 
-.carousel  {
+.carousel {
   /* width:90%; */
   justify-content: center;
   align-items: center;
+  border: 2px solid rgb(183, 132, 77);
+  border-radius: 5px;
 }
 
 .control-prev {
   color: red;
-  width:50px;
+  width: 50px;
 }
 
 .control-next {
-  color:red;
-  width:50px;
+  color: red;
+  width: 50px;
 }
