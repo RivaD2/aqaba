@@ -1,32 +1,33 @@
-import React from 'react'
+import React from "react";
 import IconButton from "@material-ui/core/IconButton";
-import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import PermIdentityOutlinedIcon from "@material-ui/icons/PermIdentityOutlined";
+const { REACT_APP_GOOGLE_CLIENT_ID } = process.env;
 
 export default class Login extends React.Component {
   state = {
     isSignedIn: null,
-    name: undefined
-  }
+    name: null,
+  };
 
   componentDidMount = async () => {
     try {
-      return await window.gapi.load('client:auth2', () => {
+      return await window.gapi.load("client:auth2", () => {
         window.gapi.client.init({
-          clientId:'940348597150-aoo83rfir0di6ser2tlos3q99mh1p0jg.apps.googleusercontent.com',
-          scope:'email'
+          clientId: REACT_APP_GOOGLE_CLIENT_ID,
+          scope: "email",
         });
         this.auth = window.gapi.auth2.getAuthInstance();
 
         this.setState({
-         isSignedIn: this.auth.isSignedIn.get()
+          isSignedIn: this.auth.isSignedIn.get(),
         });
         this.auth.isSignedIn.listen(this.handleAuthChange);
       });
     } catch (err) {
       console.error(err);
     }
-  }
-  
+  };
+
   /**
    * Gets basicProfile from gapi and signs user in
    */
@@ -35,37 +36,36 @@ export default class Login extends React.Component {
     const name = user.getGivenName();
     this.setState({
       isSignedIn: this.auth.isSignedIn.get(),
-      name: name
+      name: name,
     });
   };
-  
+
   /**
    * Toggles state of isSignedIn, signs user out if signed in
    */
   toggleSignIn = async () => {
     try {
       if (this.state.isSignedIn) {
-         await this.auth.signOut();
+        await this.auth.signOut();
         this.setState({
           name: null,
-          isSignedIn: false
+          isSignedIn: false,
         });
       }
       this.props.showLoginModal();
     } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   render() {
     return (
       <div>
         <IconButton onClick={this.toggleSignIn}>
-          <PermIdentityOutlinedIcon/>
+          <PermIdentityOutlinedIcon />
         </IconButton>
-        {this.state.name && 'Hello ' + this.state.name}
+        {this.state.name && <p>{"Hello " + this.state.name}</p>}
       </div>
-      
-    )
+    );
   }
 }
