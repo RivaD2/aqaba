@@ -9,7 +9,6 @@
 .MuiButton-root.MuiButtonBase-root:hover {
   background-color: rgb(21, 173, 238);
   color: beige;
-  cursor: auto;
 }
 
 .text-button-small {

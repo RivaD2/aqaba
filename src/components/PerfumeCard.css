@@ -25,13 +25,13 @@ body {
 }
 
 .card {
-  width: 25ch;
-  height: 32ch;
+  width: 20ch;
+  height: 28ch;
   background: rgb(218, 203, 181);
   border-radius: 5px;
   background-size: cover;
   background-position: center center;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3); */
   cursor: auto;
   transition: box-shadow 0.5s;
   will-change: transform;
@@ -39,5 +39,5 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgb(102, 198, 239);
 }

@@ -88,11 +88,7 @@ class ProductList extends React.Component {
 
     return (
       <div className="perfume-container">
-        {filterSections !== "gift" ? (
-          <div></div>
-        ) : (
-          <div className="most-popular">MOST POPULAR</div>
-        )}
+        <div className="most-popular">MOST POPULAR</div>
         <div className="perfume-cards">
           {list && <PerfumeCarousel products={list} />}
         </div>

@@ -1,7 +1,8 @@
 .carousel-container {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
+  margin-top: 60px;
 }
 
 .carousel-item {
@@ -16,7 +17,7 @@
 }
 
 .carousel .slide {
-  background-color: rgb(252, 249, 249);
+  background-color: rgb(238, 224, 209);
 }
 
 .carousel .carousel-slider {
@@ -37,14 +38,4 @@
   align-items: center;
   border: 2px solid rgb(183, 132, 77);
   border-radius: 5px;
-}
-
-.control-prev {
-  color: red;
-  width: 50px;
-}
-
-.control-next {
-  color: red;
-  width: 50px;
 }
