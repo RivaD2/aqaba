@@ -1,58 +1,51 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 /**
  * Renders Nav component for navigation
  */
-const Nav = props => {
+const Nav = (props) => {
   const styles = {
-    className:props.navLinkClass,
+    className: props.navLinkClass,
     activeClassName: props.navLinkClass,
-    id:'menu-item'
-  }
+    id: "menu-item",
+  };
   const links = [
     {
       className: styles.className,
       activeClassName: styles.activeClassName,
-      to: '/',
-      name: 'HOME'
+      to: "/",
+      name: "HOME",
     },
     {
       className: styles.className,
       activeClassName: styles.activeClassName,
-      to: '/perfumes',
-      name: 'PERFUMES'
+      to: "/perfumes",
+      name: "PERFUMES",
     },
     {
-      className:styles.className,
+      className: styles.className,
       activeClassName: styles.activeClassName,
-      to: '/bath_and_body',
-      name: 'BATH/BODY'
+      to: "/gifts",
+      name: "GIFTS",
     },
-    {
-      className:styles.className,
-      activeClassName: styles.activeClassName,
-      to: '/gifts',
-      name: 'GIFTS'
-    },
-  ]
+  ];
   return (
     <div>
-      {links.map(link =>  [
-      <NavLink 
-        className={link.className} 
-        activeClassName={link.activeClassName} 
-        to={link.to}
-        id={link.id}
-        key={link.name}
+      {links.map((link) => [
+        <NavLink
+          className={link.className}
+          activeClassName={link.activeClassName}
+          to={link.to}
+          id={link.id}
+          key={link.name}
         >
-        {link.name}
-      </NavLink>, 
-      props.showSeparators &&  <hr key={link.name + 'hr'}/> 
-    ])}
+          {link.name}
+        </NavLink>,
+        props.showSeparators && <hr key={link.name + "hr"} />,
+      ])}
     </div>
-  )
-}
+  );
+};
 
 export default Nav;
-

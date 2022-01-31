@@ -8,7 +8,7 @@ import "./ProductsList.css";
 class ProductList extends React.Component {
   state = {
     list: [],
-    price: null,
+    price: undefined,
   };
 
   componentDidMount() {
@@ -31,12 +31,7 @@ class ProductList extends React.Component {
   onListFilter = async (category) => {
     try {
       if (category === undefined) {
-        category =
-          this.props.page === "perfumes"
-            ? "feminine"
-            : this.props.page === "bath_and_body"
-            ? "body"
-            : "gift";
+        category = this.props.page === "perfumes" ? "feminine" : "gift";
       }
       const listOfProducts = await getPerfumes(category);
       this.setState({
@@ -75,22 +70,6 @@ class ProductList extends React.Component {
           </>
         );
         break;
-      case "bath_and_body":
-        filterSections = (
-          <>
-            <FilterSection
-              filter="bath"
-              label="BATH"
-              onListFilter={this.onListFilter}
-            />
-            <FilterSection
-              filter="body"
-              label="BODY"
-              onListFilter={this.onListFilter}
-            />
-          </>
-        );
-        break;
       case "gifts":
         filterSections = (
           <FilterSection
@@ -109,9 +88,12 @@ class ProductList extends React.Component {
 
     return (
       <div className="perfume-container">
-        <div className="most-popular">MOST POPULAR</div>
+        {filterSections !== "gift" ? (
+          <div></div>
+        ) : (
+          <div className="most-popular">MOST POPULAR</div>
+        )}
         <div className="perfume-cards">
-          {/* if list is defined, show carousel */}
           {list && <PerfumeCarousel products={list} />}
         </div>
         <div>
