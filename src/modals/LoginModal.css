@@ -20,7 +20,7 @@
 }
 
 .login-modal-image {
-  background-image: url("https://i.pinimg.com/564x/33/14/a9/3314a96bfa735043b82a3236a5dbd4a1.jpg");
+  background-image: url("https://fimgs.net/mdimg/perfume/375x500.47170.jpg");
   height: 100%;
   width: 320px;
   background-size: contain;
@@ -72,6 +72,9 @@
 }
 
 .google-login-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding: 0 0 20px 10px;
 }
 
@@ -138,7 +141,6 @@
     width: 242px;
     height: 54px;
     margin-bottom: 10px;
-    cursor: pointer;
   }
 
   .create-account-container {

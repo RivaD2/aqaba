@@ -26,8 +26,7 @@ const LoginModal = (props) => {
         </div>
         <div className="login-modal-content">
           <div>
-            <h1 className="login-modal-header">Welcome To AQABA</h1>
-            <p className="login-header-slogan-text">A CELEBRATION OF LOVE</p>
+            <h1 className="login-modal-header">Welcome To House of Appa</h1>
           </div>
           <h3 className="sign-in">Sign In</h3>
           <TextField
