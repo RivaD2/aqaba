@@ -25,17 +25,17 @@ body {
 }
 
 .card {
-  width: 20ch;
-  height: 28ch;
+  width: 15ch;
+  height: 25ch;
   background: rgb(218, 203, 181);
   border-radius: 5px;
   background-size: cover;
   background-position: center center;
-  /* box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3); */
   cursor: auto;
   transition: box-shadow 0.5s;
   will-change: transform;
   border: 2px solid rgb(183, 132, 77);
+  margin: 10px;
 }
 
 .card:hover {

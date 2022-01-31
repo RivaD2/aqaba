@@ -16,10 +16,10 @@ const CartModal = (props) => {
       {props.cart.items &&
         props.cart.items.map((item, index) => (
           <div className="perfume-card" key={index}>
-            <div className="cart-image">
+            <div className="cart-image-container">
               <img
                 src={`/assets/${item.image}`}
-                className="aqaba-image"
+                className="cart-image"
                 alt="product"
               ></img>
             </div>

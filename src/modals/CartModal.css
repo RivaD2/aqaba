@@ -21,8 +21,13 @@
   flex-direction: row;
 }
 
-.aqaba-image {
-  height: 120px;
+.cart-image-container {
+  width: 200px;
+  height: 200px;
+}
+
+.cart-image {
+  width: 80%;
 }
 
 .cart-details {
