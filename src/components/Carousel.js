@@ -15,7 +15,7 @@ const PerfumeCarousel = (props) => {
   };
 
   let products = props.products;
-  const mostPopular = ["Air Kingdom", "Earth Kingom", "Momo"];
+  const mostPopular = ["Air Kingdom", "Appa in the Flowerbed", "Avatar"];
 
   const carouselItems = products
     .filter((item) => {
