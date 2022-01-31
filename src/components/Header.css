@@ -40,7 +40,6 @@ a:hover {
 }
 
 .icon-block {
-  align-items: flex-end;
   display: flex;
   flex-direction: row;
 }
