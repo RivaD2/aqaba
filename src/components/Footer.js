@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
       <footer className="footer-container">
         <div className="aqaba-summary-container">
           <div className="aqaba-summary">
-            <p className="mobile-summary-title">ABOUT AQABA:</p>
+            <p className="mobile-summary-title">About House of Appa:</p>
             <p>
               House of Appa is inspired by Avatar: The Last Airbender, an
               American animated television series. Scents are not for purchase

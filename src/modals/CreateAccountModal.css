@@ -32,8 +32,8 @@
   align-items: center;
 }
 
-.aqaba-product-image {
-  width: 126px;
+.product-image {
+  width: 14em;
 }
 
 .create-account-button {

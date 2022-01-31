@@ -23,7 +23,7 @@ const ConfirmationModal = (props) => {
               <div className="cart-image">
                 <img
                   src={`/assets/${item.image}`}
-                  className="aqaba-image"
+                  className="cart-image"
                   alt="product"
                 ></img>
               </div>

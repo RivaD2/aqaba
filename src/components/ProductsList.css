@@ -52,7 +52,7 @@
 }
 
 .perfume-links:hover {
-  color: rgb(21, 173, 238);
+  color: #15adee;
 }
 
 .product-list-card-container {
@@ -60,9 +60,6 @@
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
-  max-height: 125ch;
-  max-width: 125ch;
-  width: 100%;
   justify-content: space-around;
   align-self: center;
 }
@@ -74,7 +71,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   /* For mobile phones: */
   .perfume-container {
     min-height: 400px;

@@ -165,7 +165,7 @@ export default class Checkout extends React.Component {
                     <img
                       src={`/assets/${item.image}`}
                       alt="product"
-                      className="aqaba-image"
+                      className="cart-image"
                     />
                   </div>
                   <div className="items-added-container">

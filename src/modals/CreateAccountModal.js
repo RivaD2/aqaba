@@ -12,14 +12,13 @@ const CreateAccountModal = (props) => {
   return (
     <div className="create-account-modal-container" id="create-account-modal">
       <div className="modal-content">
-        <h1 className="modal-header">Welcome To AQABA</h1>
-        <p className="header-slogan-text">A CELEBRATION OF LOVE</p>
+        <h1 className="modal-header">Welcome To House of Appa</h1>
         <div className="modal-image-container">
           <div className="account-modal-image">
             <img
-              src="/assets/aqaba-amour.png"
-              alt="aqaba-classic-perfume"
-              className="aqaba-product-image"
+              src="/assets/water-kingdom.jpg"
+              alt="water kingdom perfume"
+              className="product-image"
             />
           </div>
           <div className="create-account-header">
