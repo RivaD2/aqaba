@@ -1,4 +1,5 @@
 .checkout-container {
+  background-color: rgb(236 208 103);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

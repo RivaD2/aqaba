@@ -1,19 +1,19 @@
-import React from 'react';
-import {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
+import React from "react";
+import { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { useSpring, animated } from "react-spring/web.cjs"; // web.cjs is required for IE 11 support
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: '2px solid #E4AFC0',
+    border: "3px solid rgb(236 208 103)",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
@@ -43,7 +43,7 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   );
 });
 
-const SpringModal = ({toggleModalCallback}) => {
+const SpringModal = ({ toggleModalCallback }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   // content for any modal!
@@ -51,19 +51,19 @@ const SpringModal = ({toggleModalCallback}) => {
 
   React.useEffect(() => {
     // Passing setOpen function to Parent, App
-    if(!toggleModalCallback) return;
+    if (!toggleModalCallback) return;
     toggleModalCallback(toggleModalContent);
-  },[toggleModalCallback]);
-  
+  }, [toggleModalCallback]);
+
   /**
    *  * Sets the content of whateverm modal has been selected. Calling the modal with
    * an arg will open the modal.
    * @param  newContent - React.Element
    */
-  const toggleModalContent = newContent => {
-   setContent(newContent);
-   setOpen(!!newContent);
-  }
+  const toggleModalContent = (newContent) => {
+    setContent(newContent);
+    setOpen(!!newContent);
+  };
 
   /**
    * Closes the modal by setting state to false
@@ -87,13 +87,11 @@ const SpringModal = ({toggleModalCallback}) => {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
-            {content}
-          </div>
+          <div className={classes.paper}>{content}</div>
         </Fade>
       </Modal>
     </div>
   );
-}
+};
 
 export default SpringModal;

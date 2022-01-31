@@ -7,7 +7,6 @@ import "./TextButton.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      // margin: theme.spacing(1),
       fontFamily: ["Amiri", "serif"],
       border: "2px solid white",
       color: "white",
