@@ -6,7 +6,7 @@
 
 .nav-item {
   color: #a44200;
-  font-size: 14pt;
+  font-size: 16pt;
   margin-right: 10px;
   padding-left: 8px;
   font-weight: bold;
@@ -24,7 +24,7 @@
 
 a:hover {
   font-weight: bold;
-  color: rgb(21, 173, 238);
+  color: rgba(255, 166, 0, 0.911);
 }
 
 .link-block {
@@ -60,7 +60,8 @@ a:hover {
 }
 
 .home-title:hover {
-  color: rgb(21, 173, 238);
+  color: rgba(255, 166, 0, 0.948);
+  -webkit-text-stroke: #a44200;
 }
 
 .title-block {
