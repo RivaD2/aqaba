@@ -15,10 +15,12 @@ const PerfumeCarousel = (props) => {
   };
 
   let products = props.products;
-  const mostPopular = ["Air Kingdom", "Appa in the Flowerbed", "Avatar"];
-
+  const mostPopular = ["Toph", "Appa", "Avatar"];
+  console.log('hitting this', mostPopular);
   const carouselItems = products
     .filter((item) => {
+      console.log('item in Carousel', item)
+      console.log('item title', item.title)
       return mostPopular.includes(item.title);
     })
     .map((item) => (

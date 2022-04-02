@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    border: "3px solid rgb(236 208 103)",
+    border: "3px solid #a44200",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },

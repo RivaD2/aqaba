@@ -201,9 +201,9 @@ class App extends React.Component {
               <Route 
                 exact path="/checkout" 
                 render={() => <Checkout cart={this.state.cart}  
-                onRemoveItemFromCart={this.onRemoveItemFromCart} 
-                showCreateAccountModal={this.showCreateAccountModal} 
-                showOrderConfirmationModal={this.showOrderConfirmationModal}/> } 
+                  onRemoveItemFromCart={this.onRemoveItemFromCart}
+                  showCreateAccountModal={this.showCreateAccountModal}
+                  showOrderConfirmationModal={this.showOrderConfirmationModal}/> }
               />
               <Route exact path="/bath_and_body" render={() => <ProductList page="bath_and_body" /> } />
               <Route exact path="/gifts" render={() => <ProductList page="gifts" />} />
