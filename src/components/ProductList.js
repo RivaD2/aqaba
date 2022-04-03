@@ -31,7 +31,7 @@ class ProductList extends React.Component {
   onListFilter = async (category) => {
     try {
       if (category === undefined) {
-        category = this.props.page === "perfumes" ? "feminine" : "gift";
+        category = this.props.page === "perfumes" ? "air" : "gift";
       }
       const listOfProducts = await getPerfumes(category);
       this.setState({
@@ -58,13 +58,23 @@ class ProductList extends React.Component {
         filterSections = (
           <>
             <FilterSection
-              filter="feminine"
-              label="APPA FEMININE"
+              filter="air"
+              label="Air"
               onListFilter={this.onListFilter}
             />
             <FilterSection
-              filter="masculine"
-              label="APPA MASCULINE"
+              filter="earth"
+              label="Earth"
+              onListFilter={this.onListFilter}
+            />
+            <FilterSection
+              filter="fire"
+              label="Fire"
+              onListFilter={this.onListFilter}
+            />
+            <FilterSection
+              filter="water"
+              label="Water"
               onListFilter={this.onListFilter}
             />
           </>
