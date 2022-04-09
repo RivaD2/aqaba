@@ -1,9 +1,9 @@
 import React from 'react'
-// import ImageFade from '../components/ImageFade';
+import ImageFade from '../components/ImageFade';
 import Hero from '../components/Hero';
 import '../pages/AqabaHome.css';
 
-const AqabaHome = props  => {
+const AqabaHome = props => {
   const hero1 = {
     backgroundImg: "assets/avatar-hero-1.png",
     perfumeImg: "assets/appa-in-the-flowerbed.png",
@@ -44,8 +44,12 @@ const AqabaHome = props  => {
 
   return (
     <div className="home App-body">
-        {/* <ImageFade /> */}
-        <Hero {...hero4} />
+        <ImageFade>
+          <Hero {...hero1}></Hero>
+          <Hero {...hero2}></Hero>
+          <Hero {...hero3}></Hero>
+          <Hero {...hero4}></Hero>
+        </ImageFade>
     </div>
   )
 }

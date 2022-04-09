@@ -2,13 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useTransition, animated, config } from 'react-spring'
 import './ImageFade.css';
 
-const slides = [
-  { id: 2, url: '' },
-  { id: 4, url: ''},
-]
-
-const ImageFade = () => {
+const ImageFade = (props) => {
   const [index, set] = useState(0)
+  const slides = props.children
   const transitions = useTransition(slides[index], item => item.id, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -21,13 +17,11 @@ const ImageFade = () => {
     return () => {
       clearTimeout(timeoutId);
     }
-  }, [])
+  }, [slides.length])
   return transitions.map(({ item, props, key }) => (
-    <animated.div
-      key={key}
-      className="bg App-body"
-      style={{ ...props, backgroundImage: `url(${item.url})` }}
-    />
+    <animated.div key={key} className="bg App-body">
+      {item}
+    </animated.div>
   ))
 }
 export default ImageFade;
