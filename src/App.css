@@ -6,6 +6,7 @@
 
 .App-body {
   min-height:calc(100vh - 152px);
+  background-color: #FFFFED;
 }
 
 @media only screen and (max-width:768px) {
