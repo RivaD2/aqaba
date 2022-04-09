@@ -3,7 +3,6 @@
   flex-direction: column;
   min-height: 600px;
   justify-content: center;
-  background-color: rgb(250 247 243)
 }
 
 .most-popular {
@@ -37,8 +36,8 @@
 }
 
 .perfume-links {
-  color: #a44200;
-  font-size: 16pt;
+  color: #0061A8;
+  font-size: 20pt;
   padding-left: 10px;
   font-weight: bold;
   cursor: pointer;
@@ -102,7 +101,7 @@
   }
 
   .card {
-    height: 120px;
+    /* height: 80px; */
     width: 120px;
     display: flex;
     flex-direction: row;

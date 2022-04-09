@@ -32,6 +32,10 @@
   border-right: 8px solid rgb(7, 176, 248);
 }
 
+.slide-selected {
+  padding-bottom: 10px;
+}
+
 .slide {
   display: flex;
   justify-content: center;

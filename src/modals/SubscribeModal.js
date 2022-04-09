@@ -13,9 +13,9 @@ const SubscribeModal = (props) => {
           <div className="modal-image-container">
             <div className="subscribe-modal-image">
               <img
-                src="/assets/spirit-of-knowledge.jpg"
+                src="/assets/blue-spirit.png"
                 alt="spirit of knowledge perfume"
-                className="product-image"
+                className="subscribe-image"
               />
             </div>
             <div className="text-container">

@@ -16,7 +16,7 @@ const CreateAccountModal = (props) => {
         <div className="modal-image-container">
           <div className="account-modal-image">
             <img
-              src="/assets/water-kingdom.jpg"
+              src="/assets/water-kingdom.png"
               alt="water kingdom perfume"
               className="product-image"
             />
