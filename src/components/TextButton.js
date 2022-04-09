@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#DC9B56",
       whiteSpace: "nowrap",
       width: "100%",
+      textTransform: "none"
     },
   },
   underline: {

@@ -18,8 +18,9 @@
   text-align: center;
 }
 
-.modal-image-container {
-  margin-bottom: 40px;
+.subscribe-image {
+  width: 170px;
+  padding-bottom:40px;
 }
 
 .modal-title {

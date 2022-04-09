@@ -1,5 +1,4 @@
 .product-details-container {
-  background-color: rgb(250 247 243);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -11,7 +10,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 40em;
+  width: 20em;
   padding-bottom: 12px;
 }
 

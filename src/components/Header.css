@@ -1,11 +1,11 @@
 .header {
   z-index: 100;
   width: 100vw;
-  background-color: #8fd6f4;
+  /* background-color: #8fd6f4; */
 }
 
 .nav-item {
-  color: #a44200;
+  color: #0061A8;
   font-size: 16pt;
   margin-right: 10px;
   padding-left: 8px;
@@ -37,6 +37,7 @@ a:hover {
 .icon-block,
 .hamburger {
   width: 156px;
+  height: 40px;
 }
 
 .icon-block {
@@ -56,7 +57,7 @@ a:hover {
 
 .home-title {
   text-decoration: none;
-  color: rgb(172, 108, 68);
+  color: #4F3222;
 }
 
 .home-title:hover {
@@ -85,7 +86,6 @@ a:hover {
     z-index: 100;
     width: 100vw;
     height: 100px;
-    background-color: #fbf7f4;
   }
 
   .icon-block {
